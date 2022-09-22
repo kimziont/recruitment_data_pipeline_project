@@ -77,6 +77,18 @@ services:
     volumes:
       - ./dataset:/var/lib/mysql-files
 
+  prometheus:
+    hostname: prometheus
+    image: prom/prometheus
+    ports:
+      - 9090:9090
+
+
+  grafana:
+    hostname: grafana
+    image: grafana/grafana
+    ports:
+      - 3000:3000
 
   superset:
     hostname: superset
