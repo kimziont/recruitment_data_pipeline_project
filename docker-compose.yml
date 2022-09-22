@@ -77,11 +77,21 @@ services:
     volumes:
       - ./dataset:/var/lib/mysql-files
 
+  mysqld-exporter:
+    hostname: mysqld-exporter
+    image: prom/mysqld-exporter
+    ports:
+      - 9104:9104
+    environment:
+      DATA_SOURCE_NAME: root:passwd@(mysql:3306)/
+
   prometheus:
     hostname: prometheus
     image: prom/prometheus
     ports:
       - 9090:9090
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
 
 
   grafana:
