@@ -1,0 +1,40 @@
+{% extends './base.html' %}
+
+{% block content %}
+<div>
+    <form method="post">{% csrf_token %}
+        <div>
+            <label for="all_search">통합 검색</label>
+            <input type="text" id="all_search" name="all_search">
+        </div>
+
+        <label for="category">직무</label>
+        <select class="form-select" name="category">
+            <option disabled selected> -- select an option -- </option>
+            <option value="프론트엔드 백엔드 데이터 엔지니어 머신러닝 인공지능 데브옵스 네트워크 서버 소프트웨어" selected="selected">전체</option>
+            <option value="데이터 엔지니어">데이터 엔지니어</option>
+        </select>
+
+        <label for="region">근무 지역</label>
+        <select class="form-select" name="region">
+            <option disabled selected> -- select an option -- </option>
+            <option value="서울 경기 부산 대구 대전 인천" selected="selected">전체</option>
+            <option value="서울">서울</option>
+            <option value="경기">경기</option>
+            <option value="부산">부산</option>
+        </select>
+
+
+        <label for="salary">희망 연봉</label>
+        <select class="form-select" name="salary">
+            <option disabled selected> -- select an option -- </option>
+            <option value=0 selected="selected">상관 없음</option>
+            <option value=3000>3000만원 이상</option>
+            <option value=4000>4000만원 이상</option>
+            <option value=5000>5000만원 이상</option>
+        </select>
+        <input type="submit" value="작성완료">
+
+    </form>
+</div>
+{% endblock %}
