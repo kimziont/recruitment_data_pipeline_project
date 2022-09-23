@@ -9,7 +9,6 @@ for i in range(5):
     try:
         producer = KafkaProducer(bootstrap_servers = brokers)
         print(f'{i + 1}번 째 연결 성공')
-        print(type(producer))
         break
     except:
         print(f'{i + 1}번 째 연결 실패')

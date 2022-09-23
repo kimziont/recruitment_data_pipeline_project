@@ -26,26 +26,27 @@ driver.get('https://programmers.co.kr/job')
 
 crawling_set = set()
 for i in range(8, 9):
+
     
-    # 직무 클릭 
-    job_category_button = driver.find_element(by=By.XPATH,value="/html/body/div[2]/div/section[1]/div/div[2]/div[1]/button")
+    # 직무 클릭  /html/body/div[3]/div/section[1]/div/div[2]/div[1]/button
+    job_category_button = driver.find_element(by=By.XPATH,value="/html/body/div[3]/div/section[1]/div/div[2]/div[1]/button")
     job_category_button.click()
     time.sleep(1)
     
     # 포지션 선택 /html/body/div[2]/div/section[1]/div/div[2]/div[1]/div/ul/li[8]/label
-    i_th_job_category_xpath = f'/html/body/div[2]/div/section[1]/div/div[2]/div[1]/div/ul/li[{i}]/label'
+    i_th_job_category_xpath = f'/html/body/div[3]/div/section[1]/div/div[2]/div[1]/div/ul/li[{i}]/label'
     i_th_job_category = driver.find_element(by=By.XPATH, value=i_th_job_category_xpath)
     i_th_job_category.click()
     time.sleep(1)
     position_text = i_th_job_category.text
     
     # 경력 클릭
-    career_xpath = '/html/body/div[2]/div/section[1]/div/div[3]/div[1]/div[1]/button'
+    career_xpath = '/html/body/div[3]/div/section[1]/div/div[3]/div[1]/div[1]/button'
     driver.find_element(by=By.XPATH, value=career_xpath).click()
     time.sleep(1)
     
     # 신입 선택
-    newbie_xpath = '/html/body/div[2]/div/section[1]/div/div[3]/div[1]/div[1]/div/div/div/div[2]/label'
+    newbie_xpath = '/html/body/div[3]/div/section[1]/div/div[3]/div[1]/div[1]/div/div/div/div[2]/label'
     driver.find_element(by=By.XPATH, value=newbie_xpath).click()
     time.sleep(1)
 
@@ -85,7 +86,7 @@ for i in range(8, 9):
             row_data = dict()
             row_data['Category'] = position_text
             try:
-                j_th_position_xpath = f'/html/body/div[2]/div/section[2]/div/ul/li[{j}]/div[2]/div[1]/h5/a'
+                j_th_position_xpath = f'/html/body/div[3]/div/section[2]/div/ul/li[{j}]/div[2]/div[1]/h5/a'
                 driver.find_element(by=By.XPATH, value=j_th_position_xpath).click()
             except:
                 print(f"{page}페이지, {j}번째 글을 읽어오지 못했습니다")
@@ -178,7 +179,7 @@ for i in range(8, 9):
         else:
             pagination = last_page_num + 2
         
-        if next_page := driver.find_element(by=By.XPATH, value=f'/html/body/div[2]/div/div[3]/ul/li[{pagination}]/span'):
+        if next_page := driver.find_element(by=By.XPATH, value=f'/html/body/div[3]/div/div[3]/ul/li[{pagination}]/span'):
             page += 1
             try:
                 next_page.click()

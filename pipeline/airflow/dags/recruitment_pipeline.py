@@ -4,7 +4,7 @@ from airflow import DAG
 from airflow.operators.bash import BashOperator
 
 default_args = {
-    'start_date': datetime(2022, 7, 19)
+    'start_date': datetime(2022, 9, 23)
 }
 
 with DAG(dag_id='recruitment-airflow',

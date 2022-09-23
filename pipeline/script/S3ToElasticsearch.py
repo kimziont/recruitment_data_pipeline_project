@@ -85,7 +85,7 @@ for page in response_iterator:
             dict_data['CreatedTime'] = datetime.strptime(dict_data['CreatedTime'], '%y/%m/%d %H:%M:%S')
             dict_data['LastModifiedTime'] = datetime.strptime(dict_data['LastModifiedTime'], '%y/%m/%d %H:%M:%S')
             doc_id = dict_data['Company'] + '_' + dict_data['Title']
-            es.update(index=ES_INDEX, id=doc_id, doc=dict_data,doc_as_upsert=True)
+            es.update(index=ES_INDEX, id=doc_id, doc=dict_data, doc_as_upsert=True)
         except Exception as e:
             print(e)
             print(dict_data)
