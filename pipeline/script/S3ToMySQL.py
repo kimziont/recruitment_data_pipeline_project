@@ -32,7 +32,7 @@ cursorObject = dataBase.cursor()
 
 # 테이블 생성
 create_table = 'CREATE TABLE IF NOT EXISTS programmers (\
-id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,\
+id VARCHAR(100) NOT NULL PRIMARY KEY,\
 Category VARCHAR(20) NOT NULL,\
 Company VARCHAR(20) NOT NULL,\
 Source VARCHAR(20) NOT NULL,\
@@ -46,11 +46,9 @@ LastModifiedTime DATETIME NOT NULL\
 )'
 cursorObject.execute(create_table)
 
-
-# 테이블 생성
 create_table = 'CREATE TABLE IF NOT EXISTS skills (\
 id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,\
-post_id INT NOT NULL,\
+post_id VARCHAR(100) NOT NULL,\
 Skill VARCHAR(20) NOT NULL,\
 FOREIGN KEY(post_id) REFERENCES programmers(id)\
 )'
@@ -70,6 +68,13 @@ def get_addr(x):
     except:
         return x
 
+cursorObject.execute("SELECT id FROM programmers")
+
+id_set = set()
+for d in cursorObject:
+    id_set.add(d[0])
+
+
 #  https://gonigoni.kr/posts/list-over-1000-files-from-s3/
 paginator = client.get_paginator('list_objects_v2')
 
@@ -87,6 +92,7 @@ for page in response_iterator:
             body = client.get_object(Bucket=bucket_name,
                                      Key=content['Key'])['Body']
             dict_data = json.loads(body.read().decode())
+            dict_data['id'] = dict_data['Company'] + '_' + dict_data['Title']
 
             if 'Salary' in dict_data.keys():
                 dict_data['Salary'] = int(dict_data['Salary'].split(" ")[0])
@@ -103,36 +109,26 @@ for page in response_iterator:
             columns = ", ".join(column_list)
             placeholders = ', '.join(['%s'] * len(column_list))
 
-            sql = "INSERT INTO %s ( %s ) VALUES ( %s )" % (table, columns, placeholders)
-            cursorObject.execute(sql, [dict_data[col] for col in column_list])
 
-            if 'Stacks' in dict_data.keys():
-                pass
+            # key는 회사이름_공고제목 으로 하고,
+            # key값이 다르면 그냥 삽입,
+            # key값이 같으면 LastModified 값 비교해서,
+            # 그대로면 삽입X, 변했으면 업데이트
+            if dict_data['id'] not in id_set:
+                sql = "INSERT INTO %s ( %s ) VALUES ( %s )" % (table, columns, placeholders)
+                cursorObject.execute(sql, [dict_data[col] for col in column_list])
+
+                if 'Stacks' in dict_data and dict_data['Stacks'] is not None:
+                    stack_list = dict_data['Stacks'].split(",")
+                    for stack in stack_list:
+                        cursorObject.execute(f"INSERT INTO skills ( post_id, Skill ) VALUES ( '{dict_data['id']}', '{stack}' )")
+            else:
+                cursorObject.execute(f"SELECT LastModifiedTime FROM programmers WHERE id={dict_data['id']}")
+                last_modified_time = cursorObject.next()[0]
+                if last_modified_time != dict_data['LastModifiedTime']:
+                    sql = "INSERT INTO %s ( %s ) VALUES ( %s ) ON DUPLCATE KEY UPDATE" % (table, columns, placeholders)
+                    cursorObject.execute(sql, [dict_data[col] for col in column_list])
         except:
-            break
-
-    
-cursorObject.execute("SELECT * FROM programmers")
-data_list_from_s3 = []
-for d in cursorObject:
-    data_list_from_s3.append(d)
-
-columns = ['id','Category', 'Company', 'Source', 'EmployeeNumber', 'WorkLocation', 'Stacks', 'Status', 'Salary', 'CreatedTime', 'LastModifiedTime']
-df = pd.DataFrame(columns=columns)
-d_df = pd.DataFrame(data_list_from_s3, columns=columns)
-df = pd.concat([df, d_df], ignore_index=True)
-
-
-
-
-for row in df.iterrows():
-    if 'Stacks' in row[1].keys() and row[1]['Stacks'] is not None:
-        print(row[1]['Stacks'])
-        stack_list = row[1]['Stacks'].split(",")
-        for stack in stack_list:
-
-            insert_data = f"INSERT INTO skills ( post_id, Skill ) VALUES ( '{row[1]['id']}', '{stack}' )"
-            cursorObject.execute(insert_data)
-
+            continue
 
 dataBase.commit()
