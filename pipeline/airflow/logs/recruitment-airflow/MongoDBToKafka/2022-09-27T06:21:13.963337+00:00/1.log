@@ -1,0 +1,2 @@
+[2022-09-27 06:27:03,618] {taskinstance.py:1025} INFO - Dependencies not met for <TaskInstance: recruitment-airflow.MongoDBToKafka manual__2022-09-27T06:21:13.963337+00:00 [success]>, dependency 'Task Instance State' FAILED: Task is in the 'success' state which is not a valid state for execution. The task must be cleared in order to be run.
+[2022-09-27 06:27:03,628] {local_task_job.py:99} INFO - Task is not able to be run

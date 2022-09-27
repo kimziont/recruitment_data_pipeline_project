@@ -11,6 +11,7 @@ services:
     volumes:
       - ./pipeline/jupyter:/opt/pipeline/jupyter
       - ./pipeline/script:/opt/pipeline/script
+      - ./pipeline/pipeline.ini:/opt/pipeline/pipeline.ini
       - ./pipeline/airflow:/root/airflow
     tty: true
 
@@ -66,7 +67,7 @@ services:
     environment:
       MYSQL_USER: root
       MYSQL_ROOT_HOST: "%%"
-      MYSQL_DATABASE: test
+      MYSQL_DATABASE: recruitment
       MYSQL_ROOT_PASSWORD: passwd
     command: mysqld
       --server-id=1234
