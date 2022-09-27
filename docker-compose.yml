@@ -7,10 +7,11 @@ services:
     hostname: pipeline
     ports:
       - "49999:8888"
+      - "8080:8080"
     volumes:
       - ./pipeline/jupyter:/opt/pipeline/jupyter
       - ./pipeline/script:/opt/pipeline/script
-      - ./pipeline/airflow:/opt/pipeline/airflow
+      - ./pipeline/airflow:/root/airflow
     tty: true
 
   mongodb:
