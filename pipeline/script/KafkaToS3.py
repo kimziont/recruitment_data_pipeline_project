@@ -1,15 +1,22 @@
 import json
 import boto3
+import configparser
 from kafka import KafkaConsumer
 
-access_key_id = 'AKIAUKJSSORFOCZGKI5K'
-secret_access_key = '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'
-bucket_name = 'ziontkim-recruitment-1'
-folder_name = 'programmers/'
+parser = configparser.ConfigParser()
+parser.read("/opt/pipeline/pipeline.ini")
+
+access_key_id = parser.get("aws_boto_credentials", "access_key_id")
+secret_access_key = parser.get("aws_boto_credentials", "secret_access_key")
+bucket_name = parser.get("aws_boto_credentials", "bucket_name")
+folder_name = parser.get("aws_boto_credentials", "folder_name")
+
 s3 = boto3.resource('s3', aws_access_key_id=access_key_id, aws_secret_access_key=secret_access_key)
 
-topicName = 'recruitmentProgrammers'
-brokers = ['kafka:29092']
+kafka_host = parser.get("kafka_credentials", "host")
+kafka_port = parser.get("kafka_credentials", "port")
+topicName = parser.get("kafka_credentials", "topic")
+brokers = [f'{kafka_host}:{kafka_port}']
 
 for i in range(5):
     try:
@@ -25,8 +32,8 @@ else:
 paginator = s3.meta.client.get_paginator('list_objects_v2')
 
 response_iterator = paginator.paginate(
-    Bucket='ziontkim-recruitment-1',
-    Prefix='programmers/'
+    Bucket=bucket_name,
+    Prefix=folder_name
 )
 
 all_s3_objects = set()

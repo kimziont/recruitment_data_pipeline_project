@@ -1,13 +1,13 @@
+from lib2to3.pgen2.parse import Parser
 import re
 import time
+import configparser
 from pytz import timezone
 from datetime import datetime
-import pandas as pd
 import pymongo
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 from bs4 import BeautifulSoup
 
 
@@ -17,11 +17,24 @@ chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
 
 path = '/usr/local/lib/python3.8/site-packages/chromedriver/usr/bin/chromedriver'
-client = pymongo.MongoClient('mongodb://root:root@mongodb:27017')
-db = client["recruitment"]
-collection = db["programmers"]
 driver = webdriver.Chrome(executable_path=path, chrome_options=chrome_options)
 driver.get('https://programmers.co.kr/job')
+
+
+parser = configparser.ConfigParser()
+parser.read("/opt/pipeline/pipeline.ini")
+
+host = parser["mongodb_credentials"]["host"]
+port = parser.get("mongodb_credentials", "port")
+user = parser.get("mongodb_credentials", "user")
+passwd = parser.get("mongodb_credentials", "passwd")
+database = parser.get("mongodb_credentials", "database")
+collection = parser.get("mongodb_credentials", "collection")
+
+client = pymongo.MongoClient(f'mongodb://{user}:{passwd}@{host}:{port}')
+
+db = client.get_database(database)
+collection = db.get_collection(collection)
 
 
 crawling_set = set()

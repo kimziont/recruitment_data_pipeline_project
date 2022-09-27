@@ -1,13 +1,18 @@
 import re
 import json
+import configparser
 import boto3
 import mysql.connector
 import pandas as pd
 
 
-access_key_id = 'AKIAUKJSSORFOCZGKI5K'
-secret_access_key = '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'
-bucket_name = 'ziontkim-recruitment-1'
+parser = configparser.ConfigParser()
+parser.read("/opt/pipeline/pipeline.ini")
+
+access_key_id = parser.get("aws_boto_credentials", "access_key_id")
+secret_access_key = parser.get("aws_boto_credentials", "secret_access_key")
+bucket_name = parser.get("aws_boto_credentials", "bucket_name")
+folder_name = parser.get("aws_boto_credentials", "folder_name")
 
 s3 = boto3.resource('s3', aws_access_key_id=access_key_id, aws_secret_access_key=secret_access_key)
 client = s3.meta.client
@@ -17,10 +22,10 @@ client = s3.meta.client
 # 저장된 오브젝트 하나 가져오기
 # target_object = s3.meta.client.list_objects(Bucket=bucket_name)['Contents'][0]
 dataBase = mysql.connector.connect(
-  host ="mysql",
-  user ="root",
-  passwd ="passwd",
-  database = "recruitment"
+  host = parser.get("mysql_credentials", "host"),
+  user = parser.get("mysql_credentials", "user"),
+  passwd = parser.get("mysql_credentials", "passwd"),
+  database = parser.get("mysql_credentials", "database"),
 )
 
 # preparing a cursor object
@@ -79,8 +84,8 @@ for d in cursorObject:
 paginator = client.get_paginator('list_objects_v2')
 
 response_iterator = paginator.paginate(
-    Bucket='ziontkim-recruitment-1',
-    Prefix='programmers/'
+    Bucket=bucket_name,
+    Prefix=folder_name
 )
 
 

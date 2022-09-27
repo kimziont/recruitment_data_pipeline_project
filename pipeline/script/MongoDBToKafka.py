@@ -1,9 +1,16 @@
 import json
 import time
+import configparser
 import pymongo
 from kafka import KafkaProducer
 
-brokers = ["kafka:29092"]
+parser = configparser.ConfigParser()
+parser.read("/opt/pipeline/pipeline.ini")
+
+kafka_host = parser.get("kafka_credentials", "host")
+kafka_port = parser.get("kafka_credentials", "port")
+topicName = parser.get("kafka_credentials", "topic")
+brokers = [f'{kafka_host}:{kafka_port}']
 
 for i in range(5):
     try:
@@ -15,12 +22,17 @@ for i in range(5):
 else:
     print('Kafka를 연결할 수 없습니다')
 
-topicName = "recruitmentProgrammers"
+host = parser.get("mongodb_credentials", "host")
+port = parser.get("mongodb_credentials", "port")
+user = parser.get("mongodb_credentials", "user")
+passwd = parser.get("mongodb_credentials", "passwd")
+database = parser.get("mongodb_credentials", "database")
+collection = parser.get("mongodb_credentials", "collection")
 
-client = pymongo.MongoClient('mongodb://root:root@mongodb:27017')
+client = pymongo.MongoClient(f'mongodb://{user}:{passwd}@{host}:{port}')
 
-db = client.get_database('recruitment')
-collection = db.get_collection('programmers')
+db = client.get_database(database)
+collection = db.get_collection(collection)
 
 documents = collection.find({},{'_id': False})
 
