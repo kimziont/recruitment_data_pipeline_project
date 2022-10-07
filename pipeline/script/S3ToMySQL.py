@@ -3,7 +3,6 @@ import json
 import configparser
 import boto3
 import mysql.connector
-import pandas as pd
 
 
 parser = configparser.ConfigParser()
@@ -21,19 +20,19 @@ client = s3.meta.client
 
 # 저장된 오브젝트 하나 가져오기
 # target_object = s3.meta.client.list_objects(Bucket=bucket_name)['Contents'][0]
-dataBase = mysql.connector.connect(
+connector = mysql.connector.connect(
   host = parser.get("mysql_credentials", "host"),
   user = parser.get("mysql_credentials", "user"),
-  passwd = parser.get("mysql_credentials", "passwd"),
-  database = parser.get("mysql_credentials", "database"),
+  passwd = parser.get("mysql_credentials", "passwd")
 )
 
 # preparing a cursor object
-cursorObject = dataBase.cursor()
+cursorObject = connector.cursor()
 
-# creating database
-# cursorObject.execute("CREATE DATABASE IF NOT EXISTS recruitment")
-# cursorObject.execute("DROP TABLE programmers")
+# 데이터베이스 생성
+cursorObject.execute(f"CREATE DATABASE IF NOT EXISTS {parser.get('mysql_credentials', 'database')}")
+
+cursorObject.execute(f"USE {parser.get('mysql_credentials', 'database')}")
 
 # 테이블 생성
 create_table = 'CREATE TABLE IF NOT EXISTS programmers (\
@@ -136,4 +135,4 @@ for page in response_iterator:
         except:
             continue
 
-dataBase.commit()
+connector.commit()
