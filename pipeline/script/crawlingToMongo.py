@@ -206,4 +206,5 @@ for i in range(8, 9):
 # 마갑된 채용 공고 Status 변경하기 (In progree -> Closed)
 for doc in collection.find():
     if doc['_id'] not in crawling_set:
-        collection.find_one_and_update({'_id': doc['_id']}, {'$set' :{'Status': 'Closed'}})
+        collection.find_one_and_update({'_id': doc['_id']}, 
+        {'$set' :{'Status': 'Closed', 'LastModifiedTime': datetime.now(timezone('Asia/Seoul')).strftime("%y/%m/%d %H:%M:%S")}})
