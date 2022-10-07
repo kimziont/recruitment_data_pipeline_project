@@ -12,6 +12,10 @@ with DAG(dag_id='recruitment-airflow',
         default_args=default_args,
         tags=['recruitment'],
         catchup=False) as dag:
+    KafkaConnectTest = BashOperator(
+        task_id='KafkaConnectTest',
+        bash_command='python /opt/pipeline/script/KafkaConnectTest.py'
+    )
     crawling = BashOperator(
         task_id='crawling',
         bash_command='python /opt/pipeline/script/crawlingToMongo.py'
@@ -33,4 +37,4 @@ with DAG(dag_id='recruitment-airflow',
         bash_command='python /opt/pipeline/script/S3ToMySQL.py'
     )
 
-    crawling >> MongoDBToKafka >> KafkaToS3 >> [S3ToElasticsearch, S3ToMySQL]
+    KafkaConnectTest >> crawling >> MongoDBToKafka >> KafkaToS3 >> [S3ToElasticsearch, S3ToMySQL]
