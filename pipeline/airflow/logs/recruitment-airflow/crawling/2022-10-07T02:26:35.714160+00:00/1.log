@@ -1,0 +1,88 @@
+[2022-10-07 02:32:41,804] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: recruitment-airflow.crawling manual__2022-10-07T02:26:35.714160+00:00 [queued]>
+[2022-10-07 02:32:41,829] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: recruitment-airflow.crawling manual__2022-10-07T02:26:35.714160+00:00 [queued]>
+[2022-10-07 02:32:41,830] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-07 02:32:41,831] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2022-10-07 02:32:41,832] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-07 02:32:41,908] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): crawling> on 2022-10-07 02:26:35.714160+00:00
+[2022-10-07 02:32:41,911] {standard_task_runner.py:52} INFO - Started process 495 to run task
+[2022-10-07 02:32:41,914] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'recruitment-airflow', 'crawling', 'manual__2022-10-07T02:26:35.714160+00:00', '--job-id', '47', '--raw', '--subdir', 'DAGS_FOLDER/recruitment_pipeline.py', '--cfg-path', '/tmp/tmpvw9x4lzl', '--error-file', '/tmp/tmpxv90wrgk']
+[2022-10-07 02:32:41,915] {standard_task_runner.py:77} INFO - Job 47: Subtask crawling
+[2022-10-07 02:32:42,005] {logging_mixin.py:109} INFO - Running <TaskInstance: recruitment-airflow.crawling manual__2022-10-07T02:26:35.714160+00:00 [running]> on host pipeline
+[2022-10-07 02:32:42,057] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/xcom.py:323 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-07 02:32:42,083] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:126 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-07 02:32:42,124] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:162 SAWarning: Coercing Subquery object into a select() for use in IN(); please pass a select() construct explicitly
+[2022-10-07 02:32:42,128] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:159 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-07 02:32:42,147] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=recruitment-airflow
+AIRFLOW_CTX_TASK_ID=crawling
+AIRFLOW_CTX_EXECUTION_DATE=2022-10-07T02:26:35.714160+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-10-07T02:26:35.714160+00:00
+[2022-10-07 02:32:42,148] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-10-07 02:32:42,149] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'python /opt/pipeline/script/crawlingToMongo.py']
+[2022-10-07 02:32:42,155] {subprocess.py:85} INFO - Output:
+[2022-10-07 02:32:51,831] {subprocess.py:89} INFO - /opt/pipeline/script/crawlingToMongo.py:20: DeprecationWarning: executable_path has been deprecated, please pass in a Service object
+[2022-10-07 02:32:51,833] {subprocess.py:89} INFO -   driver = webdriver.Chrome(executable_path=path, chrome_options=chrome_options)
+[2022-10-07 02:32:51,834] {subprocess.py:89} INFO - /opt/pipeline/script/crawlingToMongo.py:20: DeprecationWarning: use options instead of chrome_options
+[2022-10-07 02:32:51,835] {subprocess.py:89} INFO -   driver = webdriver.Chrome(executable_path=path, chrome_options=chrome_options)
+[2022-10-07 02:32:51,837] {subprocess.py:89} INFO - Traceback (most recent call last):
+[2022-10-07 02:32:51,838] {subprocess.py:89} INFO -   File "/opt/pipeline/script/crawlingToMongo.py", line 52, in <module>
+[2022-10-07 02:32:51,839] {subprocess.py:89} INFO -     i_th_job_category.click()
+[2022-10-07 02:32:51,840] {subprocess.py:89} INFO -   File "/usr/local/lib/python3.8/site-packages/selenium/webdriver/remote/webelement.py", line 88, in click
+[2022-10-07 02:32:51,841] {subprocess.py:89} INFO -     self._execute(Command.CLICK_ELEMENT)
+[2022-10-07 02:32:51,842] {subprocess.py:89} INFO -   File "/usr/local/lib/python3.8/site-packages/selenium/webdriver/remote/webelement.py", line 396, in _execute
+[2022-10-07 02:32:51,843] {subprocess.py:89} INFO -     return self._parent.execute(command, params)
+[2022-10-07 02:32:51,845] {subprocess.py:89} INFO -   File "/usr/local/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 435, in execute
+[2022-10-07 02:32:51,846] {subprocess.py:89} INFO -     self.error_handler.check_response(response)
+[2022-10-07 02:32:51,847] {subprocess.py:89} INFO -   File "/usr/local/lib/python3.8/site-packages/selenium/webdriver/remote/errorhandler.py", line 247, in check_response
+[2022-10-07 02:32:51,848] {subprocess.py:89} INFO -     raise exception_class(message, screen, stacktrace)
+[2022-10-07 02:32:51,849] {subprocess.py:89} INFO - selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+[2022-10-07 02:32:51,850] {subprocess.py:89} INFO -   (Session info: headless chrome=89.0.4389.114)
+[2022-10-07 02:32:51,851] {subprocess.py:89} INFO - Stacktrace:
+[2022-10-07 02:32:51,852] {subprocess.py:89} INFO - #0 0xaaaaaf06d38c <unknown>
+[2022-10-07 02:32:51,853] {subprocess.py:89} INFO - 
+[2022-10-07 02:32:51,987] {subprocess.py:93} INFO - Command exited with return code 1
+[2022-10-07 02:32:52,001] {taskinstance.py:1703} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1332, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1458, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1514, in _execute_task
+    result = execute_callable(context=context)
+  File "/usr/local/lib/python3.8/site-packages/airflow/operators/bash.py", line 187, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2022-10-07 02:32:52,010] {taskinstance.py:1270} INFO - Marking task as FAILED. dag_id=recruitment-airflow, task_id=crawling, execution_date=20221007T022635, start_date=20221007T023241, end_date=20221007T023252
+[2022-10-07 02:32:52,133] {standard_task_runner.py:88} ERROR - Failed to execute job 47 for task crawling
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/usr/local/lib/python3.8/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 292, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/usr/local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/usr/local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/usr/local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1332, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1458, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/usr/local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1514, in _execute_task
+    result = execute_callable(context=context)
+  File "/usr/local/lib/python3.8/site-packages/airflow/operators/bash.py", line 187, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2022-10-07 02:32:52,180] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-10-07 02:32:52,282] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-10-07 02:32:52,285] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/dag.py:1069 SADeprecationWarning: Query.value() is deprecated and will be removed in a future release.  Please use Query.with_entities() in combination with Query.scalar() (deprecated since: 1.4)
+[2022-10-07 02:32:52,287] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/dag.py:1069 SADeprecationWarning: Query.values() is deprecated and will be removed in a future release.  Please use Query.with_entities() (deprecated since: 1.4)

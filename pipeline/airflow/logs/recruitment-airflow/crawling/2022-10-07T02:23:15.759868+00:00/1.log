@@ -1,0 +1,47 @@
+[2022-10-07 02:24:55,459] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: recruitment-airflow.crawling manual__2022-10-07T02:23:15.759868+00:00 [queued]>
+[2022-10-07 02:24:55,490] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: recruitment-airflow.crawling manual__2022-10-07T02:23:15.759868+00:00 [queued]>
+[2022-10-07 02:24:55,492] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-07 02:24:55,493] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2022-10-07 02:24:55,494] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-07 02:24:55,562] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): crawling> on 2022-10-07 02:23:15.759868+00:00
+[2022-10-07 02:24:55,565] {standard_task_runner.py:52} INFO - Started process 168 to run task
+[2022-10-07 02:24:55,567] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'recruitment-airflow', 'crawling', 'manual__2022-10-07T02:23:15.759868+00:00', '--job-id', '43', '--raw', '--subdir', 'DAGS_FOLDER/recruitment_pipeline.py', '--cfg-path', '/tmp/tmptxlr68nk', '--error-file', '/tmp/tmp7xk0xkcb']
+[2022-10-07 02:24:55,569] {standard_task_runner.py:77} INFO - Job 43: Subtask crawling
+[2022-10-07 02:24:55,658] {logging_mixin.py:109} INFO - Running <TaskInstance: recruitment-airflow.crawling manual__2022-10-07T02:23:15.759868+00:00 [running]> on host pipeline
+[2022-10-07 02:24:55,713] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/xcom.py:323 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-07 02:24:55,738] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:126 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-07 02:24:55,781] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:162 SAWarning: Coercing Subquery object into a select() for use in IN(); please pass a select() construct explicitly
+[2022-10-07 02:24:55,787] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:159 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-07 02:24:55,804] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=recruitment-airflow
+AIRFLOW_CTX_TASK_ID=crawling
+AIRFLOW_CTX_EXECUTION_DATE=2022-10-07T02:23:15.759868+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-10-07T02:23:15.759868+00:00
+[2022-10-07 02:24:55,806] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-10-07 02:24:55,807] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'python /opt/pipeline/script/crawlingToMongo.py']
+[2022-10-07 02:24:55,812] {subprocess.py:85} INFO - Output:
+[2022-10-07 02:25:21,007] {local_task_job.py:211} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2022-10-07 02:25:21,009] {process_utils.py:100} INFO - Sending Signals.SIGTERM to GPID 168
+[2022-10-07 02:25:21,010] {taskinstance.py:1411} ERROR - Received SIGTERM. Terminating subprocesses.
+[2022-10-07 02:25:21,012] {subprocess.py:99} INFO - Sending SIGTERM signal to process group
+[2022-10-07 02:25:21,046] {process_utils.py:66} INFO - Process psutil.Process(pid=168, status='terminated', exitcode=0, started='02:24:55') (168) terminated with exit code 0
+[2022-10-07 02:26:21,023] {process_utils.py:113} WARNING - process psutil.Process(pid=190, name='chromium', status='zombie', started='02:24:56') did not respond to SIGTERM. Trying SIGKILL
+[2022-10-07 02:26:21,024] {process_utils.py:113} WARNING - process psutil.Process(pid=169, name='python', status='zombie', started='02:24:55') did not respond to SIGTERM. Trying SIGKILL
+[2022-10-07 02:26:21,026] {process_utils.py:113} WARNING - process psutil.Process(pid=217, name='chromium', status='zombie', started='02:24:56') did not respond to SIGTERM. Trying SIGKILL
+[2022-10-07 02:26:21,028] {process_utils.py:113} WARNING - process psutil.Process(pid=191, name='chromium', status='zombie', started='02:24:56') did not respond to SIGTERM. Trying SIGKILL
+[2022-10-07 02:26:21,029] {process_utils.py:113} WARNING - process psutil.Process(pid=208, name='chromium', status='zombie', started='02:24:56') did not respond to SIGTERM. Trying SIGKILL
+[2022-10-07 02:26:21,030] {process_utils.py:113} WARNING - process psutil.Process(pid=241, name='chromium', status='zombie', started='02:24:56') did not respond to SIGTERM. Trying SIGKILL
+[2022-10-07 02:26:21,031] {process_utils.py:113} WARNING - process psutil.Process(pid=177, name='chromium', status='zombie', started='02:24:56') did not respond to SIGTERM. Trying SIGKILL
+[2022-10-07 02:26:21,033] {process_utils.py:113} WARNING - process psutil.Process(pid=171, name='chromedriver', status='zombie', started='02:24:55') did not respond to SIGTERM. Trying SIGKILL
+[2022-10-07 02:27:21,047] {process_utils.py:124} ERROR - Process psutil.Process(pid=169, name='python', status='zombie', started='02:24:55') (169) could not be killed. Giving up.
+[2022-10-07 02:27:21,048] {process_utils.py:124} ERROR - Process psutil.Process(pid=217, name='chromium', status='zombie', started='02:24:56') (217) could not be killed. Giving up.
+[2022-10-07 02:27:21,050] {process_utils.py:124} ERROR - Process psutil.Process(pid=191, name='chromium', status='zombie', started='02:24:56') (191) could not be killed. Giving up.
+[2022-10-07 02:27:21,051] {process_utils.py:124} ERROR - Process psutil.Process(pid=208, name='chromium', status='zombie', started='02:24:56') (208) could not be killed. Giving up.
+[2022-10-07 02:27:21,052] {process_utils.py:124} ERROR - Process psutil.Process(pid=241, name='chromium', status='zombie', started='02:24:56') (241) could not be killed. Giving up.
+[2022-10-07 02:27:21,054] {process_utils.py:124} ERROR - Process psutil.Process(pid=177, name='chromium', status='zombie', started='02:24:56') (177) could not be killed. Giving up.
+[2022-10-07 02:27:21,055] {process_utils.py:124} ERROR - Process psutil.Process(pid=171, name='chromedriver', status='zombie', started='02:24:55') (171) could not be killed. Giving up.
+[2022-10-07 02:27:21,056] {process_utils.py:124} ERROR - Process psutil.Process(pid=190, name='chromium', status='zombie', started='02:24:56') (190) could not be killed. Giving up.

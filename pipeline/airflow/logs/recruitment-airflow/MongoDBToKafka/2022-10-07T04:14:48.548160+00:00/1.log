@@ -1,0 +1,35 @@
+[2022-10-07 04:17:41,141] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: recruitment-airflow.MongoDBToKafka manual__2022-10-07T04:14:48.548160+00:00 [queued]>
+[2022-10-07 04:17:41,166] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: recruitment-airflow.MongoDBToKafka manual__2022-10-07T04:14:48.548160+00:00 [queued]>
+[2022-10-07 04:17:41,168] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-07 04:17:41,169] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2022-10-07 04:17:41,170] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-07 04:17:41,235] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): MongoDBToKafka> on 2022-10-07 04:14:48.548160+00:00
+[2022-10-07 04:17:41,237] {standard_task_runner.py:52} INFO - Started process 195 to run task
+[2022-10-07 04:17:41,240] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'recruitment-airflow', 'MongoDBToKafka', 'manual__2022-10-07T04:14:48.548160+00:00', '--job-id', '63', '--raw', '--subdir', 'DAGS_FOLDER/recruitment_pipeline.py', '--cfg-path', '/tmp/tmp9ovk9nql', '--error-file', '/tmp/tmpnyzhbtsy']
+[2022-10-07 04:17:41,241] {standard_task_runner.py:77} INFO - Job 63: Subtask MongoDBToKafka
+[2022-10-07 04:17:41,329] {logging_mixin.py:109} INFO - Running <TaskInstance: recruitment-airflow.MongoDBToKafka manual__2022-10-07T04:14:48.548160+00:00 [running]> on host pipeline
+[2022-10-07 04:17:41,382] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/xcom.py:323 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-07 04:17:41,403] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:126 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-07 04:17:41,442] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:162 SAWarning: Coercing Subquery object into a select() for use in IN(); please pass a select() construct explicitly
+[2022-10-07 04:17:41,447] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:159 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-07 04:17:41,463] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=recruitment-airflow
+AIRFLOW_CTX_TASK_ID=MongoDBToKafka
+AIRFLOW_CTX_EXECUTION_DATE=2022-10-07T04:14:48.548160+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-10-07T04:14:48.548160+00:00
+[2022-10-07 04:17:41,465] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-10-07 04:17:41,466] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'python /opt/pipeline/script/MongoDBToKafka.py']
+[2022-10-07 04:17:41,471] {subprocess.py:85} INFO - Output:
+[2022-10-07 04:18:24,973] {subprocess.py:89} INFO - 1번 째 연결 실패
+[2022-10-07 04:18:24,989] {subprocess.py:89} INFO - 2번 째 연결 성공
+[2022-10-07 04:18:25,515] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-10-07 04:18:25,523] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/xcom.py:103 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-07 04:18:25,584] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=recruitment-airflow, task_id=MongoDBToKafka, execution_date=20221007T041448, start_date=20221007T041741, end_date=20221007T041825
+[2022-10-07 04:18:25,658] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-10-07 04:18:25,756] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-10-07 04:18:25,759] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/dag.py:1069 SADeprecationWarning: Query.value() is deprecated and will be removed in a future release.  Please use Query.with_entities() in combination with Query.scalar() (deprecated since: 1.4)
+[2022-10-07 04:18:25,762] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/dag.py:1069 SADeprecationWarning: Query.values() is deprecated and will be removed in a future release.  Please use Query.with_entities() (deprecated since: 1.4)

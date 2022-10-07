@@ -1,0 +1,33 @@
+[2022-10-07 02:58:25,383] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: recruitment-airflow.KafkaToS3 manual__2022-10-07T02:50:46.935482+00:00 [queued]>
+[2022-10-07 02:58:25,406] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: recruitment-airflow.KafkaToS3 manual__2022-10-07T02:50:46.935482+00:00 [queued]>
+[2022-10-07 02:58:25,407] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-07 02:58:25,408] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2022-10-07 02:58:25,410] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-07 02:58:25,470] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): KafkaToS3> on 2022-10-07 02:50:46.935482+00:00
+[2022-10-07 02:58:25,473] {standard_task_runner.py:52} INFO - Started process 1044 to run task
+[2022-10-07 02:58:25,476] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'recruitment-airflow', 'KafkaToS3', 'manual__2022-10-07T02:50:46.935482+00:00', '--job-id', '56', '--raw', '--subdir', 'DAGS_FOLDER/recruitment_pipeline.py', '--cfg-path', '/tmp/tmpbqvun9qx', '--error-file', '/tmp/tmp28v0ozrb']
+[2022-10-07 02:58:25,477] {standard_task_runner.py:77} INFO - Job 56: Subtask KafkaToS3
+[2022-10-07 02:58:25,559] {logging_mixin.py:109} INFO - Running <TaskInstance: recruitment-airflow.KafkaToS3 manual__2022-10-07T02:50:46.935482+00:00 [running]> on host pipeline
+[2022-10-07 02:58:25,605] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/xcom.py:323 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-07 02:58:25,624] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:126 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-07 02:58:25,661] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:162 SAWarning: Coercing Subquery object into a select() for use in IN(); please pass a select() construct explicitly
+[2022-10-07 02:58:25,665] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:159 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-07 02:58:25,680] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=recruitment-airflow
+AIRFLOW_CTX_TASK_ID=KafkaToS3
+AIRFLOW_CTX_EXECUTION_DATE=2022-10-07T02:50:46.935482+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-10-07T02:50:46.935482+00:00
+[2022-10-07 02:58:25,682] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-10-07 02:58:25,683] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'python /opt/pipeline/script/KafkaToS3.py']
+[2022-10-07 02:58:25,689] {subprocess.py:85} INFO - Output:
+[2022-10-07 03:02:19,947] {local_task_job.py:211} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2022-10-07 03:02:19,949] {process_utils.py:100} INFO - Sending Signals.SIGTERM to GPID 1044
+[2022-10-07 03:02:19,950] {taskinstance.py:1411} ERROR - Received SIGTERM. Terminating subprocesses.
+[2022-10-07 03:02:19,952] {subprocess.py:99} INFO - Sending SIGTERM signal to process group
+[2022-10-07 03:02:19,977] {process_utils.py:66} INFO - Process psutil.Process(pid=1044, status='terminated', exitcode=0, started='02:58:25') (1044) terminated with exit code 0
+[2022-10-07 03:03:19,982] {process_utils.py:113} WARNING - process psutil.Process(pid=1045, name='python', status='zombie', started='02:58:25') did not respond to SIGTERM. Trying SIGKILL
+[2022-10-07 03:04:20,020] {process_utils.py:124} ERROR - Process psutil.Process(pid=1045, name='python', status='zombie', started='02:58:25') (1045) could not be killed. Giving up.

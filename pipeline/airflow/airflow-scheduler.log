@@ -1,0 +1,96 @@
+2022-10-07 04:14:12,501 INFO - Starting the scheduler
+2022-10-07 04:14:12,505 INFO - Processing each file at most -1 times
+2022-10-07 04:14:12,512 INFO - Launched DagFileProcessorManager with pid: 23
+2022-10-07 04:14:12,515 INFO - Resetting orphaned tasks for active dag runs
+2022-10-07 04:14:12,519 INFO - Configured default timezone Timezone('UTC')
+2022-10-07 04:14:12,525 WARNING - /root/airflow/logs/scheduler/latest already exists as a dir/file. Skip creating symlink.
+2022-10-07 04:14:13,276 INFO - 1 tasks up for execution:
+	<TaskInstance: recruitment-airflow.KafkaConnectTest manual__2022-10-07T03:03:45.080881+00:00 [scheduled]>
+2022-10-07 04:14:13,281 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2022-10-07 04:14:13,284 INFO - DAG recruitment-airflow has 0/16 running and queued tasks
+2022-10-07 04:14:13,286 INFO - Setting the following tasks to queued state:
+	<TaskInstance: recruitment-airflow.KafkaConnectTest manual__2022-10-07T03:03:45.080881+00:00 [scheduled]>
+2022-10-07 04:14:13,326 INFO - Sending TaskInstanceKey(dag_id='recruitment-airflow', task_id='KafkaConnectTest', run_id='manual__2022-10-07T03:03:45.080881+00:00', try_number=1) to executor with priority 6 and queue default
+2022-10-07 04:14:13,328 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'recruitment-airflow', 'KafkaConnectTest', 'manual__2022-10-07T03:03:45.080881+00:00', '--local', '--subdir', 'DAGS_FOLDER/recruitment_pipeline.py']
+2022-10-07 04:14:13,345 INFO - Executing command: ['airflow', 'tasks', 'run', 'recruitment-airflow', 'KafkaConnectTest', 'manual__2022-10-07T03:03:45.080881+00:00', '--local', '--subdir', 'DAGS_FOLDER/recruitment_pipeline.py']
+2022-10-07 04:14:21,112 INFO - Executor reports execution of recruitment-airflow.KafkaConnectTest run_id=manual__2022-10-07T03:03:45.080881+00:00 exited with status success for try_number 1
+2022-10-07 04:14:21,147 INFO - TaskInstance Finished: dag_id=recruitment-airflow, task_id=KafkaConnectTest, run_id=manual__2022-10-07T03:03:45.080881+00:00, run_start_date=2022-10-07 04:14:14.178693+00:00, run_end_date=2022-10-07 04:14:20.723892+00:00, run_duration=6.545199, state=success, executor_state=success, try_number=1, max_tries=0, job_id=60, pool=default_pool, queue=default, priority_weight=6, operator=BashOperator
+2022-10-07 04:14:22,505 ERROR - Marking run <DagRun recruitment-airflow @ 2022-10-07 03:03:45.080881+00:00: manual__2022-10-07T03:03:45.080881+00:00, externally triggered: True> failed
+2022-10-07 04:14:22,507 INFO - DagRun Finished: dag_id=recruitment-airflow, execution_date=2022-10-07 03:03:45.080881+00:00, run_id=manual__2022-10-07T03:03:45.080881+00:00, run_start_date=2022-10-07 03:04:20.764592+00:00, run_end_date=2022-10-07 04:14:22.507445+00:00, run_duration=4201.742853, state=failed, external_trigger=True, run_type=manual, data_interval_start=2022-10-06 00:00:00+00:00, data_interval_end=2022-10-07 00:00:00+00:00, dag_hash=770dc606b30819ee53524e0491beb8a3
+2022-10-07 04:14:22,515 INFO - Setting next_dagrun for recruitment-airflow to 2022-10-08T00:00:00+00:00
+2022-10-07 04:14:49,772 INFO - 1 tasks up for execution:
+	<TaskInstance: recruitment-airflow.KafkaConnectTest manual__2022-10-07T04:14:48.548160+00:00 [scheduled]>
+2022-10-07 04:14:49,777 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2022-10-07 04:14:49,779 INFO - DAG recruitment-airflow has 0/16 running and queued tasks
+2022-10-07 04:14:49,781 INFO - Setting the following tasks to queued state:
+	<TaskInstance: recruitment-airflow.KafkaConnectTest manual__2022-10-07T04:14:48.548160+00:00 [scheduled]>
+2022-10-07 04:14:49,824 INFO - Sending TaskInstanceKey(dag_id='recruitment-airflow', task_id='KafkaConnectTest', run_id='manual__2022-10-07T04:14:48.548160+00:00', try_number=1) to executor with priority 6 and queue default
+2022-10-07 04:14:49,826 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'recruitment-airflow', 'KafkaConnectTest', 'manual__2022-10-07T04:14:48.548160+00:00', '--local', '--subdir', 'DAGS_FOLDER/recruitment_pipeline.py']
+2022-10-07 04:14:49,844 INFO - Executing command: ['airflow', 'tasks', 'run', 'recruitment-airflow', 'KafkaConnectTest', 'manual__2022-10-07T04:14:48.548160+00:00', '--local', '--subdir', 'DAGS_FOLDER/recruitment_pipeline.py']
+2022-10-07 04:14:56,966 INFO - Executor reports execution of recruitment-airflow.KafkaConnectTest run_id=manual__2022-10-07T04:14:48.548160+00:00 exited with status success for try_number 1
+2022-10-07 04:14:56,999 INFO - TaskInstance Finished: dag_id=recruitment-airflow, task_id=KafkaConnectTest, run_id=manual__2022-10-07T04:14:48.548160+00:00, run_start_date=2022-10-07 04:14:50.696248+00:00, run_end_date=2022-10-07 04:14:56.588569+00:00, run_duration=5.892321, state=success, executor_state=success, try_number=1, max_tries=0, job_id=61, pool=default_pool, queue=default, priority_weight=6, operator=BashOperator
+2022-10-07 04:14:57,291 INFO - 1 tasks up for execution:
+	<TaskInstance: recruitment-airflow.crawling manual__2022-10-07T04:14:48.548160+00:00 [scheduled]>
+2022-10-07 04:14:57,298 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2022-10-07 04:14:57,300 INFO - DAG recruitment-airflow has 0/16 running and queued tasks
+2022-10-07 04:14:57,303 INFO - Setting the following tasks to queued state:
+	<TaskInstance: recruitment-airflow.crawling manual__2022-10-07T04:14:48.548160+00:00 [scheduled]>
+2022-10-07 04:14:57,342 INFO - Sending TaskInstanceKey(dag_id='recruitment-airflow', task_id='crawling', run_id='manual__2022-10-07T04:14:48.548160+00:00', try_number=1) to executor with priority 5 and queue default
+2022-10-07 04:14:57,345 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'recruitment-airflow', 'crawling', 'manual__2022-10-07T04:14:48.548160+00:00', '--local', '--subdir', 'DAGS_FOLDER/recruitment_pipeline.py']
+2022-10-07 04:14:57,361 INFO - Executing command: ['airflow', 'tasks', 'run', 'recruitment-airflow', 'crawling', 'manual__2022-10-07T04:14:48.548160+00:00', '--local', '--subdir', 'DAGS_FOLDER/recruitment_pipeline.py']
+2022-10-07 04:17:39,635 INFO - Executor reports execution of recruitment-airflow.crawling run_id=manual__2022-10-07T04:14:48.548160+00:00 exited with status success for try_number 1
+2022-10-07 04:17:39,667 INFO - TaskInstance Finished: dag_id=recruitment-airflow, task_id=crawling, run_id=manual__2022-10-07T04:14:48.548160+00:00, run_start_date=2022-10-07 04:14:58.183877+00:00, run_end_date=2022-10-07 04:17:39.245680+00:00, run_duration=161.061803, state=success, executor_state=success, try_number=1, max_tries=0, job_id=62, pool=default_pool, queue=default, priority_weight=5, operator=BashOperator
+2022-10-07 04:17:39,680 ERROR - DagFileProcessorManager (PID=23) last sent a heartbeat 162.58 seconds ago! Restarting it
+2022-10-07 04:17:39,684 INFO - Sending Signals.SIGTERM to GPID 23
+2022-10-07 04:17:39,739 INFO - Process psutil.Process(pid=23, status='terminated', exitcode=0, started='04:14:12') (23) terminated with exit code 0
+2022-10-07 04:17:39,745 INFO - Launched DagFileProcessorManager with pid: 191
+2022-10-07 04:17:39,748 INFO - Configured default timezone Timezone('UTC')
+2022-10-07 04:17:39,754 WARNING - /root/airflow/logs/scheduler/latest already exists as a dir/file. Skip creating symlink.
+2022-10-07 04:17:40,268 INFO - 1 tasks up for execution:
+	<TaskInstance: recruitment-airflow.MongoDBToKafka manual__2022-10-07T04:14:48.548160+00:00 [scheduled]>
+2022-10-07 04:17:40,272 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2022-10-07 04:17:40,274 INFO - DAG recruitment-airflow has 0/16 running and queued tasks
+2022-10-07 04:17:40,276 INFO - Setting the following tasks to queued state:
+	<TaskInstance: recruitment-airflow.MongoDBToKafka manual__2022-10-07T04:14:48.548160+00:00 [scheduled]>
+2022-10-07 04:17:40,314 INFO - Sending TaskInstanceKey(dag_id='recruitment-airflow', task_id='MongoDBToKafka', run_id='manual__2022-10-07T04:14:48.548160+00:00', try_number=1) to executor with priority 4 and queue default
+2022-10-07 04:17:40,317 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'recruitment-airflow', 'MongoDBToKafka', 'manual__2022-10-07T04:14:48.548160+00:00', '--local', '--subdir', 'DAGS_FOLDER/recruitment_pipeline.py']
+2022-10-07 04:17:40,335 INFO - Executing command: ['airflow', 'tasks', 'run', 'recruitment-airflow', 'MongoDBToKafka', 'manual__2022-10-07T04:14:48.548160+00:00', '--local', '--subdir', 'DAGS_FOLDER/recruitment_pipeline.py']
+2022-10-07 04:18:25,922 INFO - Executor reports execution of recruitment-airflow.MongoDBToKafka run_id=manual__2022-10-07T04:14:48.548160+00:00 exited with status success for try_number 1
+2022-10-07 04:18:25,957 INFO - TaskInstance Finished: dag_id=recruitment-airflow, task_id=MongoDBToKafka, run_id=manual__2022-10-07T04:14:48.548160+00:00, run_start_date=2022-10-07 04:17:41.142397+00:00, run_end_date=2022-10-07 04:18:25.584449+00:00, run_duration=44.442052, state=success, executor_state=success, try_number=1, max_tries=0, job_id=63, pool=default_pool, queue=default, priority_weight=4, operator=BashOperator
+2022-10-07 04:18:26,440 INFO - 1 tasks up for execution:
+	<TaskInstance: recruitment-airflow.KafkaToS3 manual__2022-10-07T04:14:48.548160+00:00 [scheduled]>
+2022-10-07 04:18:26,444 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2022-10-07 04:18:26,447 INFO - DAG recruitment-airflow has 0/16 running and queued tasks
+2022-10-07 04:18:26,449 INFO - Setting the following tasks to queued state:
+	<TaskInstance: recruitment-airflow.KafkaToS3 manual__2022-10-07T04:14:48.548160+00:00 [scheduled]>
+2022-10-07 04:18:26,489 INFO - Sending TaskInstanceKey(dag_id='recruitment-airflow', task_id='KafkaToS3', run_id='manual__2022-10-07T04:14:48.548160+00:00', try_number=1) to executor with priority 3 and queue default
+2022-10-07 04:18:26,492 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'recruitment-airflow', 'KafkaToS3', 'manual__2022-10-07T04:14:48.548160+00:00', '--local', '--subdir', 'DAGS_FOLDER/recruitment_pipeline.py']
+2022-10-07 04:18:26,509 INFO - Executing command: ['airflow', 'tasks', 'run', 'recruitment-airflow', 'KafkaToS3', 'manual__2022-10-07T04:14:48.548160+00:00', '--local', '--subdir', 'DAGS_FOLDER/recruitment_pipeline.py']
+2022-10-07 04:19:07,763 INFO - Executor reports execution of recruitment-airflow.KafkaToS3 run_id=manual__2022-10-07T04:14:48.548160+00:00 exited with status success for try_number 1
+2022-10-07 04:19:07,807 INFO - TaskInstance Finished: dag_id=recruitment-airflow, task_id=KafkaToS3, run_id=manual__2022-10-07T04:14:48.548160+00:00, run_start_date=2022-10-07 04:18:27.444905+00:00, run_end_date=2022-10-07 04:19:07.344271+00:00, run_duration=39.899366, state=success, executor_state=success, try_number=1, max_tries=0, job_id=64, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator
+2022-10-07 04:19:08,333 INFO - 2 tasks up for execution:
+	<TaskInstance: recruitment-airflow.S3ToElasticsearch manual__2022-10-07T04:14:48.548160+00:00 [scheduled]>
+	<TaskInstance: recruitment-airflow.S3ToMySQL manual__2022-10-07T04:14:48.548160+00:00 [scheduled]>
+2022-10-07 04:19:08,338 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 2 task instances ready to be queued
+2022-10-07 04:19:08,340 INFO - DAG recruitment-airflow has 0/16 running and queued tasks
+2022-10-07 04:19:08,342 INFO - DAG recruitment-airflow has 1/16 running and queued tasks
+2022-10-07 04:19:08,344 INFO - Setting the following tasks to queued state:
+	<TaskInstance: recruitment-airflow.S3ToElasticsearch manual__2022-10-07T04:14:48.548160+00:00 [scheduled]>
+	<TaskInstance: recruitment-airflow.S3ToMySQL manual__2022-10-07T04:14:48.548160+00:00 [scheduled]>
+2022-10-07 04:19:08,392 INFO - Sending TaskInstanceKey(dag_id='recruitment-airflow', task_id='S3ToElasticsearch', run_id='manual__2022-10-07T04:14:48.548160+00:00', try_number=1) to executor with priority 1 and queue default
+2022-10-07 04:19:08,394 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'recruitment-airflow', 'S3ToElasticsearch', 'manual__2022-10-07T04:14:48.548160+00:00', '--local', '--subdir', 'DAGS_FOLDER/recruitment_pipeline.py']
+2022-10-07 04:19:08,396 INFO - Sending TaskInstanceKey(dag_id='recruitment-airflow', task_id='S3ToMySQL', run_id='manual__2022-10-07T04:14:48.548160+00:00', try_number=1) to executor with priority 1 and queue default
+2022-10-07 04:19:08,398 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'recruitment-airflow', 'S3ToMySQL', 'manual__2022-10-07T04:14:48.548160+00:00', '--local', '--subdir', 'DAGS_FOLDER/recruitment_pipeline.py']
+2022-10-07 04:19:08,420 INFO - Executing command: ['airflow', 'tasks', 'run', 'recruitment-airflow', 'S3ToElasticsearch', 'manual__2022-10-07T04:14:48.548160+00:00', '--local', '--subdir', 'DAGS_FOLDER/recruitment_pipeline.py']
+2022-10-07 04:19:11,873 INFO - Executing command: ['airflow', 'tasks', 'run', 'recruitment-airflow', 'S3ToMySQL', 'manual__2022-10-07T04:14:48.548160+00:00', '--local', '--subdir', 'DAGS_FOLDER/recruitment_pipeline.py']
+2022-10-07 04:19:13,588 INFO - Executor reports execution of recruitment-airflow.S3ToElasticsearch run_id=manual__2022-10-07T04:14:48.548160+00:00 exited with status success for try_number 1
+2022-10-07 04:19:13,591 INFO - Executor reports execution of recruitment-airflow.S3ToMySQL run_id=manual__2022-10-07T04:14:48.548160+00:00 exited with status success for try_number 1
+2022-10-07 04:19:13,628 INFO - TaskInstance Finished: dag_id=recruitment-airflow, task_id=S3ToElasticsearch, run_id=manual__2022-10-07T04:14:48.548160+00:00, run_start_date=2022-10-07 04:19:09.351347+00:00, run_end_date=2022-10-07 04:19:11.574980+00:00, run_duration=2.223633, state=success, executor_state=success, try_number=1, max_tries=0, job_id=65, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator
+2022-10-07 04:19:13,631 INFO - TaskInstance Finished: dag_id=recruitment-airflow, task_id=S3ToMySQL, run_id=manual__2022-10-07T04:14:48.548160+00:00, run_start_date=2022-10-07 04:19:12.742172+00:00, run_end_date=2022-10-07 04:19:13.264772+00:00, run_duration=0.5226, state=failed, executor_state=success, try_number=1, max_tries=0, job_id=66, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator
+2022-10-07 04:19:13,708 INFO - Resetting orphaned tasks for active dag runs
+2022-10-07 04:19:13,832 ERROR - Marking run <DagRun recruitment-airflow @ 2022-10-07 04:14:48.548160+00:00: manual__2022-10-07T04:14:48.548160+00:00, externally triggered: True> failed
+2022-10-07 04:19:13,836 INFO - DagRun Finished: dag_id=recruitment-airflow, execution_date=2022-10-07 04:14:48.548160+00:00, run_id=manual__2022-10-07T04:14:48.548160+00:00, run_start_date=2022-10-07 04:14:49.584661+00:00, run_end_date=2022-10-07 04:19:13.836307+00:00, run_duration=264.251646, state=failed, external_trigger=True, run_type=manual, data_interval_start=2022-10-06 00:00:00+00:00, data_interval_end=2022-10-07 00:00:00+00:00, dag_hash=770dc606b30819ee53524e0491beb8a3
+2022-10-07 04:19:13,843 INFO - Setting next_dagrun for recruitment-airflow to 2022-10-08T00:00:00+00:00
+2022-10-07 04:24:13,840 INFO - Resetting orphaned tasks for active dag runs
+2022-10-07 04:29:13,957 INFO - Resetting orphaned tasks for active dag runs
+2022-10-07 04:34:14,052 INFO - Resetting orphaned tasks for active dag runs

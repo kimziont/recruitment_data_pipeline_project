@@ -1,0 +1,43 @@
+[2022-10-07 02:54:07,312] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: recruitment-airflow.crawling manual__2022-10-07T02:53:47.294587+00:00 [queued]>
+[2022-10-07 02:54:07,337] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: recruitment-airflow.crawling manual__2022-10-07T02:53:47.294587+00:00 [queued]>
+[2022-10-07 02:54:07,338] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-07 02:54:07,339] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2022-10-07 02:54:07,340] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-07 02:54:07,417] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): crawling> on 2022-10-07 02:53:47.294587+00:00
+[2022-10-07 02:54:07,420] {standard_task_runner.py:52} INFO - Started process 914 to run task
+[2022-10-07 02:54:07,422] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'recruitment-airflow', 'crawling', 'manual__2022-10-07T02:53:47.294587+00:00', '--job-id', '53', '--raw', '--subdir', 'DAGS_FOLDER/recruitment_pipeline.py', '--cfg-path', '/tmp/tmpx9lb1oej', '--error-file', '/tmp/tmplgo2qx3r']
+[2022-10-07 02:54:07,424] {standard_task_runner.py:77} INFO - Job 53: Subtask crawling
+[2022-10-07 02:54:07,507] {logging_mixin.py:109} INFO - Running <TaskInstance: recruitment-airflow.crawling manual__2022-10-07T02:53:47.294587+00:00 [running]> on host pipeline
+[2022-10-07 02:54:07,551] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/xcom.py:323 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-07 02:54:07,574] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:126 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-07 02:54:07,610] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:162 SAWarning: Coercing Subquery object into a select() for use in IN(); please pass a select() construct explicitly
+[2022-10-07 02:54:07,615] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:159 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-07 02:54:07,630] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=recruitment-airflow
+AIRFLOW_CTX_TASK_ID=crawling
+AIRFLOW_CTX_EXECUTION_DATE=2022-10-07T02:53:47.294587+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-10-07T02:53:47.294587+00:00
+[2022-10-07 02:54:07,631] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-10-07 02:54:07,633] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'python /opt/pipeline/script/crawlingToMongo.py']
+[2022-10-07 02:54:07,638] {subprocess.py:85} INFO - Output:
+[2022-10-07 02:56:46,571] {subprocess.py:89} INFO - /opt/pipeline/script/crawlingToMongo.py:20: DeprecationWarning: executable_path has been deprecated, please pass in a Service object
+[2022-10-07 02:56:46,574] {subprocess.py:89} INFO -   driver = webdriver.Chrome(executable_path=path, chrome_options=chrome_options)
+[2022-10-07 02:56:46,576] {subprocess.py:89} INFO - /opt/pipeline/script/crawlingToMongo.py:20: DeprecationWarning: use options instead of chrome_options
+[2022-10-07 02:56:46,578] {subprocess.py:89} INFO -   driver = webdriver.Chrome(executable_path=path, chrome_options=chrome_options)
+[2022-10-07 02:56:46,579] {subprocess.py:89} INFO - 2
+[2022-10-07 02:56:46,581] {subprocess.py:89} INFO - -----1번 째 페이지 크롤링중----------------------------
+[2022-10-07 02:56:46,582] {subprocess.py:89} INFO - ['티맥스티베로_DB Engineer', '티맥스티베로_DBA', '페이타랩_[패스오더] 데이터 엔지니어(그로스해커)', '어뮤즈랩_AI 미디어 개발자', '바로고_Data Engineer (Data ETL Engineer)', '바로고_Public Cloud Engineer', '페이타랩_[패스오더] 백엔드(Spring, Python, MSA)개발자 (병역특례 산업기능요원 보충역/전직가능)', '스페이스워크_Data Scientist', '빅픽처팀_NLP / TTS 연구원 , 데이터 엔지니어, 데이터 사이언스', '111퍼센트_데이터 엔지니어', '쏘마_Detection Engineer', '쏘마_Data Engineer (데이터 엔지니어)', '쏘마_Back-end Engineer (백엔드 엔지니어)', '네오사피엔스_데이터 엔지니어', '버킷플레이스(오늘의집)_[전문연구요원] Software Engineer, Data', '싱크테크노_웹풀스택 (데이터융합 웹서비스 플랫폼 개발)', '쿤텍_데이터 개발자', '쿤텍_클라우드 데이터 엔지니어(Data Engineer)', '쿤텍_AI/DATA Engineer', 'Gauss Labs_AI Engineer']
+[2022-10-07 02:56:46,584] {subprocess.py:89} INFO - 2페이지로 이동합니다
+[2022-10-07 02:56:46,585] {subprocess.py:89} INFO - -----2번 째 페이지 크롤링중----------------------------
+[2022-10-07 02:56:46,586] {subprocess.py:89} INFO - ['스트리미_데이터 엔지니어', '클로봇_[기업부설연구소] Visual/LiDAR SLAM 개발', '이노팸_Visual  Geo-localization  Researcher', '인포보스_[인포보스]인공지능개발팀(산업기능요원, 전문연구요원 가능)', 'AB180_Data Scientist (데이터 사이언티스트)(병역특례 가능)', '해줌_[에너지 IT기업 해줌] 백엔드 개발자', '아이트_AI PM(팀장 이상 급) 및 개발자(AI, 빅데이터 분야)', '제네시스랩_Data Scientist', '올거나이즈코리아_[AI Startup] AI Researcher / Engineer', '릴리커버_백엔드 경력 개발자 모집', '인플루엔셜_[윌라] 데이터 엔지니어', '아비커스_(R&D) 플랫폼 개발 MLOps', '아비커스_Machine Learning Engineer', 'Xinics_DevOps 엔지니어', '아비커스_Perception Engineer']
+[2022-10-07 02:56:47,149] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-10-07 02:56:47,155] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/xcom.py:103 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-07 02:56:47,212] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=recruitment-airflow, task_id=crawling, execution_date=20221007T025347, start_date=20221007T025407, end_date=20221007T025647
+[2022-10-07 02:56:47,286] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-10-07 02:56:47,372] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-10-07 02:56:47,375] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/dag.py:1069 SADeprecationWarning: Query.value() is deprecated and will be removed in a future release.  Please use Query.with_entities() in combination with Query.scalar() (deprecated since: 1.4)
+[2022-10-07 02:56:47,377] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/dag.py:1069 SADeprecationWarning: Query.values() is deprecated and will be removed in a future release.  Please use Query.with_entities() (deprecated since: 1.4)
