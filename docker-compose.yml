@@ -14,6 +14,8 @@ services:
       - ./pipeline/pipeline.ini:/opt/pipeline/pipeline.ini
       - ./pipeline/airflow:/root/airflow
     tty: true
+    # 왜 안되는 걸까
+    # command: bash -c "airflow scheduler && airflow webserver -p 8080"
 
   mongodb:
     image: mongo:latest
@@ -112,6 +114,8 @@ services:
     volumes:
       - ./django:/opt/recruitment
     tty: true
+    # 왜 안되는 걸까
+    # command: ["python", "/opt/recruitment/manage.py", "runserver"]
 
 
 volumes:

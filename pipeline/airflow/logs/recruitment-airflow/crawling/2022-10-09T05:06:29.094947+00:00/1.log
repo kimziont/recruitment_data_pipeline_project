@@ -1,0 +1,272 @@
+[2022-10-09 05:06:39,612] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: recruitment-airflow.crawling manual__2022-10-09T05:06:29.094947+00:00 [queued]>
+[2022-10-09 05:06:39,669] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: recruitment-airflow.crawling manual__2022-10-09T05:06:29.094947+00:00 [queued]>
+[2022-10-09 05:06:39,671] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-09 05:06:39,673] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2022-10-09 05:06:39,674] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-09 05:06:39,770] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): crawling> on 2022-10-09 05:06:29.094947+00:00
+[2022-10-09 05:06:39,774] {standard_task_runner.py:52} INFO - Started process 4274 to run task
+[2022-10-09 05:06:39,776] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'recruitment-airflow', 'crawling', 'manual__2022-10-09T05:06:29.094947+00:00', '--job-id', '104', '--raw', '--subdir', 'DAGS_FOLDER/recruitment_pipeline.py', '--cfg-path', '/tmp/tmpogqb4i2t', '--error-file', '/tmp/tmp9c94yiu_']
+[2022-10-09 05:06:39,793] {standard_task_runner.py:77} INFO - Job 104: Subtask crawling
+[2022-10-09 05:06:39,884] {logging_mixin.py:109} INFO - Running <TaskInstance: recruitment-airflow.crawling manual__2022-10-09T05:06:29.094947+00:00 [running]> on host pipeline
+[2022-10-09 05:06:39,931] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/xcom.py:323 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-09 05:06:39,956] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:126 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-09 05:06:40,003] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:162 SAWarning: Coercing Subquery object into a select() for use in IN(); please pass a select() construct explicitly
+[2022-10-09 05:06:40,009] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:159 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-09 05:06:40,057] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=recruitment-airflow
+AIRFLOW_CTX_TASK_ID=crawling
+AIRFLOW_CTX_EXECUTION_DATE=2022-10-09T05:06:29.094947+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-10-09T05:06:29.094947+00:00
+[2022-10-09 05:06:40,059] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-10-09 05:06:40,060] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'python /opt/pipeline/script/crawlingToMongo.py']
+[2022-10-09 05:06:40,065] {subprocess.py:85} INFO - Output:
+[2022-10-09 05:14:15,655] {subprocess.py:89} INFO - [서버/백엔드] 직무 전체 페이지 수: 9쪽
+[2022-10-09 05:14:15,658] {subprocess.py:89} INFO - -----------[서버/백엔드] 직무 크롤링중-----------
+[2022-10-09 05:14:15,659] {subprocess.py:89} INFO - ----------------------------[서버/백엔드] 직무 1번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:14:15,660] {subprocess.py:89} INFO - ['아이오트러스트_[IoTrust] 디센트 백엔드 개발자', '오케스트로_Back-end Engineer', '멕아이씨에스_백엔드 개발자 채용(Spring boot)', '카카오브레인_Machine Learning Engineer - Inference Engine', '디에스랩글로벌_웹 백엔드 개발자 (Python)', '그린랩스_[신선하이개발실] 백엔드 개발 (주니어)', '라이너스_웹서비스 개발자', '아이언플래그_백엔드 개발자', '어뮤즈랩_Node.JS 개발자', '미리디_[미리디] Jr.백엔드 개발자 - 이미지 프로세싱', '슈퍼진_Server Developer (GAME)', '슈퍼진_Junior Sever Developer (SNS)', '아이비베리_서버/백엔드 개발', '플라잉캣_Node.js 백엔드 개발자', '커넥트핏_백엔드 개발자', '아이패밀리에스씨_PHP/Laravel 개발자', '위시켓_[위시켓 개발팀] 웹 개발자', '마드라스체크_[플로우] 시스템 신규 개발', '위메이드_블록체인 코어 및 연계 플랫폼 개발자', '로민_[로민] AI 솔루션 운영 개발자']
+[2022-10-09 05:14:15,662] {subprocess.py:89} INFO - 
+[2022-10-09 05:14:15,663] {subprocess.py:89} INFO - 2페이지로 이동합니다
+[2022-10-09 05:14:15,665] {subprocess.py:89} INFO - 
+[2022-10-09 05:14:15,667] {subprocess.py:89} INFO - ----------------------------[서버/백엔드] 직무 2번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:14:15,668] {subprocess.py:89} INFO - ['Klinelex_전기차 충전 플랫폼 개발', '에이스랩_자율주행 시스템 개발자 - 자율주행 데브코스 수강생 전용', '모두싸인_백엔드 엔지니어(산업기능요원 보충역, 전직)', '모두싸인_DevOps 엔지니어', '아우름케어매니지먼트_주니어 소프트웨어 개발자 (웹개발)', '페이타랩_[패스오더] 백엔드(Spring, Python, MSA)개발자 (병역특례 산업기능요원 보충역/전직가능)', '비바리퍼블리카(토스)_[토스뱅크] Server Developer (Internal Product)', '모젯_서버 개발자(주니어)_산업기능요원 편입/전직 가능', '일루미나리안_데브옵스 엔지니어(DevOps Engineer)', '위메이드_디파이 플랫폼 백엔드 개발자', '인플루엔셜_[윌라] 백엔드 개발자', '카페24_[개발팀] 이커머스 사입 및 공급 시스템 개발자', '레디앤스타트_웹개발자(루비온레일즈)', '엔버랩스_[BackEnd] Node.js 개발자', '단비교육_백엔드 주니어 개발자', '블루버드_SW 웹서버개발자', '로그프레소_데이터베이스 엔진 개발자', '알티베이스_.NET 기반 개발  / 네트워크 프로그램 개발  / C/C++/Java 개발자', '팀프레시_백엔드/풀스택 개발자', '콘캣_AI 기반 질병예측&챗봇 서비스 개발']
+[2022-10-09 05:14:15,669] {subprocess.py:89} INFO - 
+[2022-10-09 05:14:15,670] {subprocess.py:89} INFO - 3페이지로 이동합니다
+[2022-10-09 05:14:15,671] {subprocess.py:89} INFO - 
+[2022-10-09 05:14:15,673] {subprocess.py:89} INFO - ----------------------------[서버/백엔드] 직무 3번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:14:15,675] {subprocess.py:89} INFO - ['파인랩_헬스케어&핀테크 결합 APP 서비스 개발', '드림어스컴퍼니_[오디오플랫폼 FLO] Python 기반 빅데이터 처리 개발자', '엑심베이_Web Developer', '비바리퍼블리카(토스)_[토스뱅크] Server Developer (Platform)', '비바리퍼블리카(토스)_[토스뱅크] Server Developer (Product)', '스테이지랩스_백엔드 개발자', '쏘마_Data Engineer (데이터 엔지니어)', '쏘마_Back-end Engineer (백엔드 엔지니어)', '당근마켓_서버 엔지니어 - 광고 서비스', '미디움_[전략기획본부] 블록체인 스마트 컨트랙트 개발자', '비에스지파트너스_JavaScript 풀스택 개발자', '태화이노베이션_서버/백엔드, 프론트엔드, 웹 풀스택 개발자', '엔라이튼_백엔드 엔지니어 (병역특례 전문연구요원)', '오케스트로_Open-source Engineer', '오케스트로_Cloud Infra Engineer', '포자랩스_AI 작곡 시스템 백엔드 개발자', '네오사피엔스_파이썬 백엔드 개발자', '당근마켓_서버 엔지니어 - 운영개발', '오케스트로_Full Stack Developer (Cloud DevOps Service)', '당근마켓_서버 엔지니어 - 당근페이 플랫폼 (Java / Kotlin)']
+[2022-10-09 05:14:15,676] {subprocess.py:89} INFO - 
+[2022-10-09 05:14:15,677] {subprocess.py:89} INFO - 4페이지로 이동합니다
+[2022-10-09 05:14:15,679] {subprocess.py:89} INFO - 
+[2022-10-09 05:14:15,680] {subprocess.py:89} INFO - ----------------------------[서버/백엔드] 직무 4번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:14:15,681] {subprocess.py:89} INFO - ['당근마켓_서버 엔지니어 - 당근페이 서비스 (Java / Kotlin)', '오케스트로_Full Stack Developer (Cloud Service - MLOps)', '오케스트로_Senior Back-end Developer (Cloud Service - AIOps)', '버킷플레이스(오늘의집)_[전문연구요원] Software Engineer, Backend', '클래스유_[클래스유] 백엔드 개발자', '살린_백엔드 개발자', '맥스트_프론트엔드 개발자', '브릭_웹 벡엔드 개발자', '매드업_주니어 백엔드 개발자', '에이피알_Windows 개발자', '지지큐컴퍼니_Python Developer (파이썬 개발자)', '알에스인터렉티브_프론트엔드 개발자', '미디움_[전략기획본부] 블록체인 코어 개발자', '미디움_[전략기획본부] 블록체인 연동 백엔드 개발', '인스피언_클라우드EDI 서비스 개발자', 'iPortfolio_Back-end 개발자', '알라딘글로벌알앤디센터_웹/앱 백엔드 개발자', '쓰리덕스_웹 개발자', '쿤텍_데이터 개발자', '업스테이지_Software Engineer - 검색']
+[2022-10-09 05:14:15,682] {subprocess.py:89} INFO - 
+[2022-10-09 05:14:15,683] {subprocess.py:89} INFO - 5페이지로 이동합니다
+[2022-10-09 05:14:15,684] {subprocess.py:89} INFO - 
+[2022-10-09 05:14:15,686] {subprocess.py:89} INFO - ----------------------------[서버/백엔드] 직무 5번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:14:15,687] {subprocess.py:89} INFO - ['스와치온_백엔드 개발자', '넥슨코리아_[인텔리전스랩스] 프론트서버개발팀 백엔드 개발자 (Java)', '이스트소프트_[ESTsoft] 백엔드 개발자', 'Gauss Labs_AI Engineer', '스냅태그_백엔드(Node.js) 개발자', '슈퍼캣_[메타버스 ZEP] 서버 프로그래머', '스트리미_백엔드 개발자', '스트리미_DevOps 엔지니어', '버넥트_[개발센터] 백엔드 개발자', '액션파워_[액션파워] 백엔드 개발자', '크레이브몹_서버 프로그래머', '인포보스_[인포보스]솔루션개발팀(Front-end, Back-end / 산업기능요원, 전문연구요원 가능)', '슈퍼캣_[메타버스 ZEP] 백엔드 개발자', '슈퍼캣_[메타버스 ZEP] 콘텐츠 서버 프로그래머', '에어스메디컬_Backend Engineer', '무스마_소프트웨어 개발자(Back-end/Front-end)', '카카오브레인_Backend Engineer', '업스테이지_[전문연구요원] Software Engineer', '넥서스커뮤니티_C# 개발자', '엑스이허브_산업기능요원 개발자']
+[2022-10-09 05:14:15,688] {subprocess.py:89} INFO - 
+[2022-10-09 05:14:15,689] {subprocess.py:89} INFO - 6페이지로 이동합니다
+[2022-10-09 05:14:15,690] {subprocess.py:89} INFO - 
+[2022-10-09 05:14:15,691] {subprocess.py:89} INFO - ----------------------------[서버/백엔드] 직무 6번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:14:15,693] {subprocess.py:89} INFO - ['스와치온_백엔드 개발자', '넥슨코리아_[인텔리전스랩스] 프론트서버개발팀 백엔드 개발자 (Java)', '이스트소프트_[ESTsoft] 백엔드 개발자', 'Gauss Labs_AI Engineer', '스냅태그_백엔드(Node.js) 개발자', '슈퍼캣_[메타버스 ZEP] 서버 프로그래머', '스트리미_백엔드 개발자', '스트리미_DevOps 엔지니어', '버넥트_[개발센터] 백엔드 개발자', '액션파워_[액션파워] 백엔드 개발자', '크레이브몹_서버 프로그래머', '인포보스_[인포보스]솔루션개발팀(Front-end, Back-end / 산업기능요원, 전문연구요원 가능)', '슈퍼캣_[메타버스 ZEP] 백엔드 개발자', '슈퍼캣_[메타버스 ZEP] 콘텐츠 서버 프로그래머', '에어스메디컬_Backend Engineer', '무스마_소프트웨어 개발자(Back-end/Front-end)', '카카오브레인_Backend Engineer', '업스테이지_[전문연구요원] Software Engineer', '넥서스커뮤니티_C# 개발자', '엑스이허브_산업기능요원 개발자']
+[2022-10-09 05:14:15,696] {subprocess.py:89} INFO - 
+[2022-10-09 05:14:15,697] {subprocess.py:89} INFO - 7페이지로 이동합니다
+[2022-10-09 05:14:15,698] {subprocess.py:89} INFO - 
+[2022-10-09 05:14:15,699] {subprocess.py:89} INFO - ----------------------------[서버/백엔드] 직무 7번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:21:48,787] {subprocess.py:89} INFO - ['스와치온_백엔드 개발자', '넥슨코리아_[인텔리전스랩스] 프론트서버개발팀 백엔드 개발자 (Java)', '이스트소프트_[ESTsoft] 백엔드 개발자', 'Gauss Labs_AI Engineer', '스냅태그_백엔드(Node.js) 개발자', '슈퍼캣_[메타버스 ZEP] 서버 프로그래머', '스트리미_백엔드 개발자', '스트리미_DevOps 엔지니어', '버넥트_[개발센터] 백엔드 개발자', '액션파워_[액션파워] 백엔드 개발자', '크레이브몹_서버 프로그래머', '인포보스_[인포보스]솔루션개발팀(Front-end, Back-end / 산업기능요원, 전문연구요원 가능)', '슈퍼캣_[메타버스 ZEP] 백엔드 개발자', '슈퍼캣_[메타버스 ZEP] 콘텐츠 서버 프로그래머', '에어스메디컬_Backend Engineer', '무스마_소프트웨어 개발자(Back-end/Front-end)', '카카오브레인_Backend Engineer', '업스테이지_[전문연구요원] Software Engineer', '넥서스커뮤니티_C# 개발자', '엑스이허브_산업기능요원 개발자']
+[2022-10-09 05:21:48,791] {subprocess.py:89} INFO - 
+[2022-10-09 05:21:48,792] {subprocess.py:89} INFO - 8페이지로 이동합니다
+[2022-10-09 05:21:48,793] {subprocess.py:89} INFO - 
+[2022-10-09 05:21:48,795] {subprocess.py:89} INFO - ----------------------------[서버/백엔드] 직무 8번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:21:48,796] {subprocess.py:89} INFO - ['스와치온_백엔드 개발자', '넥슨코리아_[인텔리전스랩스] 프론트서버개발팀 백엔드 개발자 (Java)', '이스트소프트_[ESTsoft] 백엔드 개발자', 'Gauss Labs_AI Engineer', '스냅태그_백엔드(Node.js) 개발자', '슈퍼캣_[메타버스 ZEP] 서버 프로그래머', '스트리미_백엔드 개발자', '스트리미_DevOps 엔지니어', '버넥트_[개발센터] 백엔드 개발자', '액션파워_[액션파워] 백엔드 개발자', '크레이브몹_서버 프로그래머', '인포보스_[인포보스]솔루션개발팀(Front-end, Back-end / 산업기능요원, 전문연구요원 가능)', '슈퍼캣_[메타버스 ZEP] 백엔드 개발자', '슈퍼캣_[메타버스 ZEP] 콘텐츠 서버 프로그래머', '에어스메디컬_Backend Engineer', '무스마_소프트웨어 개발자(Back-end/Front-end)', '카카오브레인_Backend Engineer', '업스테이지_[전문연구요원] Software Engineer', '넥서스커뮤니티_C# 개발자', '엑스이허브_산업기능요원 개발자']
+[2022-10-09 05:21:48,799] {subprocess.py:89} INFO - 
+[2022-10-09 05:21:48,800] {subprocess.py:89} INFO - 9페이지로 이동합니다
+[2022-10-09 05:21:48,801] {subprocess.py:89} INFO - 
+[2022-10-09 05:21:48,802] {subprocess.py:89} INFO - ----------------------------[서버/백엔드] 직무 9번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:21:48,805] {subprocess.py:89} INFO - ['스와치온_백엔드 개발자', '넥슨코리아_[인텔리전스랩스] 프론트서버개발팀 백엔드 개발자 (Java)', '이스트소프트_[ESTsoft] 백엔드 개발자', 'Gauss Labs_AI Engineer', '스냅태그_백엔드(Node.js) 개발자', '슈퍼캣_[메타버스 ZEP] 서버 프로그래머', '스트리미_백엔드 개발자', '스트리미_DevOps 엔지니어', '버넥트_[개발센터] 백엔드 개발자', '액션파워_[액션파워] 백엔드 개발자', '크레이브몹_서버 프로그래머', '인포보스_[인포보스]솔루션개발팀(Front-end, Back-end / 산업기능요원, 전문연구요원 가능)', '슈퍼캣_[메타버스 ZEP] 백엔드 개발자', '슈퍼캣_[메타버스 ZEP] 콘텐츠 서버 프로그래머', '에어스메디컬_Backend Engineer', '무스마_소프트웨어 개발자(Back-end/Front-end)', '카카오브레인_Backend Engineer', '업스테이지_[전문연구요원] Software Engineer', '넥서스커뮤니티_C# 개발자', '엑스이허브_산업기능요원 개발자']
+[2022-10-09 05:21:48,807] {subprocess.py:89} INFO - 
+[2022-10-09 05:21:48,809] {subprocess.py:89} INFO - 10페이지로 이동합니다
+[2022-10-09 05:21:48,810] {subprocess.py:89} INFO - 
+[2022-10-09 05:21:48,811] {subprocess.py:89} INFO - [프론트엔드] 직무 전체 페이지 수: 7쪽
+[2022-10-09 05:21:48,812] {subprocess.py:89} INFO - -----------[프론트엔드] 직무 크롤링중-----------
+[2022-10-09 05:21:48,813] {subprocess.py:89} INFO - ----------------------------[프론트엔드] 직무 1번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:21:48,815] {subprocess.py:89} INFO - ['빅픽처팀_웹/앱 프론트엔드 개발자', '아이오트러스트_[IoTrust] 디센트 프론트엔드 개발자', '페이타랩_[패스오더] Windows 개발자', '페이타랩_[패스오더] 웹 프론트엔드 개발자', '크립토파라다이스_Front-end Junior Developer', '페이타랩_[패스오더] iOS 개발자', '멕아이씨에스_프론트엔드 개발자 채용(React)', '그린랩스_[신선하이개발실] 프론트엔드 개발 (주니어)', '라이너스_웹서비스 개발자', '에이피알_[에이피알] 프론트엔드 개발자', '아프리카티비_글로벌 서비스 Front-end 개발', '커넥트핏_프론트엔드(Flutter) 개발자', '위시켓_[위시켓 개발팀] 웹 개발자', '위메이드_백오피스 프론트 개발자', 'Klinelex_전기차 충전 플랫폼 개발', '모두싸인_프론트엔드 엔지니어(산업기능요원 보충역, 전직)', '페이타랩_[패스오더] Windows 개발자 (병역특례 산업기능요원 보충역/전직가능)', '페이타랩_[패스오더] iOS 개발자 (병역특례 산업기능요원 보충역/전직가능)', '페이타랩_[패스오더] 안드로이드 개발자', '페이타랩_[패스오더] 안드로이드 개발자 (병역특례 산업기능요원 보충역/전직가능)']
+[2022-10-09 05:21:48,820] {subprocess.py:89} INFO - 
+[2022-10-09 05:21:48,821] {subprocess.py:89} INFO - 2페이지로 이동합니다
+[2022-10-09 05:21:48,823] {subprocess.py:89} INFO - 
+[2022-10-09 05:21:48,825] {subprocess.py:89} INFO - ----------------------------[프론트엔드] 직무 2번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:21:48,827] {subprocess.py:89} INFO - ['페이타랩_[패스오더] 웹 프론트엔드 개발자 (병역특례 산업기능요원 보충역/전직가능)', '위메이드_디파이 플랫폼 스마트 컨트랙트 개발자', '카페24_[개발팀] 이커머스 사입 및 공급 시스템 개발자', '의식주컴퍼니_[런드리고] 웹 프론트엔드 개발자(신입 가능)', '미디움_[전략기획본부] 웹 프론트엔드 Frontend 개발자', '당근마켓_프론트엔드 엔지니어 - 당근페이', '레디앤스타트_웹개발자(루비온레일즈)', '단비교육_프런트엔드(ReactJS) 주니어 개발자', '블루버드_SW 웹서버개발자', '스마트캐스트_C++ 프로그래머 (QT)', '팀프레시_백엔드/풀스택 개발자', '파인랩_헬스케어&핀테크 결합 APP 서비스 개발', '콘캣_AR APP 서비스 개발', '미리디_[미리캔버스] 코어엔진 개발자', '스테이지랩스_프론트엔드 개발자', '쏘마_Data Engineer (데이터 엔지니어)', '쏘마_Back-end Engineer (백엔드 엔지니어)', '비에스지파트너스_JavaScript 풀스택 개발자', '태화이노베이션_서버/백엔드, 프론트엔드, 웹 풀스택 개발자', '네오사피엔스_프론트엔드 개발자 - 내부 플랫폼']
+[2022-10-09 05:21:48,828] {subprocess.py:89} INFO - 
+[2022-10-09 05:21:48,829] {subprocess.py:89} INFO - 3페이지로 이동합니다
+[2022-10-09 05:21:48,831] {subprocess.py:89} INFO - 
+[2022-10-09 05:21:48,832] {subprocess.py:89} INFO - ----------------------------[프론트엔드] 직무 3번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:21:48,833] {subprocess.py:89} INFO - ['네오사피엔스_프론트엔드 개발자', '오케스트로_Developer, Engineer', '오케스트로_Front-end Developer  (클라우드 관리 콘솔)', '오케스트로_Full Stack Developer (Cloud DevOps Service)', '오케스트로_Full Stack Developer (Cloud Service - MLOps)', '버킷플레이스(오늘의집)_[전문연구요원] Software Engineer, Frontend', '클래스유_[클래스유] 프론트엔드 개발자', '맥스트_프론트엔드 개발자', '브릭_웹 프론트 개발자', '인텔리즈_DeepLearning for machine vision[제조산업을 위한 인공지능 연구 개발자]', '식스샵_[플랫폼 팀] 프론트엔드 개발자', "아이에이치큐_'바바요(babayo)' OTT 플랫폼 프론트 개발자 (React)", "아이에이치큐_'바바요(babayo)'  OTT 플랫폼 모바일 개발자 (React-Native)", '한국시니어연구소_프론트 개발자 (Front-End Engineer)', '알라딘글로벌알앤디센터_블록체인 기반 웹서비스 프론트엔드 개발자', '비트바이트_웹 프론트엔드 개발자', '알에스인터렉티브_프론트엔드 개발자', '파모즈_서버키트 프론트엔드 서비스 개발자', '미디움_[전략기획본부] 블록체인 코어 개발자', '미디움_[전략기획본부] 블록체인 연동 백엔드 개발']
+[2022-10-09 05:21:48,835] {subprocess.py:89} INFO - 
+[2022-10-09 05:21:48,836] {subprocess.py:89} INFO - 4페이지로 이동합니다
+[2022-10-09 05:21:48,837] {subprocess.py:89} INFO - 
+[2022-10-09 05:21:48,838] {subprocess.py:89} INFO - ----------------------------[프론트엔드] 직무 4번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:53:09,778] {subprocess.py:89} INFO - ['iPortfolio_Front-end 개발자', '쓰리아이_Frontend Developer', '나인하이어_React 웹 프론트엔드 개발자, 부산', '알라딘글로벌알앤디센터_웹/앱 프론트 개발자', '쓰리덕스_웹 개발자', '룩코_모바일 앱 프론트엔드 개발자 (React-Native, Typescript) - 주니어, 시니어', '티피씨인터넷_웹 프론트엔드 개발자', '업스테이지_Software Engineer - 검색', '오케스트로_Front-end Developer(클라우드 모니터링)', '이우소프트_Web/Cloud Front-end', 'SKIA_Unity 개발자', '버넥트_[개발센터] 웹 개발자', '액션파워_[액션파워] 프론트엔드 개발자', '인포보스_[인포보스]솔루션개발팀(Front-end, Back-end / 산업기능요원, 전문연구요원 가능)', '에이럭스_소프트웨어 개발 엔지니어 (웹)', 'AB180_Junior Web SDK Engineer(주니어 웹 SDK 엔지니어)(병역특례 가능)', '무스마_소프트웨어 개발자(Back-end/Front-end)', '뮤즈라이브_프론트엔드 엔지니어(Front Engineer / React, Javascript)', '휴라_Frontend UI 개발자', '업스테이지_[전문연구요원] Software Engineer']
+[2022-10-09 05:53:09,781] {subprocess.py:89} INFO - 4페이지, 6번째 글을 읽어오지 못했습니다
+[2022-10-09 05:53:09,783] {subprocess.py:89} INFO - 에러 원인은 'Company' 입니다
+[2022-10-09 05:53:09,785] {subprocess.py:89} INFO - 에러공고 글 제목은 "" 입니다.
+[2022-10-09 05:53:09,786] {subprocess.py:89} INFO - 4페이지, 7번째 글을 읽어오지 못했습니다
+[2022-10-09 05:53:09,786] {subprocess.py:89} INFO - 에러 원인은 'Company' 입니다
+[2022-10-09 05:53:09,788] {subprocess.py:89} INFO - 에러공고 글 제목은 "" 입니다.
+[2022-10-09 05:53:09,789] {subprocess.py:89} INFO - 4페이지, 20번째 글을 읽어오지 못했습니다
+[2022-10-09 05:53:09,791] {subprocess.py:89} INFO - 에러 원인은 'Company' 입니다
+[2022-10-09 05:53:09,792] {subprocess.py:89} INFO - 에러공고 글 제목은 "" 입니다.
+[2022-10-09 05:53:09,793] {subprocess.py:89} INFO - 
+[2022-10-09 05:53:09,795] {subprocess.py:89} INFO - 5페이지로 이동합니다
+[2022-10-09 05:53:09,797] {subprocess.py:89} INFO - 
+[2022-10-09 05:53:09,798] {subprocess.py:89} INFO - ----------------------------[프론트엔드] 직무 5번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:53:09,799] {subprocess.py:89} INFO - ['엑스이허브_산업기능요원 개발자', '에스앤피랩_Frontend Developer', '아이트럭_프론트엔드 개발자', '빅인사이트_FrontEnd Team 개발자', '세탁특공대_React native Engineer(Front-end) 엔지니어', '아주큐엠에스_웹개발', '라이브커넥트_Flutter 앱 개발자', '바텍 네트웍스_Front-end 개발', '이노솔루션_LMS / CMS 개발자', '오토피디아_React Native 개발자', '오토피디아_React 개발자', '엑셀로_SW개발', '큐픽스_Angular/TypeScript, WebGL/OpenGL, 병역특례 가능', '클로버추얼패션_웹 그래픽스 개발자', '비바리퍼블리카(토스)_[토스뱅크] Frontend Developer', '긴트_[자율주행] 모바일 앱(App) 개발', '올거나이즈코리아_[AI Startup] React Front-end Engineer', '포커스미디어코리아_Frontend Engineer', '비바리퍼블리카(토스)_[토스뱅크] Internal Product Developer (고객 상담 시스템)', '트릿지_주니어 프론트엔드 개발자']
+[2022-10-09 05:53:09,801] {subprocess.py:89} INFO - 
+[2022-10-09 05:53:09,803] {subprocess.py:89} INFO - 6페이지로 이동합니다
+[2022-10-09 05:53:09,805] {subprocess.py:89} INFO - 
+[2022-10-09 05:53:09,807] {subprocess.py:89} INFO - ----------------------------[프론트엔드] 직무 6번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:53:09,810] {subprocess.py:89} INFO - ['빗썸코리아_[빗썸] 블록체인 개발', '넥스쳐_웹/플랫폼 개발자', '한국직무능력평가연구소_웹개발자 (JAVA)', '타르트_프로덕트 엔지니어 (프론트 / 백 / 데이터)', '메가존클라우드_Front End Web Development Engineer', '엔젤스윙_프론트엔드 엔지니어', '겟앤쇼_겟앤쇼 웹 개발자', '릴리커버_프론트엔드 개발자 모집', '루미르_UX/UI 개발', 'SKIA_AR iOS 개발자', '컨워스_OpenGL/GLSL 개발자', '히비스_플랫폼 서비스 개발 팀원', '컨워스_3D/2D 지도 프론트엔드 개발자', '데이터메이커_Frontend Engineer', '열정팩토리_프론트엔드 개발자 (Flutter)', '해긴_플랫폼 개발자', '브리치_프론트엔드&백엔드 개발자', '핀크_웹서버개발자', '핀크_Back-end서버개발자', '보이저엑스_Vrew 데스크탑 앱 개발자']
+[2022-10-09 05:53:09,811] {subprocess.py:89} INFO - 
+[2022-10-09 05:53:09,814] {subprocess.py:89} INFO - 7페이지로 이동합니다
+[2022-10-09 05:53:09,818] {subprocess.py:89} INFO - 
+[2022-10-09 05:53:09,820] {subprocess.py:89} INFO - ----------------------------[프론트엔드] 직무 7번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:53:09,822] {subprocess.py:89} INFO - ['아이엠에스모빌리티_프론트 개발자 (Front Developer)', '플랜티넷_C/C++ 개발', 'TAGby_Web Developer(Python)', '밀리만코리아_Software Engineer (Application 개발)', '블루펫_프론트엔드 개발자', '구루미_프론트엔드 개발자', '데이블_Senior Software Engineer', '피에이치씨_서버개발자', '한스바이오텍_키오스크 웹서비스 개발', '한마음스마트_키오스크 웹서비스 개발', '비바리퍼블리카(토스)_[토스코어] Frontend Developer', '솔트룩스_병특 전문연구요원 개발자', 'Xinics_프론트엔드 웹 개발자', 'Xinics_이러닝 웹 솔루션 개발자', '아이시큐어_웹 서비스 개발자']
+[2022-10-09 05:53:09,825] {subprocess.py:89} INFO - 7페이지, 7번째 글을 읽어오지 못했습니다
+[2022-10-09 05:53:09,827] {subprocess.py:89} INFO - 에러 원인은 'Company' 입니다
+[2022-10-09 05:53:09,829] {subprocess.py:89} INFO - 에러공고 글 제목은 "" 입니다.
+[2022-10-09 05:53:09,830] {subprocess.py:89} INFO - 
+[2022-10-09 05:53:09,831] {subprocess.py:89} INFO - 8페이지로 이동합니다
+[2022-10-09 05:53:09,833] {subprocess.py:89} INFO - 
+[2022-10-09 05:53:09,835] {subprocess.py:89} INFO - [웹 풀스택] 직무 전체 페이지 수: 5쪽
+[2022-10-09 05:53:09,836] {subprocess.py:89} INFO - -----------[웹 풀스택] 직무 크롤링중-----------
+[2022-10-09 05:53:09,838] {subprocess.py:89} INFO - ----------------------------[웹 풀스택] 직무 1번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:53:09,839] {subprocess.py:89} INFO - ['피에이치씨_서버개발자', '코그콤_웹 서비스 개발/연구', 'Xinics_백엔드 웹 개발자', 'Xinics_프론트엔드 웹 개발자', 'Xinics_이러닝 웹 솔루션 개발자', '리턴제로_AI 연구 개발, 서비스 개발', '아이시큐어_웹 서비스 개발자']
+[2022-10-09 05:53:09,840] {subprocess.py:89} INFO - 1페이지, 1번째 글을 읽어오지 못했습니다
+[2022-10-09 05:53:09,841] {subprocess.py:89} INFO - 에러 원인은 'Company' 입니다
+[2022-10-09 05:53:09,843] {subprocess.py:89} INFO - 에러공고 글 제목은 "" 입니다.
+[2022-10-09 05:53:09,845] {subprocess.py:89} INFO - 1페이지, 2번째 글을 읽어오지 못했습니다
+[2022-10-09 05:53:09,846] {subprocess.py:89} INFO - 에러 원인은 'NoneType' object has no attribute 'select_one' 입니다
+[2022-10-09 05:53:09,847] {subprocess.py:89} INFO - 에러공고 글 제목은 "웹 서비스 개발/연구" 입니다.
+[2022-10-09 05:53:09,848] {subprocess.py:89} INFO - 
+[2022-10-09 05:53:09,850] {subprocess.py:89} INFO - 2페이지로 이동합니다
+[2022-10-09 05:53:09,851] {subprocess.py:89} INFO - 
+[2022-10-09 05:53:09,852] {subprocess.py:89} INFO - ----------------------------[웹 풀스택] 직무 2번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:53:09,854] {subprocess.py:89} INFO - ['피에이치씨_서버개발자', '코그콤_웹 서비스 개발/연구', 'Xinics_백엔드 웹 개발자', 'Xinics_프론트엔드 웹 개발자', 'Xinics_이러닝 웹 솔루션 개발자', '리턴제로_AI 연구 개발, 서비스 개발', '아이시큐어_웹 서비스 개발자']
+[2022-10-09 05:53:09,856] {subprocess.py:89} INFO - 2페이지, 2번째 글을 읽어오지 못했습니다
+[2022-10-09 05:53:09,859] {subprocess.py:89} INFO - 에러 원인은 'NoneType' object has no attribute 'select_one' 입니다
+[2022-10-09 05:53:09,860] {subprocess.py:89} INFO - 에러공고 글 제목은 "웹 서비스 개발/연구" 입니다.
+[2022-10-09 05:53:09,862] {subprocess.py:89} INFO - 
+[2022-10-09 05:53:09,863] {subprocess.py:89} INFO - 3페이지로 이동합니다
+[2022-10-09 05:53:09,864] {subprocess.py:89} INFO - 
+[2022-10-09 05:53:09,865] {subprocess.py:89} INFO - ----------------------------[웹 풀스택] 직무 3번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:53:09,866] {subprocess.py:89} INFO - ['피에이치씨_서버개발자', '코그콤_웹 서비스 개발/연구', 'Xinics_백엔드 웹 개발자', 'Xinics_프론트엔드 웹 개발자', 'Xinics_이러닝 웹 솔루션 개발자', '리턴제로_AI 연구 개발, 서비스 개발', '아이시큐어_웹 서비스 개발자']
+[2022-10-09 05:53:09,867] {subprocess.py:89} INFO - 3페이지, 2번째 글을 읽어오지 못했습니다
+[2022-10-09 05:53:09,868] {subprocess.py:89} INFO - 에러 원인은 'NoneType' object has no attribute 'select_one' 입니다
+[2022-10-09 05:53:09,870] {subprocess.py:89} INFO - 에러공고 글 제목은 "웹 서비스 개발/연구" 입니다.
+[2022-10-09 05:53:09,871] {subprocess.py:89} INFO - 
+[2022-10-09 05:53:09,872] {subprocess.py:89} INFO - 4페이지로 이동합니다
+[2022-10-09 05:53:09,873] {subprocess.py:89} INFO - 
+[2022-10-09 05:53:09,874] {subprocess.py:89} INFO - ----------------------------[웹 풀스택] 직무 4번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:53:09,876] {subprocess.py:89} INFO - ['피에이치씨_서버개발자', '코그콤_웹 서비스 개발/연구', 'Xinics_백엔드 웹 개발자', 'Xinics_프론트엔드 웹 개발자', 'Xinics_이러닝 웹 솔루션 개발자', '리턴제로_AI 연구 개발, 서비스 개발', '아이시큐어_웹 서비스 개발자']
+[2022-10-09 05:53:09,877] {subprocess.py:89} INFO - 4페이지, 2번째 글을 읽어오지 못했습니다
+[2022-10-09 05:53:09,879] {subprocess.py:89} INFO - 에러 원인은 'NoneType' object has no attribute 'select_one' 입니다
+[2022-10-09 05:53:09,881] {subprocess.py:89} INFO - 에러공고 글 제목은 "웹 서비스 개발/연구" 입니다.
+[2022-10-09 05:53:09,884] {subprocess.py:89} INFO - 
+[2022-10-09 05:53:09,886] {subprocess.py:89} INFO - 5페이지로 이동합니다
+[2022-10-09 05:53:09,888] {subprocess.py:89} INFO - 
+[2022-10-09 05:53:09,889] {subprocess.py:89} INFO - ----------------------------[웹 풀스택] 직무 5번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:53:09,891] {subprocess.py:89} INFO - ['피에이치씨_서버개발자', '코그콤_웹 서비스 개발/연구', 'Xinics_백엔드 웹 개발자', 'Xinics_프론트엔드 웹 개발자', 'Xinics_이러닝 웹 솔루션 개발자', '리턴제로_AI 연구 개발, 서비스 개발', '아이시큐어_웹 서비스 개발자']
+[2022-10-09 05:53:09,892] {subprocess.py:89} INFO - 5페이지, 2번째 글을 읽어오지 못했습니다
+[2022-10-09 05:53:09,893] {subprocess.py:89} INFO - 에러 원인은 'NoneType' object has no attribute 'select_one' 입니다
+[2022-10-09 05:53:09,895] {subprocess.py:89} INFO - 에러공고 글 제목은 "웹 서비스 개발/연구" 입니다.
+[2022-10-09 05:53:09,896] {subprocess.py:89} INFO - 
+[2022-10-09 05:53:09,898] {subprocess.py:89} INFO - 6페이지로 이동합니다
+[2022-10-09 05:53:09,899] {subprocess.py:89} INFO - 
+[2022-10-09 05:53:09,901] {subprocess.py:89} INFO - [머신러닝] 직무 전체 페이지 수: 3쪽
+[2022-10-09 05:59:31,040] {subprocess.py:89} INFO - -----------[머신러닝] 직무 크롤링중-----------
+[2022-10-09 05:59:31,041] {subprocess.py:89} INFO - ----------------------------[머신러닝] 직무 1번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:59:31,043] {subprocess.py:89} INFO - ['에너자이_(임베디드) 소프트웨어 & AI 컴파일러 엔지니어', '에너자이_ML Engineer/Researcher', '클레온_AI Deep Learning Engineer 딥러닝 엔지니어 (전문연구요원 가능)', '퀀타매트릭스_머신러닝 엔지니어/ 데이터사이언티스트', '뉴로클_딥러닝 리서처', '리디_머신러닝 엔지니어(전문연구요원 가능)', '어뮤즈랩_AI 미디어 개발자', '로민_[로민] AI 솔루션 운영 개발자', '로민_[로민] AI 솔루션, 자연어처리 개발자', '로민_[로민] AI 솔루션, 컴퓨터비전 개발자', '에이스랩_자율주행 소프트웨어 개발자 - 자율주행 데브코스 수강생 전용', '휴레이포지티브_[휴레이] 머신러닝 개발자', '스페이스워크_Data Scientist', '포스로직_이미지 프로세싱 알고리즘 연구/ 최적화', '시터스_컴퓨터 비전 개발자', '빅픽처팀_NLP / TTS 연구원 , 데이터 엔지니어, 데이터 사이언스', '핀그램_소프트웨어 개발자', '오케스트로_AI / 클라우드 R&D 연구원 (정부과제 전담, 병역특례 가능)', '오케스트로_빅데이터 엔지니어(AIOps 팀)', '오케스트로_머신러닝(언어지능) 연구원']
+[2022-10-09 05:59:31,045] {subprocess.py:89} INFO - 1페이지, 1번째 글을 읽어오지 못했습니다
+[2022-10-09 05:59:31,047] {subprocess.py:89} INFO - 에러 원인은 'Company' 입니다
+[2022-10-09 05:59:31,050] {subprocess.py:89} INFO - 에러공고 글 제목은 "" 입니다.
+[2022-10-09 05:59:31,052] {subprocess.py:89} INFO - 
+[2022-10-09 05:59:31,053] {subprocess.py:89} INFO - 2페이지로 이동합니다
+[2022-10-09 05:59:31,056] {subprocess.py:89} INFO - 
+[2022-10-09 05:59:31,057] {subprocess.py:89} INFO - ----------------------------[머신러닝] 직무 2번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:59:31,059] {subprocess.py:89} INFO - ['오케스트로_머신러닝(시각지능) 연구원', '버킷플레이스(오늘의집)_[전문연구요원] Software Engineer, Machine Learning', '인텔리즈_DeepLearning for machine vision[제조산업을 위한 인공지능 연구 개발자]', '버넥트_[연구센터] Computer Vision-Visual SLAM Engineer', '아우름플래닛_AI/ML 엔지니어', '앤트_ML/DL Researcher', '아이지에이웍스_머신러닝 엔지니어 (디파이너리)', '업스테이지_Software Engineer - 검색', 'Gauss Labs_AI Engineer', 'SKIA_AR, Image processing 전문 연구원', '피에이치씨_AI 연구원 (원주의료기기테크노밸리)', '액션파워_[액션파워] 인공지능/머신러닝 엔지니어', '인포보스_[인포보스]인공지능개발팀(산업기능요원, 전문연구요원 가능)', 'AB180_Data Scientist (데이터 사이언티스트)(병역특례 가능)', '포자랩스_인공지능 작곡 딥러닝 개발자 (NLP)', '해줌_[에너지 IT기업 해줌] 백엔드 개발자', '뷰메진_컴퓨터비전 엔지니어 Junior', '데이터헌트_머신러닝 엔지니어(NLP) / 데이터 사이언티스트', '룩코_AI 엔지니어', '아이트럭_머신러닝 개발자']
+[2022-10-09 05:59:31,060] {subprocess.py:89} INFO - 
+[2022-10-09 05:59:31,062] {subprocess.py:89} INFO - 3페이지로 이동합니다
+[2022-10-09 05:59:31,064] {subprocess.py:89} INFO - 
+[2022-10-09 05:59:31,066] {subprocess.py:89} INFO - ----------------------------[머신러닝] 직무 3번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:59:31,068] {subprocess.py:89} INFO - ['누비랩_포인트 클라우드 엔지니어', '리콘랩스_컴퓨터비전 연구원(석박사)', '올거나이즈코리아_[AI Startup] AI Researcher / Engineer', '모아이스_2D Pose AI Researcher', '옴니어스_ML Engineer - Personalized Recommendation', '옴니어스_ML Engineer - Trend analytics', '옴니어스_ML Engineer - Computer vision', '모빌린트_딥러닝 알고리즘 엔지니어', '뉴블라_머신 러닝 기반 서비스를 위한 SaaS Solution Backend 개발', '데이터메이커_ML Engineer', '인플루엔셜_[윌라] 데이터 엔지니어', '아비커스_(R&D) 플랫폼 개발 MLOps', '씨엔알리서치_AI Engineer', '아비커스_Machine Learning Engineer', '아비커스_Computer Vision Engineer', '메디픽셀_[인공지능기업] 딥러닝/영상처리 연구원 모집', '니트로 스튜디오_카트라이더 드리프트 머신러닝 개발자', '바텍 네트웍스_클라우드기반 의료플랫폼 AI(영상/음성/텍스트 인식 등)개발자', '리턴제로_AI 연구 개발, 서비스 개발']
+[2022-10-09 05:59:31,070] {subprocess.py:89} INFO - 
+[2022-10-09 05:59:31,071] {subprocess.py:89} INFO - 4페이지로 이동합니다
+[2022-10-09 05:59:31,072] {subprocess.py:89} INFO - 
+[2022-10-09 05:59:31,073] {subprocess.py:89} INFO - [인공지능(AI)] 직무 전체 페이지 수: 4쪽
+[2022-10-09 05:59:31,074] {subprocess.py:89} INFO - -----------[인공지능(AI)] 직무 크롤링중-----------
+[2022-10-09 05:59:31,075] {subprocess.py:89} INFO - ----------------------------[인공지능(AI)] 직무 1번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:59:31,076] {subprocess.py:89} INFO - ['클로봇_[로봇응용개발팀] 로봇 응용 SW 개발', '클로봇_[기업부설연구소] Visual/LiDAR SLAM 개발', '한국클라우드_공공정책사업실 R&D 개발자', '프로그래머스 KDT 데브코스 자율주행 1기_(프로그래머스 자율주행 데브코스 수료생용 공고)자율주행 \x08Perception Engineer', '인포보스_[인포보스]인공지능개발팀(산업기능요원, 전문연구요원 가능)', 'AB180_Data Scientist (데이터 사이언티스트)(병역특례 가능)', '포자랩스_인공지능 작곡 딥러닝 개발자 (NLP)', '업스테이지_[전문연구요원] AI Research Engineer', '데이터헌트_머신러닝 엔지니어(NLP) / 데이터 사이언티스트', '룩코_AI 엔지니어', '누비랩_포인트 클라우드 엔지니어', '리콘랩스_컴퓨터비전 연구원(석박사)', '리콘랩스_AI 엔지니어', '아이트_AI PM(팀장 이상 급) 및 개발자(AI, 빅데이터 분야)', '제네시스랩_Data Scientist', '올거나이즈코리아_[AI Startup] AI Researcher / Engineer', '모아이스_2D Pose AI Researcher', '옴니어스_ML Engineer - Personalized Recommendation', '옴니어스_ML Engineer - Trend analytics', '옴니어스_ML Engineer - Computer vision']
+[2022-10-09 05:59:31,079] {subprocess.py:89} INFO - 1페이지, 1번째 글을 읽어오지 못했습니다
+[2022-10-09 05:59:31,080] {subprocess.py:89} INFO - 에러 원인은 'Company' 입니다
+[2022-10-09 05:59:31,081] {subprocess.py:89} INFO - 에러공고 글 제목은 "" 입니다.
+[2022-10-09 05:59:31,082] {subprocess.py:89} INFO - 
+[2022-10-09 05:59:31,083] {subprocess.py:89} INFO - 2페이지로 이동합니다
+[2022-10-09 05:59:31,084] {subprocess.py:89} INFO - 
+[2022-10-09 05:59:31,085] {subprocess.py:89} INFO - ----------------------------[인공지능(AI)] 직무 2번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:59:31,087] {subprocess.py:89} INFO - ['릴리커버_백엔드 경력 개발자 모집', '모빌린트_딥러닝 알고리즘 엔지니어', '인플루엔셜_[윌라] 데이터 엔지니어', '넥스트케이_딥러닝 영상분석 개발자', '보이저엑스_Vrew 데스크탑 앱 개발자', '씨엔알리서치_AI Engineer', '아비커스_Machine Learning Engineer', '아이엠에스모빌리티_IMS.Connect 백엔드 개발자', '메디픽셀_[인공지능기업] 딥러닝/영상처리 연구원 모집', '니트로 스튜디오_카트라이더 드리프트 머신러닝 개발자', '코그콤_웹 서비스 개발/연구', '바텍 네트웍스_클라우드기반 의료플랫폼 AI(영상/음성/텍스트 인식 등)개발자', '솔트룩스_데이터사이언티스트(석박사)', '솔트룩스_병특 전문연구요원 개발자']
+[2022-10-09 05:59:31,088] {subprocess.py:89} INFO - 2페이지, 11번째 글을 읽어오지 못했습니다
+[2022-10-09 05:59:31,089] {subprocess.py:89} INFO - 에러 원인은 'NoneType' object has no attribute 'select_one' 입니다
+[2022-10-09 05:59:31,090] {subprocess.py:89} INFO - 에러공고 글 제목은 "웹 서비스 개발/연구" 입니다.
+[2022-10-09 05:59:31,092] {subprocess.py:89} INFO - 
+[2022-10-09 05:59:31,093] {subprocess.py:89} INFO - 3페이지로 이동합니다
+[2022-10-09 05:59:31,094] {subprocess.py:89} INFO - 
+[2022-10-09 05:59:31,095] {subprocess.py:89} INFO - ----------------------------[인공지능(AI)] 직무 3번 째 페이지 크롤링중----------------------------
+[2022-10-09 05:59:31,097] {subprocess.py:89} INFO - ['릴리커버_백엔드 경력 개발자 모집', '모빌린트_딥러닝 알고리즘 엔지니어', '인플루엔셜_[윌라] 데이터 엔지니어', '넥스트케이_딥러닝 영상분석 개발자', '보이저엑스_Vrew 데스크탑 앱 개발자', '씨엔알리서치_AI Engineer', '아비커스_Machine Learning Engineer', '아이엠에스모빌리티_IMS.Connect 백엔드 개발자', '메디픽셀_[인공지능기업] 딥러닝/영상처리 연구원 모집', '니트로 스튜디오_카트라이더 드리프트 머신러닝 개발자', '코그콤_웹 서비스 개발/연구', '바텍 네트웍스_클라우드기반 의료플랫폼 AI(영상/음성/텍스트 인식 등)개발자', '솔트룩스_데이터사이언티스트(석박사)', '솔트룩스_병특 전문연구요원 개발자']
+[2022-10-09 05:59:31,099] {subprocess.py:89} INFO - 3페이지, 11번째 글을 읽어오지 못했습니다
+[2022-10-09 05:59:31,100] {subprocess.py:89} INFO - 에러 원인은 'NoneType' object has no attribute 'select_one' 입니다
+[2022-10-09 05:59:31,101] {subprocess.py:89} INFO - 에러공고 글 제목은 "웹 서비스 개발/연구" 입니다.
+[2022-10-09 05:59:31,101] {subprocess.py:89} INFO - 
+[2022-10-09 05:59:31,102] {subprocess.py:89} INFO - 4페이지로 이동합니다
+[2022-10-09 05:59:31,103] {subprocess.py:89} INFO - 
+[2022-10-09 05:59:31,104] {subprocess.py:89} INFO - ----------------------------[인공지능(AI)] 직무 4번 째 페이지 크롤링중----------------------------
+[2022-10-09 06:04:07,716] {subprocess.py:89} INFO - /opt/pipeline/script/crawlingToMongo.py:37: DeprecationWarning: executable_path has been deprecated, please pass in a Service object
+[2022-10-09 06:04:07,720] {subprocess.py:89} INFO -   driver = webdriver.Chrome(executable_path=chrome_driver_path, chrome_options=chrome_options)
+[2022-10-09 06:04:07,722] {subprocess.py:89} INFO - /opt/pipeline/script/crawlingToMongo.py:37: DeprecationWarning: use options instead of chrome_options
+[2022-10-09 06:04:07,724] {subprocess.py:89} INFO -   driver = webdriver.Chrome(executable_path=chrome_driver_path, chrome_options=chrome_options)
+[2022-10-09 06:04:07,726] {subprocess.py:89} INFO - ['릴리커버_백엔드 경력 개발자 모집', '모빌린트_딥러닝 알고리즘 엔지니어', '인플루엔셜_[윌라] 데이터 엔지니어', '넥스트케이_딥러닝 영상분석 개발자', '보이저엑스_Vrew 데스크탑 앱 개발자', '씨엔알리서치_AI Engineer', '아비커스_Machine Learning Engineer', '아이엠에스모빌리티_IMS.Connect 백엔드 개발자', '메디픽셀_[인공지능기업] 딥러닝/영상처리 연구원 모집', '니트로 스튜디오_카트라이더 드리프트 머신러닝 개발자', '코그콤_웹 서비스 개발/연구', '바텍 네트웍스_클라우드기반 의료플랫폼 AI(영상/음성/텍스트 인식 등)개발자', '솔트룩스_데이터사이언티스트(석박사)', '솔트룩스_병특 전문연구요원 개발자']
+[2022-10-09 06:04:07,727] {subprocess.py:89} INFO - 4페이지, 11번째 글을 읽어오지 못했습니다
+[2022-10-09 06:04:07,730] {subprocess.py:89} INFO - 에러 원인은 'NoneType' object has no attribute 'select_one' 입니다
+[2022-10-09 06:04:07,732] {subprocess.py:89} INFO - 에러공고 글 제목은 "웹 서비스 개발/연구" 입니다.
+[2022-10-09 06:04:07,734] {subprocess.py:89} INFO - 
+[2022-10-09 06:04:07,736] {subprocess.py:89} INFO - 5페이지로 이동합니다
+[2022-10-09 06:04:07,739] {subprocess.py:89} INFO - 
+[2022-10-09 06:04:07,742] {subprocess.py:89} INFO - [데이터 엔지니어] 직무 전체 페이지 수: 2쪽
+[2022-10-09 06:04:07,744] {subprocess.py:89} INFO - -----------[데이터 엔지니어] 직무 크롤링중-----------
+[2022-10-09 06:04:07,746] {subprocess.py:89} INFO - ----------------------------[데이터 엔지니어] 직무 1번 째 페이지 크롤링중----------------------------
+[2022-10-09 06:04:07,747] {subprocess.py:89} INFO - ['티맥스티베로_DB Application 개발자', '티맥스티베로_DB Engine 개발자', '페이타랩_[패스오더] 데이터 엔지니어(그로스해커)', '어뮤즈랩_AI 미디어 개발자', '바로고_Data Engineer (Data ETL Engineer)', '바로고_Public Cloud Engineer', '페이타랩_[패스오더] 백엔드(Spring, Python, MSA)개발자 (병역특례 산업기능요원 보충역/전직가능)', '스페이스워크_Data Scientist', '빅픽처팀_NLP / TTS 연구원 , 데이터 엔지니어, 데이터 사이언스', '111퍼센트_데이터 엔지니어', '쏘마_Detection Engineer', '쏘마_Data Engineer (데이터 엔지니어)', '쏘마_Back-end Engineer (백엔드 엔지니어)', '네오사피엔스_데이터 엔지니어', '버킷플레이스(오늘의집)_[전문연구요원] Software Engineer, Data', '싱크테크노_웹풀스택 (데이터융합 웹서비스 플랫폼 개발)', '쿤텍_데이터 개발자', '쿤텍_클라우드 데이터 엔지니어(Data Engineer)', '쿤텍_AI/DATA Engineer', 'Gauss Labs_AI Engineer']
+[2022-10-09 06:04:07,749] {subprocess.py:89} INFO - 1페이지, 1번째 글을 읽어오지 못했습니다
+[2022-10-09 06:04:07,752] {subprocess.py:89} INFO - 에러 원인은 'Company' 입니다
+[2022-10-09 06:04:07,753] {subprocess.py:89} INFO - 에러공고 글 제목은 "" 입니다.
+[2022-10-09 06:04:07,755] {subprocess.py:89} INFO - 1페이지, 16번째 글을 읽어오지 못했습니다. 에러 원인: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[3]/div/section[2]/div/ul/li[16]/div[2]/div[1]/h5/a"}
+[2022-10-09 06:04:07,756] {subprocess.py:89} INFO -   (Session info: headless chrome=89.0.4389.114)
+[2022-10-09 06:04:07,758] {subprocess.py:89} INFO - Stacktrace:
+[2022-10-09 06:04:07,760] {subprocess.py:89} INFO - #0 0xaaaae6dbd38c <unknown>
+[2022-10-09 06:04:07,762] {subprocess.py:89} INFO - .
+[2022-10-09 06:04:07,764] {subprocess.py:89} INFO - 1페이지, 17번째 글을 읽어오지 못했습니다. 에러 원인: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[3]/div/section[2]/div/ul/li[17]/div[2]/div[1]/h5/a"}
+[2022-10-09 06:04:07,766] {subprocess.py:89} INFO -   (Session info: headless chrome=89.0.4389.114)
+[2022-10-09 06:04:07,768] {subprocess.py:89} INFO - Stacktrace:
+[2022-10-09 06:04:07,770] {subprocess.py:89} INFO - #0 0xaaaae6dbd38c <unknown>
+[2022-10-09 06:04:07,771] {subprocess.py:89} INFO - .
+[2022-10-09 06:04:07,772] {subprocess.py:89} INFO - 1페이지, 18번째 글을 읽어오지 못했습니다. 에러 원인: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[3]/div/section[2]/div/ul/li[18]/div[2]/div[1]/h5/a"}
+[2022-10-09 06:04:07,774] {subprocess.py:89} INFO -   (Session info: headless chrome=89.0.4389.114)
+[2022-10-09 06:04:07,776] {subprocess.py:89} INFO - Stacktrace:
+[2022-10-09 06:04:07,778] {subprocess.py:89} INFO - #0 0xaaaae6dbd38c <unknown>
+[2022-10-09 06:04:07,780] {subprocess.py:89} INFO - .
+[2022-10-09 06:04:07,784] {subprocess.py:89} INFO - 1페이지, 19번째 글을 읽어오지 못했습니다. 에러 원인: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[3]/div/section[2]/div/ul/li[19]/div[2]/div[1]/h5/a"}
+[2022-10-09 06:04:07,786] {subprocess.py:89} INFO -   (Session info: headless chrome=89.0.4389.114)
+[2022-10-09 06:04:07,788] {subprocess.py:89} INFO - Stacktrace:
+[2022-10-09 06:04:07,790] {subprocess.py:89} INFO - #0 0xaaaae6dbd38c <unknown>
+[2022-10-09 06:04:07,791] {subprocess.py:89} INFO - .
+[2022-10-09 06:04:07,793] {subprocess.py:89} INFO - 1페이지, 20번째 글을 읽어오지 못했습니다. 에러 원인: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[3]/div/section[2]/div/ul/li[20]/div[2]/div[1]/h5/a"}
+[2022-10-09 06:04:07,795] {subprocess.py:89} INFO -   (Session info: headless chrome=89.0.4389.114)
+[2022-10-09 06:04:07,797] {subprocess.py:89} INFO - Stacktrace:
+[2022-10-09 06:04:07,799] {subprocess.py:89} INFO - #0 0xaaaae6dbd38c <unknown>
+[2022-10-09 06:04:07,802] {subprocess.py:89} INFO - .
+[2022-10-09 06:04:07,804] {subprocess.py:89} INFO - 
+[2022-10-09 06:04:07,806] {subprocess.py:89} INFO - 2페이지로 이동합니다
+[2022-10-09 06:04:07,808] {subprocess.py:89} INFO - 
+[2022-10-09 06:04:07,810] {subprocess.py:89} INFO - ----------------------------[데이터 엔지니어] 직무 2번 째 페이지 크롤링중----------------------------
+[2022-10-09 06:04:07,812] {subprocess.py:89} INFO - ['스트리미_데이터 엔지니어', '클로봇_[기업부설연구소] Visual/LiDAR SLAM 개발', '이노팸_Visual  Geo-localization  Researcher', '인포보스_[인포보스]인공지능개발팀(산업기능요원, 전문연구요원 가능)', 'AB180_Data Scientist (데이터 사이언티스트)(병역특례 가능)', '해줌_[에너지 IT기업 해줌] 백엔드 개발자', '아이트_AI PM(팀장 이상 급) 및 개발자(AI, 빅데이터 분야)', '제네시스랩_Data Scientist', '올거나이즈코리아_[AI Startup] AI Researcher / Engineer', '릴리커버_백엔드 경력 개발자 모집', '인플루엔셜_[윌라] 데이터 엔지니어', '아비커스_(R&D) 플랫폼 개발 MLOps', '아비커스_Machine Learning Engineer', 'Xinics_DevOps 엔지니어', '아비커스_Perception Engineer']
+[2022-10-09 06:04:07,814] {subprocess.py:89} INFO - 
+[2022-10-09 06:04:07,817] {subprocess.py:89} INFO - 3페이지로 이동합니다
+[2022-10-09 06:04:07,819] {subprocess.py:89} INFO - 
+[2022-10-09 06:04:08,169] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-10-09 06:04:08,181] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/xcom.py:103 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-09 06:04:08,314] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=recruitment-airflow, task_id=crawling, execution_date=20221009T050629, start_date=20221009T050639, end_date=20221009T060408
+[2022-10-09 06:04:08,447] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-10-09 06:04:08,539] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-10-09 06:04:08,541] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/dag.py:1069 SADeprecationWarning: Query.value() is deprecated and will be removed in a future release.  Please use Query.with_entities() in combination with Query.scalar() (deprecated since: 1.4)
+[2022-10-09 06:04:08,543] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/dag.py:1069 SADeprecationWarning: Query.values() is deprecated and will be removed in a future release.  Please use Query.with_entities() (deprecated since: 1.4)

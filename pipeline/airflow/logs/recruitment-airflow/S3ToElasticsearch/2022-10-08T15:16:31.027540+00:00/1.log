@@ -1,0 +1,367 @@
+[2022-10-08 15:32:18,089] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: recruitment-airflow.S3ToElasticsearch manual__2022-10-08T15:16:31.027540+00:00 [queued]>
+[2022-10-08 15:32:18,115] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: recruitment-airflow.S3ToElasticsearch manual__2022-10-08T15:16:31.027540+00:00 [queued]>
+[2022-10-08 15:32:18,116] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-08 15:32:18,117] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2022-10-08 15:32:18,118] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-08 15:32:18,191] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): S3ToElasticsearch> on 2022-10-08 15:16:31.027540+00:00
+[2022-10-08 15:32:18,194] {standard_task_runner.py:52} INFO - Started process 237 to run task
+[2022-10-08 15:32:18,196] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'recruitment-airflow', 'S3ToElasticsearch', 'manual__2022-10-08T15:16:31.027540+00:00', '--job-id', '83', '--raw', '--subdir', 'DAGS_FOLDER/recruitment_pipeline.py', '--cfg-path', '/tmp/tmpzdzn1mv5', '--error-file', '/tmp/tmpl3by1ora']
+[2022-10-08 15:32:18,198] {standard_task_runner.py:77} INFO - Job 83: Subtask S3ToElasticsearch
+[2022-10-08 15:32:18,291] {logging_mixin.py:109} INFO - Running <TaskInstance: recruitment-airflow.S3ToElasticsearch manual__2022-10-08T15:16:31.027540+00:00 [running]> on host pipeline
+[2022-10-08 15:32:18,346] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/xcom.py:323 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-08 15:32:18,371] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:126 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-08 15:32:18,416] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:162 SAWarning: Coercing Subquery object into a select() for use in IN(); please pass a select() construct explicitly
+[2022-10-08 15:32:18,420] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:159 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-08 15:32:18,442] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=recruitment-airflow
+AIRFLOW_CTX_TASK_ID=S3ToElasticsearch
+AIRFLOW_CTX_EXECUTION_DATE=2022-10-08T15:16:31.027540+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-10-08T15:16:31.027540+00:00
+[2022-10-08 15:32:18,444] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-10-08 15:32:18,445] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'python /opt/pipeline/script/S3ToElasticsearch.py']
+[2022-10-08 15:32:18,453] {subprocess.py:85} INFO - Output:
+[2022-10-08 15:32:47,186] {subprocess.py:89} INFO - programmers/111퍼센트데이터 엔지니어.json
+[2022-10-08 15:32:47,189] {subprocess.py:89} INFO - programmers/AB180Data Scientist (데이터 사이언티스트)(병역특례 가능).json
+[2022-10-08 15:32:47,190] {subprocess.py:89} INFO - programmers/AB180Junior Web SDK Engineer(주니어 웹 SDK 엔지니어)(병역특례 가능).json
+[2022-10-08 15:32:47,191] {subprocess.py:89} INFO - programmers/Coupang[Coupang] Senior, Backend engineer (SCM).json
+[2022-10-08 15:32:47,192] {subprocess.py:89} INFO - programmers/Gauss LabsAI Engineer.json
+[2022-10-08 15:32:47,193] {subprocess.py:89} INFO - programmers/Klinelex전기차 충전 플랫폼 개발.json
+[2022-10-08 15:32:47,194] {subprocess.py:89} INFO - programmers/OGQ서버 개발자.json
+[2022-10-08 15:32:47,195] {subprocess.py:89} INFO - programmers/SKIAAR iOS 개발자.json
+[2022-10-08 15:32:47,197] {subprocess.py:89} INFO - programmers/SKIAAR, Image processing 전문 연구원.json
+[2022-10-08 15:32:47,198] {subprocess.py:89} INFO - programmers/SKIAUnity 개발자.json
+[2022-10-08 15:32:47,199] {subprocess.py:89} INFO - programmers/Superb AISoftware Engineer (전문연구요원 편입_전직 가능).json
+[2022-10-08 15:32:47,200] {subprocess.py:89} INFO - programmers/TAGbyWeb Developer(Python).json
+[2022-10-08 15:32:47,201] {subprocess.py:89} INFO - programmers/XinicsDevOps 엔지니어.json
+[2022-10-08 15:32:47,201] {subprocess.py:89} INFO - programmers/Xinics백엔드 웹 개발자.json
+[2022-10-08 15:32:47,202] {subprocess.py:89} INFO - programmers/Xinics이러닝 웹 솔루션 개발자.json
+[2022-10-08 15:32:47,203] {subprocess.py:89} INFO - programmers/Xinics프론트엔드 웹 개발자.json
+[2022-10-08 15:32:47,204] {subprocess.py:89} INFO - programmers/iPortfolioBack-end 개발자.json
+[2022-10-08 15:32:47,204] {subprocess.py:89} INFO - programmers/iPortfolioFront-end 개발자.json
+[2022-10-08 15:32:47,205] {subprocess.py:89} INFO - programmers/겟앤쇼겟앤쇼 웹 개발자.json
+[2022-10-08 15:32:47,206] {subprocess.py:89} INFO - programmers/구루미프론트엔드 개발자.json
+[2022-10-08 15:32:47,207] {subprocess.py:89} INFO - programmers/그린랩스[신선하이개발실] 백엔드 개발 (주니어).json
+[2022-10-08 15:32:47,208] {subprocess.py:89} INFO - programmers/그린랩스[신선하이개발실] 프론트엔드 개발 (주니어).json
+[2022-10-08 15:32:47,209] {subprocess.py:89} INFO - programmers/긴트[자율주행] 모바일 앱(App) 개발.json
+[2022-10-08 15:32:47,210] {subprocess.py:89} INFO - programmers/나인하이어React 웹 프론트엔드 개발자, 부산.json
+[2022-10-08 15:32:47,211] {subprocess.py:89} INFO - programmers/네오사피엔스데이터 엔지니어.json
+[2022-10-08 15:32:47,213] {subprocess.py:89} INFO - programmers/네오사피엔스파이썬 백엔드 개발자.json
+[2022-10-08 15:32:47,214] {subprocess.py:89} INFO - programmers/네오사피엔스프론트엔드 개발자 - 내부 플랫폼.json
+[2022-10-08 15:32:47,214] {subprocess.py:89} INFO - programmers/네오사피엔스프론트엔드 개발자.json
+[2022-10-08 15:32:47,215] {subprocess.py:89} INFO - programmers/넥서스커뮤니티C# 개발자.json
+[2022-10-08 15:32:47,216] {subprocess.py:89} INFO - programmers/넥스쳐웹_플랫폼 개발자.json
+[2022-10-08 15:32:47,217] {subprocess.py:89} INFO - programmers/넥스트케이딥러닝 영상분석 개발자.json
+[2022-10-08 15:32:47,218] {subprocess.py:89} INFO - programmers/넥슨코리아[인텔리전스랩스] 선행개발실 백엔드 개발자(Go_Python).json
+[2022-10-08 15:32:47,219] {subprocess.py:89} INFO - programmers/넥슨코리아[인텔리전스랩스] 프론트서버개발팀 백엔드 개발자 (Java).json
+[2022-10-08 15:32:47,220] {subprocess.py:89} INFO - programmers/누비랩포인트 클라우드 엔지니어.json
+[2022-10-08 15:32:47,221] {subprocess.py:89} INFO - programmers/뉴로클딥러닝 리서처.json
+[2022-10-08 15:32:47,221] {subprocess.py:89} INFO - programmers/뉴블라머신 러닝 기반 서비스를 위한 SaaS Solution Backend 개발.json
+[2022-10-08 15:32:47,223] {subprocess.py:89} INFO - programmers/니트로 스튜디오카트라이더 드리프트 머신러닝 개발자.json
+[2022-10-08 15:32:47,224] {subprocess.py:89} INFO - programmers/단비교육백엔드 주니어 개발자.json
+[2022-10-08 15:32:47,225] {subprocess.py:89} INFO - programmers/단비교육프런트엔드(ReactJS) 주니어 개발자.json
+[2022-10-08 15:32:47,226] {subprocess.py:89} INFO - programmers/당근마켓서버 엔지니어 - 광고 서비스.json
+[2022-10-08 15:32:47,227] {subprocess.py:89} INFO - programmers/당근마켓서버 엔지니어 - 당근페이 서비스 (Java _ Kotlin).json
+[2022-10-08 15:32:47,227] {subprocess.py:89} INFO - programmers/당근마켓서버 엔지니어 - 당근페이 플랫폼 (Java _ Kotlin).json
+[2022-10-08 15:32:47,228] {subprocess.py:89} INFO - programmers/당근마켓서버 엔지니어 - 운영개발.json
+[2022-10-08 15:32:47,229] {subprocess.py:89} INFO - programmers/당근마켓프론트엔드 엔지니어 - 당근페이.json
+[2022-10-08 15:32:47,230] {subprocess.py:89} INFO - programmers/데브구루C, C++ _ APP개발자.json
+[2022-10-08 15:32:47,231] {subprocess.py:89} INFO - programmers/데이블Senior Software Engineer.json
+[2022-10-08 15:32:47,232] {subprocess.py:89} INFO - programmers/데이터메이커Backend Engineer.json
+[2022-10-08 15:32:47,233] {subprocess.py:89} INFO - programmers/데이터메이커Frontend Engineer.json
+[2022-10-08 15:32:47,234] {subprocess.py:89} INFO - programmers/데이터메이커ML Engineer.json
+[2022-10-08 15:32:47,234] {subprocess.py:89} INFO - programmers/데이터헌트머신러닝 엔지니어(NLP) _ 데이터 사이언티스트.json
+[2022-10-08 15:32:47,235] {subprocess.py:89} INFO - programmers/드림어스컴퍼니Cloud Engineer(DevOps).json
+[2022-10-08 15:32:47,236] {subprocess.py:89} INFO - programmers/드림어스컴퍼니[오디오플랫폼 FLO] Python 기반 빅데이터 처리 개발자.json
+[2022-10-08 15:32:47,237] {subprocess.py:89} INFO - programmers/디에스랩글로벌웹 백엔드 개발자 (Python).json
+[2022-10-08 15:32:47,238] {subprocess.py:89} INFO - programmers/라이너스웹서비스 개발자.json
+[2022-10-08 15:32:47,239] {subprocess.py:89} INFO - programmers/라이브커넥트Flutter 앱 개발자.json
+[2022-10-08 15:32:47,240] {subprocess.py:89} INFO - programmers/레디앤스타트웹개발자(루비온레일즈).json
+[2022-10-08 15:32:47,241] {subprocess.py:89} INFO - programmers/로그프레소데이터베이스 엔진 개발자.json
+[2022-10-08 15:32:47,242] {subprocess.py:89} INFO - programmers/로민[로민] AI 솔루션 운영 개발자.json
+[2022-10-08 15:32:47,243] {subprocess.py:89} INFO - programmers/로민[로민] AI 솔루션, 자연어처리 개발자.json
+[2022-10-08 15:32:47,244] {subprocess.py:89} INFO - programmers/로민[로민] AI 솔루션, 컴퓨터비전 개발자.json
+[2022-10-08 15:32:47,245] {subprocess.py:89} INFO - programmers/루미르UX_UI 개발.json
+[2022-10-08 15:32:47,246] {subprocess.py:89} INFO - programmers/룩코AI 엔지니어.json
+[2022-10-08 15:32:47,247] {subprocess.py:89} INFO - programmers/룩코모바일 앱 프론트엔드 개발자 (React-Native, Typescript) - 주니어, 시니어.json
+[2022-10-08 15:32:47,247] {subprocess.py:89} INFO - programmers/리디머신러닝 엔지니어(전문연구요원 가능).json
+[2022-10-08 15:32:47,248] {subprocess.py:89} INFO - programmers/리콘랩스AI 엔지니어.json
+[2022-10-08 15:32:47,249] {subprocess.py:89} INFO - programmers/리콘랩스컴퓨터비전 연구원(석박사).json
+[2022-10-08 15:32:47,250] {subprocess.py:89} INFO - programmers/리턴제로AI 연구 개발, 서비스 개발.json
+[2022-10-08 15:32:47,251] {subprocess.py:89} INFO - programmers/릴리커버백엔드 경력 개발자 모집.json
+[2022-10-08 15:32:47,251] {subprocess.py:89} INFO - programmers/릴리커버프론트엔드 개발자 모집.json
+[2022-10-08 15:32:47,252] {subprocess.py:89} INFO - programmers/마드라스체크[플로우] 시스템 신규 개발.json
+[2022-10-08 15:32:47,253] {subprocess.py:89} INFO - programmers/매드업주니어 백엔드 개발자.json
+[2022-10-08 15:32:47,254] {subprocess.py:89} INFO - programmers/매스프레소(콴다)DBA (MySQL).json
+[2022-10-08 15:32:47,255] {subprocess.py:89} INFO - programmers/맥스트프론트엔드 개발자.json
+[2022-10-08 15:32:47,256] {subprocess.py:89} INFO - programmers/메가존클라우드Front End Web Development Engineer.json
+[2022-10-08 15:32:47,257] {subprocess.py:89} INFO - programmers/메디픽셀[인공지능기업] 딥러닝_영상처리 연구원 모집.json
+[2022-10-08 15:32:47,257] {subprocess.py:89} INFO - programmers/메쉬코리아데이터 엔지니어.json
+[2022-10-08 15:32:47,258] {subprocess.py:89} INFO - programmers/멕아이씨에스백엔드 개발자 채용(Spring boot).json
+[2022-10-08 15:32:47,259] {subprocess.py:89} INFO - programmers/멕아이씨에스프론트엔드 개발자 채용(React).json
+[2022-10-08 15:32:47,259] {subprocess.py:89} INFO - programmers/모두싸인DevOps 엔지니어.json
+[2022-10-08 15:32:47,260] {subprocess.py:89} INFO - programmers/모두싸인백엔드 엔지니어(산업기능요원 보충역, 전직).json
+[2022-10-08 15:32:47,261] {subprocess.py:89} INFO - programmers/모두싸인프론트엔드 엔지니어(산업기능요원 보충역, 전직).json
+[2022-10-08 15:32:47,262] {subprocess.py:89} INFO - programmers/모빌린트딥러닝 알고리즘 엔지니어.json
+[2022-10-08 15:32:47,262] {subprocess.py:89} INFO - programmers/모아이스2D Pose AI Researcher.json
+[2022-10-08 15:32:47,263] {subprocess.py:89} INFO - programmers/모젯서버 개발자(주니어)_산업기능요원 편입_전직 가능.json
+[2022-10-08 15:32:47,264] {subprocess.py:89} INFO - programmers/무스마소프트웨어 개발자(Back-end_Front-end).json
+[2022-10-08 15:32:47,265] {subprocess.py:89} INFO - programmers/뮤즈라이브프론트엔드 엔지니어(Front Engineer _ React, Javascript).json
+[2022-10-08 15:32:47,266] {subprocess.py:89} INFO - programmers/미디움[전략기획본부] DevOps Engineer.json
+[2022-10-08 15:32:47,266] {subprocess.py:89} INFO - programmers/미디움[전략기획본부] 블록체인 스마트 컨트랙트 개발자.json
+[2022-10-08 15:32:47,267] {subprocess.py:89} INFO - programmers/미디움[전략기획본부] 블록체인 연동 백엔드 개발.json
+[2022-10-08 15:32:47,268] {subprocess.py:89} INFO - programmers/미디움[전략기획본부] 블록체인 코어 개발자.json
+[2022-10-08 15:32:47,269] {subprocess.py:89} INFO - programmers/미디움[전략기획본부] 웹 프론트엔드 Frontend 개발자.json
+[2022-10-08 15:32:47,270] {subprocess.py:89} INFO - programmers/미리디[미리디] Jr.백엔드 개발자 - 이미지 프로세싱.json
+[2022-10-08 15:32:47,272] {subprocess.py:89} INFO - programmers/미리디[미리캔버스] 코어엔진 개발자.json
+[2022-10-08 15:32:47,272] {subprocess.py:89} INFO - programmers/밀리만코리아Software Engineer (Application 개발).json
+[2022-10-08 15:32:47,273] {subprocess.py:89} INFO - programmers/바로고Data Engineer (Data ETL Engineer).json
+[2022-10-08 15:32:47,274] {subprocess.py:89} INFO - programmers/바로고Public Cloud Engineer.json
+[2022-10-08 15:32:47,275] {subprocess.py:89} INFO - programmers/바텍 네트웍스Back-end_Infra 개발.json
+[2022-10-08 15:32:47,275] {subprocess.py:89} INFO - programmers/바텍 네트웍스Front-end 개발.json
+[2022-10-08 15:32:47,276] {subprocess.py:89} INFO - programmers/바텍 네트웍스클라우드기반 의료플랫폼 AI(영상_음성_텍스트 인식 등)개발자.json
+[2022-10-08 15:32:47,277] {subprocess.py:89} INFO - programmers/버넥트[개발센터] DevOps 엔지니어.json
+[2022-10-08 15:32:47,277] {subprocess.py:89} INFO - programmers/버넥트[개발센터] 백엔드 개발자.json
+[2022-10-08 15:32:47,278] {subprocess.py:89} INFO - programmers/버넥트[개발센터] 웹 개발자.json
+[2022-10-08 15:32:47,279] {subprocess.py:89} INFO - programmers/버넥트[연구센터] Computer Vision-Visual SLAM Engineer.json
+[2022-10-08 15:32:47,280] {subprocess.py:89} INFO - programmers/버킷플레이스(오늘의집)Software Engineer, Data.json
+[2022-10-08 15:32:47,281] {subprocess.py:89} INFO - programmers/버킷플레이스(오늘의집)[전문연구요원] Software Engineer, Backend.json
+[2022-10-08 15:32:47,282] {subprocess.py:89} INFO - programmers/버킷플레이스(오늘의집)[전문연구요원] Software Engineer, Data.json
+[2022-10-08 15:32:47,283] {subprocess.py:89} INFO - programmers/버킷플레이스(오늘의집)[전문연구요원] Software Engineer, Frontend.json
+[2022-10-08 15:32:47,284] {subprocess.py:89} INFO - programmers/버킷플레이스(오늘의집)[전문연구요원] Software Engineer, Machine Learning.json
+[2022-10-08 15:32:47,285] {subprocess.py:89} INFO - programmers/보이저엑스Vrew 데스크탑 앱 개발자.json
+[2022-10-08 15:32:47,285] {subprocess.py:89} INFO - programmers/뷰메진컴퓨터비전 엔지니어 Junior.json
+[2022-10-08 15:32:47,286] {subprocess.py:89} INFO - programmers/브리치프론트엔드&백엔드 개발자.json
+[2022-10-08 15:32:47,287] {subprocess.py:89} INFO - programmers/브릭웹 벡엔드 개발자.json
+[2022-10-08 15:32:47,288] {subprocess.py:89} INFO - programmers/브릭웹 프론트 개발자.json
+[2022-10-08 15:32:47,289] {subprocess.py:89} INFO - programmers/블루버드SW 웹서버개발자.json
+[2022-10-08 15:32:47,290] {subprocess.py:89} INFO - programmers/블루펫프론트엔드 개발자.json
+[2022-10-08 15:32:47,291] {subprocess.py:89} INFO - programmers/비바리퍼블리카(토스)[토스뱅크] Frontend Developer.json
+[2022-10-08 15:32:47,291] {subprocess.py:89} INFO - programmers/비바리퍼블리카(토스)[토스뱅크] Internal Product Developer (고객 상담 시스템).json
+[2022-10-08 15:32:47,292] {subprocess.py:89} INFO - programmers/비바리퍼블리카(토스)[토스뱅크] Server Developer (Internal Product).json
+[2022-10-08 15:32:47,293] {subprocess.py:89} INFO - programmers/비바리퍼블리카(토스)[토스뱅크] Server Developer (Platform).json
+[2022-10-08 15:33:14,261] {subprocess.py:89} INFO - programmers/비바리퍼블리카(토스)[토스뱅크] Server Developer (Product).json
+[2022-10-08 15:33:14,265] {subprocess.py:89} INFO - programmers/비바리퍼블리카(토스)[토스코어] Frontend Developer.json
+[2022-10-08 15:33:14,267] {subprocess.py:89} INFO - programmers/비에스지파트너스JavaScript 풀스택 개발자.json
+[2022-10-08 15:33:14,269] {subprocess.py:89} INFO - programmers/비트바이트웹 프론트엔드 개발자.json
+[2022-10-08 15:33:14,272] {subprocess.py:89} INFO - programmers/빅인사이트FrontEnd Team 개발자.json
+[2022-10-08 15:33:14,275] {subprocess.py:89} INFO - programmers/빅픽처팀NLP _ TTS 연구원 , 데이터 엔지니어, 데이터 사이언스.json
+[2022-10-08 15:33:14,277] {subprocess.py:89} INFO - programmers/빅픽처팀웹_앱 프론트엔드 개발자.json
+[2022-10-08 15:33:14,279] {subprocess.py:89} INFO - programmers/빗썸코리아[빗썸] 블록체인 개발.json
+[2022-10-08 15:33:14,281] {subprocess.py:89} INFO - programmers/살린백엔드 개발자.json
+[2022-10-08 15:33:14,282] {subprocess.py:89} INFO - programmers/세탁특공대React native Engineer(Front-end) 엔지니어.json
+[2022-10-08 15:33:14,284] {subprocess.py:89} INFO - programmers/솔트룩스데이터사이언티스트(석박사).json
+[2022-10-08 15:33:14,286] {subprocess.py:89} INFO - programmers/솔트룩스병특 전문연구요원 개발자.json
+[2022-10-08 15:33:14,287] {subprocess.py:89} INFO - programmers/수호아이오Technical Writer.json
+[2022-10-08 15:33:14,289] {subprocess.py:89} INFO - programmers/슈퍼진Junior Sever Developer (SNS).json
+[2022-10-08 15:33:14,290] {subprocess.py:89} INFO - programmers/슈퍼진Server Developer (GAME).json
+[2022-10-08 15:33:14,292] {subprocess.py:89} INFO - programmers/슈퍼캣[메타버스 ZEP] 백엔드 개발자.json
+[2022-10-08 15:33:14,293] {subprocess.py:89} INFO - programmers/슈퍼캣[메타버스 ZEP] 서버 프로그래머.json
+[2022-10-08 15:33:14,295] {subprocess.py:89} INFO - programmers/슈퍼캣[메타버스 ZEP] 콘텐츠 서버 프로그래머.json
+[2022-10-08 15:33:14,297] {subprocess.py:89} INFO - programmers/스냅태그백엔드(Node.js) 개발자.json
+[2022-10-08 15:33:14,298] {subprocess.py:89} INFO - programmers/스마트캐스트C++ 프로그래머 (QT).json
+[2022-10-08 15:33:14,299] {subprocess.py:89} INFO - programmers/스와치온백엔드 개발자.json
+[2022-10-08 15:33:14,300] {subprocess.py:89} INFO - programmers/스테이지랩스백엔드 개발자.json
+[2022-10-08 15:33:14,301] {subprocess.py:89} INFO - programmers/스테이지랩스프론트엔드 개발자.json
+[2022-10-08 15:33:14,302] {subprocess.py:89} INFO - programmers/스트리미DevOps 엔지니어.json
+[2022-10-08 15:33:14,303] {subprocess.py:89} INFO - programmers/스트리미데이터 엔지니어.json
+[2022-10-08 15:33:14,305] {subprocess.py:89} INFO - programmers/스트리미백엔드 개발자.json
+[2022-10-08 15:33:14,305] {subprocess.py:89} INFO - programmers/스페이스워크Data Scientist.json
+[2022-10-08 15:33:14,307] {subprocess.py:89} INFO - programmers/시터스컴퓨터 비전 개발자.json
+[2022-10-08 15:33:14,308] {subprocess.py:89} INFO - programmers/식스샵[플랫폼 팀] 프론트엔드 개발자.json
+[2022-10-08 15:33:14,309] {subprocess.py:89} INFO - programmers/싱크테크노웹풀스택 (데이터융합 웹서비스 플랫폼 개발).json
+[2022-10-08 15:33:14,310] {subprocess.py:89} INFO - programmers/쏘마Back-end Engineer (백엔드 엔지니어).json
+[2022-10-08 15:33:14,311] {subprocess.py:89} INFO - programmers/쏘마Data Engineer (데이터 엔지니어).json
+[2022-10-08 15:33:14,311] {subprocess.py:89} INFO - programmers/쏘마Detection Engineer.json
+[2022-10-08 15:33:14,312] {subprocess.py:89} INFO - programmers/쓰리덕스웹 개발자.json
+[2022-10-08 15:33:14,313] {subprocess.py:89} INFO - programmers/쓰리아이Frontend Developer.json
+[2022-10-08 15:33:14,314] {subprocess.py:89} INFO - programmers/씨엔알리서치AI Engineer.json
+[2022-10-08 15:33:14,315] {subprocess.py:89} INFO - programmers/아비커스(R&D) 플랫폼 개발 MLOps.json
+[2022-10-08 15:33:14,316] {subprocess.py:89} INFO - programmers/아비커스Computer Vision Engineer.json
+[2022-10-08 15:33:14,316] {subprocess.py:89} INFO - programmers/아비커스Machine Learning Engineer.json
+[2022-10-08 15:33:14,317] {subprocess.py:89} INFO - programmers/아비커스Perception Engineer.json
+[2022-10-08 15:33:14,319] {subprocess.py:89} INFO - programmers/아우름케어매니지먼트주니어 소프트웨어 개발자 (웹개발).json
+[2022-10-08 15:33:14,320] {subprocess.py:89} INFO - programmers/아우름플래닛AI_ML 엔지니어.json
+[2022-10-08 15:33:14,321] {subprocess.py:89} INFO - programmers/아이비베리서버_백엔드 개발.json
+[2022-10-08 15:33:14,322] {subprocess.py:89} INFO - programmers/아이시큐어웹 서비스 개발자.json
+[2022-10-08 15:33:14,323] {subprocess.py:89} INFO - programmers/아이언플래그백엔드 개발자.json
+[2022-10-08 15:33:14,324] {subprocess.py:89} INFO - programmers/아이에이치큐'바바요(babayo)'  OTT 플랫폼 모바일 개발자 (React-Native).json
+[2022-10-08 15:33:14,324] {subprocess.py:89} INFO - programmers/아이에이치큐'바바요(babayo)' OTT 플랫폼 프론트 개발자 (React).json
+[2022-10-08 15:33:14,325] {subprocess.py:89} INFO - programmers/아이엠에스모빌리티IMS.Connect 백엔드 개발자.json
+[2022-10-08 15:33:14,326] {subprocess.py:89} INFO - programmers/아이엠에스모빌리티프론트 개발자 (Front Developer).json
+[2022-10-08 15:33:14,327] {subprocess.py:89} INFO - programmers/아이오트러스트[IoTrust] 디센트 백엔드 개발자.json
+[2022-10-08 15:33:14,328] {subprocess.py:89} INFO - programmers/아이오트러스트[IoTrust] 디센트 프론트엔드 개발자.json
+[2022-10-08 15:33:14,329] {subprocess.py:89} INFO - programmers/아이지에이웍스머신러닝 엔지니어 (디파이너리).json
+[2022-10-08 15:33:14,330] {subprocess.py:89} INFO - programmers/아이트AI PM(팀장 이상 급) 및 개발자(AI, 빅데이터 분야).json
+[2022-10-08 15:33:14,332] {subprocess.py:89} INFO - programmers/아이트럭머신러닝 개발자.json
+[2022-10-08 15:33:14,333] {subprocess.py:89} INFO - programmers/아이트럭프론트엔드 개발자.json
+[2022-10-08 15:33:14,334] {subprocess.py:89} INFO - programmers/아이패밀리에스씨PHP_Laravel 개발자.json
+[2022-10-08 15:33:14,334] {subprocess.py:89} INFO - programmers/아주큐엠에스웹개발.json
+[2022-10-08 15:33:14,335] {subprocess.py:89} INFO - programmers/아티언스서버 개발자.json
+[2022-10-08 15:33:14,336] {subprocess.py:89} INFO - programmers/아프리카티비글로벌 서비스 Front-end 개발.json
+[2022-10-08 15:33:14,337] {subprocess.py:89} INFO - programmers/알라딘글로벌알앤디센터블록체인 기반 웹서비스 프론트엔드 개발자.json
+[2022-10-08 15:33:14,337] {subprocess.py:89} INFO - programmers/알라딘글로벌알앤디센터웹_앱 백엔드 개발자.json
+[2022-10-08 15:33:14,338] {subprocess.py:89} INFO - programmers/알라딘글로벌알앤디센터웹_앱 프론트 개발자.json
+[2022-10-08 15:33:14,339] {subprocess.py:89} INFO - programmers/알에스인터렉티브프론트엔드 개발자.json
+[2022-10-08 15:33:14,340] {subprocess.py:89} INFO - programmers/알티베이스.NET 기반 개발  _ 네트워크 프로그램 개발  _ C_C++_Java 개발자.json
+[2022-10-08 15:33:14,341] {subprocess.py:89} INFO - programmers/액션파워[액션파워] 백엔드 개발자.json
+[2022-10-08 15:33:14,342] {subprocess.py:89} INFO - programmers/액션파워[액션파워] 인공지능_머신러닝 엔지니어.json
+[2022-10-08 15:33:14,343] {subprocess.py:89} INFO - programmers/액션파워[액션파워] 프론트엔드 개발자.json
+[2022-10-08 15:33:14,344] {subprocess.py:89} INFO - programmers/앤트ML_DL Researcher.json
+[2022-10-08 15:33:14,345] {subprocess.py:89} INFO - programmers/어뮤즈랩AI 미디어 개발자.json
+[2022-10-08 15:33:14,346] {subprocess.py:89} INFO - programmers/어뮤즈랩Node.JS 개발자.json
+[2022-10-08 15:33:14,347] {subprocess.py:89} INFO - programmers/업스테이지Software Engineer - 검색.json
+[2022-10-08 15:33:14,348] {subprocess.py:89} INFO - programmers/업스테이지[전문연구요원] AI Research Engineer.json
+[2022-10-08 15:33:14,349] {subprocess.py:89} INFO - programmers/업스테이지[전문연구요원] Software Engineer.json
+[2022-10-08 15:33:14,350] {subprocess.py:89} INFO - programmers/에너자이(임베디드) 소프트웨어 & AI 컴파일러 엔지니어.json
+[2022-10-08 15:33:14,351] {subprocess.py:89} INFO - programmers/에너자이ML Engineer_Researcher.json
+[2022-10-08 15:33:14,352] {subprocess.py:89} INFO - programmers/에스앤피랩Frontend Developer.json
+[2022-10-08 15:33:14,353] {subprocess.py:89} INFO - programmers/에스티피씨자율주행 Perception 개발자 - 자율주행 데브코스 수강생 전용.json
+[2022-10-08 15:33:14,353] {subprocess.py:89} INFO - programmers/에어스메디컬Backend Engineer.json
+[2022-10-08 15:33:14,354] {subprocess.py:89} INFO - programmers/에이럭스소프트웨어 개발 엔지니어 (웹).json
+[2022-10-08 15:33:14,355] {subprocess.py:89} INFO - programmers/에이스랩자율주행 소프트웨어 개발자 - 자율주행 데브코스 수강생 전용.json
+[2022-10-08 15:33:14,356] {subprocess.py:89} INFO - programmers/에이스랩자율주행 시스템 개발자 - 자율주행 데브코스 수강생 전용.json
+[2022-10-08 15:33:14,357] {subprocess.py:89} INFO - programmers/에이피알Windows 개발자.json
+[2022-10-08 15:33:14,357] {subprocess.py:89} INFO - programmers/에이피알[에이피알] 프론트엔드 개발자.json
+[2022-10-08 15:33:14,358] {subprocess.py:89} INFO - programmers/엑셀로SW개발.json
+[2022-10-08 15:33:14,360] {subprocess.py:89} INFO - programmers/엑스이허브산업기능요원 개발자.json
+[2022-10-08 15:33:14,361] {subprocess.py:89} INFO - programmers/엑심베이Web Developer.json
+[2022-10-08 15:33:14,362] {subprocess.py:89} INFO - programmers/엔라이튼백엔드 엔지니어 (병역특례 전문연구요원).json
+[2022-10-08 15:33:14,363] {subprocess.py:89} INFO - programmers/엔버랩스[BackEnd] Node.js 개발자.json
+[2022-10-08 15:33:14,364] {subprocess.py:89} INFO - programmers/엔젤스윙백엔드 엔지니어.json
+[2022-10-08 15:33:14,365] {subprocess.py:89} INFO - programmers/엔젤스윙프론트엔드 엔지니어.json
+[2022-10-08 15:33:14,366] {subprocess.py:89} INFO - programmers/열정팩토리프론트엔드 개발자 (Flutter).json
+[2022-10-08 15:33:14,367] {subprocess.py:89} INFO - programmers/오케스트로AI _ 클라우드 R&D 연구원 (정부과제 전담, 병역특례 가능).json
+[2022-10-08 15:33:14,367] {subprocess.py:89} INFO - programmers/오케스트로Back-end Engineer.json
+[2022-10-08 15:33:14,368] {subprocess.py:89} INFO - programmers/오케스트로Cloud Infra Engineer.json
+[2022-10-08 15:33:14,368] {subprocess.py:89} INFO - programmers/오케스트로Developer, Engineer.json
+[2022-10-08 15:33:14,369] {subprocess.py:89} INFO - programmers/오케스트로Front-end Developer  (클라우드 관리 콘솔).json
+[2022-10-08 15:33:14,370] {subprocess.py:89} INFO - programmers/오케스트로Front-end Developer(클라우드 모니터링).json
+[2022-10-08 15:33:14,371] {subprocess.py:89} INFO - programmers/오케스트로Full Stack Developer (Biz Dev).json
+[2022-10-08 15:33:14,371] {subprocess.py:89} INFO - programmers/오케스트로Full Stack Developer (Cloud DevOps Service).json
+[2022-10-08 15:33:14,372] {subprocess.py:89} INFO - programmers/오케스트로Full Stack Developer (Cloud Service - MLOps).json
+[2022-10-08 15:33:14,372] {subprocess.py:89} INFO - programmers/오케스트로Full Stack Developer (Contrabass UI_API).json
+[2022-10-08 15:33:14,373] {subprocess.py:89} INFO - programmers/오케스트로Full Stack Developer (Public Cloud Platform Solution).json
+[2022-10-08 15:33:14,374] {subprocess.py:89} INFO - programmers/오케스트로Full Stack Developer (클라우드 관련 개발).json
+[2022-10-08 15:33:14,375] {subprocess.py:89} INFO - programmers/오케스트로Open-source Engineer.json
+[2022-10-08 15:33:14,375] {subprocess.py:89} INFO - programmers/오케스트로Senior Back-end Developer (Cloud Service - AIOps).json
+[2022-10-08 15:33:14,376] {subprocess.py:89} INFO - programmers/오케스트로머신러닝(시각지능) 연구원.json
+[2022-10-08 15:33:14,377] {subprocess.py:89} INFO - programmers/오케스트로머신러닝(언어지능) 연구원.json
+[2022-10-08 15:33:14,378] {subprocess.py:89} INFO - programmers/오케스트로빅데이터 엔지니어(AIOps 팀).json
+[2022-10-08 15:33:14,378] {subprocess.py:89} INFO - programmers/오토피디아React Native 개발자.json
+[2022-10-08 15:33:14,379] {subprocess.py:89} INFO - programmers/오토피디아React 개발자.json
+[2022-10-08 15:33:14,380] {subprocess.py:89} INFO - programmers/올거나이즈코리아[AI Startup] AI Researcher _ Engineer.json
+[2022-10-08 15:33:14,381] {subprocess.py:89} INFO - programmers/올거나이즈코리아[AI Startup] React Front-end Engineer.json
+[2022-10-08 15:33:14,381] {subprocess.py:89} INFO - programmers/올거나이즈코리아[AI Startup] 파이썬 백엔드 엔지니어.json
+[2022-10-08 15:33:14,382] {subprocess.py:89} INFO - programmers/옴니어스ML Engineer - Computer vision.json
+[2022-10-08 15:33:14,383] {subprocess.py:89} INFO - programmers/옴니어스ML Engineer - Personalized Recommendation.json
+[2022-10-08 15:33:14,384] {subprocess.py:89} INFO - programmers/옴니어스ML Engineer - Trend analytics.json
+[2022-10-08 15:33:14,385] {subprocess.py:89} INFO - programmers/위메이드디파이 플랫폼 백엔드 개발자.json
+[2022-10-08 15:33:14,386] {subprocess.py:89} INFO - programmers/위메이드디파이 플랫폼 스마트 컨트랙트 개발자.json
+[2022-10-08 15:33:14,387] {subprocess.py:89} INFO - programmers/위메이드백오피스 프론트 개발자.json
+[2022-10-08 15:33:14,388] {subprocess.py:89} INFO - programmers/위메이드블록체인 코어 및 연계 플랫폼 개발자.json
+[2022-10-08 15:33:14,389] {subprocess.py:89} INFO - programmers/위시켓[위시켓 개발팀] 웹 개발자.json
+[2022-10-08 15:33:35,862] {subprocess.py:89} INFO - /opt/pipeline/script/S3ToElasticsearch.py:97: ElasticsearchWarning: Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security.
+[2022-10-08 15:33:35,864] {subprocess.py:89} INFO -   es.update(index=ES_INDEX, id=doc_id, doc=dict_data, doc_as_upsert=True)
+[2022-10-08 15:33:35,867] {subprocess.py:89} INFO - programmers/의식주컴퍼니[런드리고] 웹 프론트엔드 개발자(신입 가능).json
+[2022-10-08 15:33:35,869] {subprocess.py:89} INFO - programmers/이노솔루션LMS _ CMS 개발자.json
+[2022-10-08 15:33:35,871] {subprocess.py:89} INFO - programmers/이노팸Visual  Geo-localization  Researcher.json
+[2022-10-08 15:33:35,873] {subprocess.py:89} INFO - programmers/이스트소프트[ESTsoft] 백엔드 개발자.json
+[2022-10-08 15:33:35,874] {subprocess.py:89} INFO - programmers/이우소프트Web_Cloud Front-end.json
+[2022-10-08 15:33:35,876] {subprocess.py:89} INFO - programmers/인스피언클라우드EDI 서비스 개발자.json
+[2022-10-08 15:33:35,877] {subprocess.py:89} INFO - programmers/인텔리즈DeepLearning for machine vision[제조산업을 위한 인공지능 연구 개발자].json
+[2022-10-08 15:33:35,879] {subprocess.py:89} INFO - programmers/인포보스[인포보스]솔루션개발팀(Front-end, Back-end _ 산업기능요원, 전문연구요원 가능).json
+[2022-10-08 15:33:35,880] {subprocess.py:89} INFO - programmers/인포보스[인포보스]인공지능개발팀(산업기능요원, 전문연구요원 가능).json
+[2022-10-08 15:33:35,882] {subprocess.py:89} INFO - programmers/인플루엔셜[윌라] 데이터 엔지니어.json
+[2022-10-08 15:33:35,883] {subprocess.py:89} INFO - programmers/인플루엔셜[윌라] 백엔드 개발자.json
+[2022-10-08 15:33:35,885] {subprocess.py:89} INFO - programmers/일루미나리안데브옵스 엔지니어(DevOps Engineer).json
+[2022-10-08 15:33:35,886] {subprocess.py:89} INFO - programmers/제네시스랩Data Scientist.json
+[2022-10-08 15:33:35,888] {subprocess.py:89} INFO - programmers/지지큐컴퍼니Python Developer (파이썬 개발자).json
+[2022-10-08 15:33:35,889] {subprocess.py:89} INFO - programmers/카카오브레인Backend Engineer.json
+[2022-10-08 15:33:35,890] {subprocess.py:89} INFO - programmers/카카오브레인Machine Learning Engineer - Inference Engine.json
+[2022-10-08 15:33:35,891] {subprocess.py:89} INFO - programmers/카카오브레인Mobile SDK Engineer.json
+[2022-10-08 15:33:35,892] {subprocess.py:89} INFO - programmers/카카오엔터프라이즈[AI LAB] AI 석_박사 기술 인재.json
+[2022-10-08 15:33:35,893] {subprocess.py:89} INFO - programmers/카페24[개발팀] 이커머스 사입 및 공급 시스템 개발자.json
+[2022-10-08 15:33:35,894] {subprocess.py:89} INFO - programmers/커넥트핏백엔드 개발자.json
+[2022-10-08 15:33:35,896] {subprocess.py:89} INFO - programmers/커넥트핏프론트엔드(Flutter) 개발자.json
+[2022-10-08 15:33:35,897] {subprocess.py:89} INFO - programmers/컨워스3D_2D 지도 프론트엔드 개발자.json
+[2022-10-08 15:33:35,898] {subprocess.py:89} INFO - programmers/컨워스OpenGL_GLSL 개발자.json
+[2022-10-08 15:33:35,899] {subprocess.py:89} INFO - programmers/콘캣AI 기반 질병예측&챗봇 서비스 개발.json
+[2022-10-08 15:33:35,900] {subprocess.py:89} INFO - programmers/콘캣AR APP 서비스 개발.json
+[2022-10-08 15:33:35,901] {subprocess.py:89} INFO - programmers/쿤텍AI_DATA Engineer.json
+[2022-10-08 15:33:35,902] {subprocess.py:89} INFO - programmers/쿤텍데이터 개발자.json
+[2022-10-08 15:33:35,904] {subprocess.py:89} INFO - programmers/쿤텍보안 취약점 솔루션 엔지니어.json
+[2022-10-08 15:33:35,905] {subprocess.py:89} INFO - programmers/쿤텍악성코드 분석 엔지니어.json
+[2022-10-08 15:33:35,907] {subprocess.py:89} INFO - programmers/쿤텍클라우드 데이터 엔지니어(Data Engineer).json
+[2022-10-08 15:33:35,907] {subprocess.py:89} INFO - programmers/퀀타매트릭스머신러닝 엔지니어_ 데이터사이언티스트.json
+[2022-10-08 15:33:35,909] {subprocess.py:89} INFO - programmers/큐픽스Angular_TypeScript, WebGL_OpenGL, 병역특례 가능.json
+[2022-10-08 15:33:35,910] {subprocess.py:89} INFO - programmers/큐픽스백엔드, AWS_IaC_Elastic Stack, 병역특례 가능.json
+[2022-10-08 15:33:35,911] {subprocess.py:89} INFO - programmers/크래프트테크놀로지스SQL Developer.json
+[2022-10-08 15:33:35,912] {subprocess.py:89} INFO - programmers/크레비스파트너스[도너스] SaaS 서비스 개발자.json
+[2022-10-08 15:33:35,913] {subprocess.py:89} INFO - programmers/크레이브몹서버 프로그래머.json
+[2022-10-08 15:33:35,913] {subprocess.py:89} INFO - programmers/크립토파라다이스Front-end Junior Developer.json
+[2022-10-08 15:33:35,914] {subprocess.py:89} INFO - programmers/클래스유[클래스유] 백엔드 개발자.json
+[2022-10-08 15:33:35,915] {subprocess.py:89} INFO - programmers/클래스유[클래스유] 프론트엔드 개발자.json
+[2022-10-08 15:33:35,916] {subprocess.py:89} INFO - programmers/클레온AI Deep Learning Engineer 딥러닝 엔지니어 (전문연구요원 가능).json
+[2022-10-08 15:33:35,917] {subprocess.py:89} INFO - programmers/클레온MLOps Engineer, DevOps Engineer (전문연구요원).json
+[2022-10-08 15:33:35,919] {subprocess.py:89} INFO - programmers/클로버추얼패션웹 그래픽스 개발자.json
+[2022-10-08 15:33:35,920] {subprocess.py:89} INFO - programmers/클로봇[기업부설연구소] Visual_LiDAR SLAM 개발.json
+[2022-10-08 15:33:35,921] {subprocess.py:89} INFO - programmers/클로봇[로봇응용개발팀] 안드로이드 기반 로봇 응용프로그램 개발.json
+[2022-10-08 15:33:35,922] {subprocess.py:89} INFO - programmers/클로봇모바일 로봇 자율주행 SW 개발자.json
+[2022-10-08 15:33:35,923] {subprocess.py:89} INFO - programmers/클로봇모바일 로봇 제어 SW 개발자.json
+[2022-10-08 15:33:35,924] {subprocess.py:89} INFO - programmers/타르트프로덕트 엔지니어 (프론트 _ 백 _ 데이터).json
+[2022-10-08 15:33:35,924] {subprocess.py:89} INFO - programmers/태화이노베이션서버_백엔드, 프론트엔드, 웹 풀스택 개발자.json
+[2022-10-08 15:33:35,925] {subprocess.py:89} INFO - programmers/트릿지주니어 프론트엔드 개발자.json
+[2022-10-08 15:33:35,926] {subprocess.py:89} INFO - programmers/트릿지클라우드 보안 엔지니어 (CSE,SRE,DevOps).json
+[2022-10-08 15:33:35,928] {subprocess.py:89} INFO - programmers/티맥스티베로DB Application 개발자.json
+[2022-10-08 15:33:35,929] {subprocess.py:89} INFO - programmers/티맥스티베로DB Engine 개발자.json
+[2022-10-08 15:33:35,930] {subprocess.py:89} INFO - programmers/티맥스티베로DB Engineer.json
+[2022-10-08 15:33:35,931] {subprocess.py:89} INFO - programmers/티맥스티베로DBA.json
+[2022-10-08 15:33:35,932] {subprocess.py:89} INFO - programmers/티피씨인터넷웹 프론트엔드 개발자.json
+[2022-10-08 15:33:35,933] {subprocess.py:89} INFO - programmers/팀프레시백엔드_풀스택 개발자.json
+[2022-10-08 15:33:35,934] {subprocess.py:89} INFO - programmers/파모즈서버키트 프론트엔드 서비스 개발자.json
+[2022-10-08 15:33:35,935] {subprocess.py:89} INFO - programmers/파인랩헬스케어&핀테크 결합 APP 서비스 개발.json
+[2022-10-08 15:33:35,936] {subprocess.py:89} INFO - programmers/퍼즐원스튜디오Platform Programmer.json
+[2022-10-08 15:33:35,938] {subprocess.py:89} INFO - programmers/페이타랩[패스오더] DevOps Engineer (병역특례 산업기능요원 보충역_전직가능).json
+[2022-10-08 15:33:35,938] {subprocess.py:89} INFO - programmers/페이타랩[패스오더] Windows 개발자 (병역특례 산업기능요원 보충역_전직가능).json
+[2022-10-08 15:33:35,939] {subprocess.py:89} INFO - programmers/페이타랩[패스오더] Windows 개발자.json
+[2022-10-08 15:33:35,941] {subprocess.py:89} INFO - programmers/페이타랩[패스오더] iOS 개발자 (병역특례 산업기능요원 보충역_전직가능).json
+[2022-10-08 15:33:35,941] {subprocess.py:89} INFO - programmers/페이타랩[패스오더] iOS 개발자.json
+[2022-10-08 15:33:35,942] {subprocess.py:89} INFO - programmers/페이타랩[패스오더] 데이터 엔지니어(그로스해커).json
+[2022-10-08 15:33:35,943] {subprocess.py:89} INFO - programmers/페이타랩[패스오더] 백엔드(Spring, Python, MSA)개발자 (병역특례 산업기능요원 보충역_전직가능).json
+[2022-10-08 15:33:35,944] {subprocess.py:89} INFO - programmers/페이타랩[패스오더] 안드로이드 개발자 (병역특례 산업기능요원 보충역_전직가능).json
+[2022-10-08 15:33:35,946] {subprocess.py:89} INFO - programmers/페이타랩[패스오더] 안드로이드 개발자.json
+[2022-10-08 15:33:35,947] {subprocess.py:89} INFO - programmers/페이타랩[패스오더] 웹 프론트엔드 개발자 (병역특례 산업기능요원 보충역_전직가능).json
+[2022-10-08 15:33:35,948] {subprocess.py:89} INFO - programmers/페이타랩[패스오더] 웹 프론트엔드 개발자.json
+[2022-10-08 15:33:35,948] {subprocess.py:89} INFO - programmers/포스로직이미지 프로세싱 알고리즘 연구_ 최적화.json
+[2022-10-08 15:33:35,949] {subprocess.py:89} INFO - programmers/포자랩스AI 작곡 시스템 백엔드 개발자.json
+[2022-10-08 15:33:35,950] {subprocess.py:89} INFO - programmers/포자랩스인공지능 작곡 딥러닝 개발자 (NLP).json
+[2022-10-08 15:33:35,952] {subprocess.py:89} INFO - programmers/포커스미디어코리아Frontend Engineer.json
+[2022-10-08 15:33:35,953] {subprocess.py:89} INFO - programmers/프로그래머스 KDT 데브코스 자율주행 1기(프로그래머스 자율주행 데브코스 수료생용 공고)자율주행 Perception Engineer.json
+[2022-10-08 15:33:35,955] {subprocess.py:89} INFO - programmers/플라잉캣Node.js 백엔드 개발자.json
+[2022-10-08 15:33:35,957] {subprocess.py:89} INFO - programmers/플랜티넷C_C++ 개발.json
+[2022-10-08 15:33:35,958] {subprocess.py:89} INFO - programmers/피에이치씨AI 연구원 (원주의료기기테크노밸리).json
+[2022-10-08 15:33:35,960] {subprocess.py:89} INFO - programmers/피에이치씨서버개발자.json
+[2022-10-08 15:33:35,961] {subprocess.py:89} INFO - programmers/핀그램소프트웨어 개발자.json
+[2022-10-08 15:33:35,962] {subprocess.py:89} INFO - programmers/핀크Back-end서버개발자.json
+[2022-10-08 15:33:35,963] {subprocess.py:89} INFO - programmers/핀크웹서버개발자.json
+[2022-10-08 15:33:35,964] {subprocess.py:89} INFO - programmers/한국시니어연구소프론트 개발자 (Front-End Engineer).json
+[2022-10-08 15:33:35,965] {subprocess.py:89} INFO - programmers/한국직무능력평가연구소웹개발자 (JAVA).json
+[2022-10-08 15:33:35,966] {subprocess.py:89} INFO - programmers/한국클라우드공공정책사업실 R&D 개발자.json
+[2022-10-08 15:33:35,968] {subprocess.py:89} INFO - programmers/한마음스마트키오스크 웹서비스 개발.json
+[2022-10-08 15:33:35,969] {subprocess.py:89} INFO - programmers/한스바이오텍키오스크 웹서비스 개발.json
+[2022-10-08 15:33:35,970] {subprocess.py:89} INFO - programmers/해긴플랫폼 개발자.json
+[2022-10-08 15:33:35,971] {subprocess.py:89} INFO - programmers/해줌[에너지 IT기업 해줌] 백엔드 개발자.json
+[2022-10-08 15:33:35,972] {subprocess.py:89} INFO - programmers/휴라Frontend UI 개발자.json
+[2022-10-08 15:33:35,973] {subprocess.py:89} INFO - programmers/휴레이포지티브[휴레이] 머신러닝 개발자.json
+[2022-10-08 15:33:35,974] {subprocess.py:89} INFO - programmers/히비스플랫폼 서비스 개발 팀원.json
+[2022-10-08 15:33:35,996] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-10-08 15:33:36,004] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/xcom.py:103 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-08 15:33:36,092] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=recruitment-airflow, task_id=S3ToElasticsearch, execution_date=20221008T151631, start_date=20221008T153218, end_date=20221008T153336
+[2022-10-08 15:33:36,208] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-10-08 15:33:36,245] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-10-08 15:33:36,248] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/dag.py:1069 SADeprecationWarning: Query.value() is deprecated and will be removed in a future release.  Please use Query.with_entities() in combination with Query.scalar() (deprecated since: 1.4)
+[2022-10-08 15:33:36,249] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/dag.py:1069 SADeprecationWarning: Query.values() is deprecated and will be removed in a future release.  Please use Query.with_entities() (deprecated since: 1.4)

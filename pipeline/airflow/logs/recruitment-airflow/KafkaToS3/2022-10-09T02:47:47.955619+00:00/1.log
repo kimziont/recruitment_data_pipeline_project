@@ -1,0 +1,87 @@
+[2022-10-09 02:51:03,234] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: recruitment-airflow.KafkaToS3 manual__2022-10-09T02:47:47.955619+00:00 [queued]>
+[2022-10-09 02:51:03,270] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: recruitment-airflow.KafkaToS3 manual__2022-10-09T02:47:47.955619+00:00 [queued]>
+[2022-10-09 02:51:03,271] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-09 02:51:03,272] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2022-10-09 02:51:03,273] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-09 02:51:03,354] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): KafkaToS3> on 2022-10-09 02:47:47.955619+00:00
+[2022-10-09 02:51:03,357] {standard_task_runner.py:52} INFO - Started process 495 to run task
+[2022-10-09 02:51:03,360] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'recruitment-airflow', 'KafkaToS3', 'manual__2022-10-09T02:47:47.955619+00:00', '--job-id', '95', '--raw', '--subdir', 'DAGS_FOLDER/recruitment_pipeline.py', '--cfg-path', '/tmp/tmpmfr5ph4y', '--error-file', '/tmp/tmp5do91veg']
+[2022-10-09 02:51:03,361] {standard_task_runner.py:77} INFO - Job 95: Subtask KafkaToS3
+[2022-10-09 02:51:03,476] {logging_mixin.py:109} INFO - Running <TaskInstance: recruitment-airflow.KafkaToS3 manual__2022-10-09T02:47:47.955619+00:00 [running]> on host pipeline
+[2022-10-09 02:51:03,538] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/xcom.py:323 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-09 02:51:03,569] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:126 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-09 02:51:03,618] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:162 SAWarning: Coercing Subquery object into a select() for use in IN(); please pass a select() construct explicitly
+[2022-10-09 02:51:03,624] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:159 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-09 02:51:03,648] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=recruitment-airflow
+AIRFLOW_CTX_TASK_ID=KafkaToS3
+AIRFLOW_CTX_EXECUTION_DATE=2022-10-09T02:47:47.955619+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-10-09T02:47:47.955619+00:00
+[2022-10-09 02:51:03,650] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-10-09 02:51:03,652] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'python /opt/pipeline/script/KafkaToS3.py']
+[2022-10-09 02:51:03,657] {subprocess.py:85} INFO - Output:
+[2022-10-09 02:52:03,423] {subprocess.py:89} INFO - 1번 째 연결 성공
+[2022-10-09 02:52:03,425] {subprocess.py:89} INFO - <class 'kafka.consumer.group.KafkaConsumer'>
+[2022-10-09 02:52:03,428] {subprocess.py:89} INFO - programmers/티맥스티베로DB Application 개발자.json is stored in S3
+[2022-10-09 02:52:03,429] {subprocess.py:89} INFO - programmers/티맥스티베로DB Engine 개발자.json is stored in S3
+[2022-10-09 02:52:03,432] {subprocess.py:89} INFO - programmers/아이언플래그백엔드 개발자.json is stored in S3
+[2022-10-09 02:52:03,434] {subprocess.py:89} INFO - programmers/크래프트테크놀로지스SQL Developer.json is stored in S3
+[2022-10-09 02:52:03,436] {subprocess.py:89} INFO - programmers/매스프레소(콴다)DBA (MySQL).json is stored in S3
+[2022-10-09 02:52:03,437] {subprocess.py:89} INFO - programmers/클레온MLOps Engineer, DevOps Engineer (전문연구요원).json is stored in S3
+[2022-10-09 02:52:03,439] {subprocess.py:89} INFO - programmers/멕아이씨에스백엔드 개발자 채용(Spring boot).json is stored in S3
+[2022-10-09 02:52:03,442] {subprocess.py:89} INFO - programmers/커넥트핏백엔드 개발자.json is stored in S3
+[2022-10-09 02:52:03,444] {subprocess.py:89} INFO - programmers/수호아이오Technical Writer.json is stored in S3
+[2022-10-09 02:52:03,445] {subprocess.py:89} INFO - programmers/바로고Data Engineer (Data ETL Engineer).json is stored in S3
+[2022-10-09 02:52:03,446] {subprocess.py:89} INFO - programmers/바로고Public Cloud Engineer.json is stored in S3
+[2022-10-09 02:52:03,447] {subprocess.py:89} INFO - programmers/페이타랩[패스오더] DevOps Engineer (병역특례 산업기능요원 보충역_전직가능).json is stored in S3
+[2022-10-09 02:52:03,448] {subprocess.py:89} INFO - programmers/드림어스컴퍼니Cloud Engineer(DevOps).json is stored in S3
+[2022-10-09 02:52:03,449] {subprocess.py:89} INFO - programmers/스테이지랩스백엔드 개발자.json is stored in S3
+[2022-10-09 02:52:03,451] {subprocess.py:89} INFO - programmers/클래스유[클래스유] 백엔드 개발자.json is stored in S3
+[2022-10-09 02:52:03,452] {subprocess.py:89} INFO - programmers/지지큐컴퍼니Python Developer (파이썬 개발자).json is stored in S3
+[2022-10-09 02:52:03,453] {subprocess.py:89} INFO - programmers/미디움[전략기획본부] DevOps Engineer.json is stored in S3
+[2022-10-09 02:52:03,455] {subprocess.py:89} INFO - programmers/트릿지클라우드 보안 엔지니어 (CSE,SRE,DevOps).json is stored in S3
+[2022-10-09 02:52:03,456] {subprocess.py:89} INFO - programmers/쿤텍보안 취약점 솔루션 엔지니어.json is stored in S3
+[2022-10-09 02:52:03,457] {subprocess.py:89} INFO - programmers/쿤텍클라우드 데이터 엔지니어(Data Engineer).json is stored in S3
+[2022-10-09 02:52:03,458] {subprocess.py:89} INFO - programmers/쿤텍AI_DATA Engineer.json is stored in S3
+[2022-10-09 02:52:03,459] {subprocess.py:89} INFO - programmers/버넥트[개발센터] DevOps 엔지니어.json is stored in S3
+[2022-10-09 02:52:03,461] {subprocess.py:89} INFO - programmers/쿤텍악성코드 분석 엔지니어.json is stored in S3
+[2022-10-09 02:52:03,462] {subprocess.py:89} INFO - programmers/쎄트렉아이DevOps 개발자.json is stored in S3
+[2022-10-09 02:52:03,462] {subprocess.py:89} INFO - programmers/트릿지데브옵스 엔지니어 (DevOps Engineer).json is stored in S3
+[2022-10-09 02:52:03,463] {subprocess.py:89} INFO - programmers/히비스플랫폼 서비스 개발 팀원.json is stored in S3
+[2022-10-09 02:52:03,464] {subprocess.py:89} INFO - programmers/티맥스티베로DB Application 개발자.json is stored in S3
+[2022-10-09 02:52:03,465] {subprocess.py:89} INFO - programmers/티맥스티베로DB Engine 개발자.json is stored in S3
+[2022-10-09 02:52:03,466] {subprocess.py:89} INFO - programmers/아이언플래그백엔드 개발자.json is stored in S3
+[2022-10-09 02:52:03,468] {subprocess.py:89} INFO - programmers/크래프트테크놀로지스SQL Developer.json is stored in S3
+[2022-10-09 02:52:03,471] {subprocess.py:89} INFO - programmers/매스프레소(콴다)DBA (MySQL).json is stored in S3
+[2022-10-09 02:52:03,471] {subprocess.py:89} INFO - programmers/클레온MLOps Engineer, DevOps Engineer (전문연구요원).json is stored in S3
+[2022-10-09 02:52:03,472] {subprocess.py:89} INFO - programmers/멕아이씨에스백엔드 개발자 채용(Spring boot).json is stored in S3
+[2022-10-09 02:52:03,474] {subprocess.py:89} INFO - programmers/커넥트핏백엔드 개발자.json is stored in S3
+[2022-10-09 02:52:03,475] {subprocess.py:89} INFO - programmers/수호아이오Technical Writer.json is stored in S3
+[2022-10-09 02:52:03,477] {subprocess.py:89} INFO - programmers/바로고Data Engineer (Data ETL Engineer).json is stored in S3
+[2022-10-09 02:52:03,478] {subprocess.py:89} INFO - programmers/바로고Public Cloud Engineer.json is stored in S3
+[2022-10-09 02:52:03,480] {subprocess.py:89} INFO - programmers/페이타랩[패스오더] DevOps Engineer (병역특례 산업기능요원 보충역_전직가능).json is stored in S3
+[2022-10-09 02:52:03,481] {subprocess.py:89} INFO - programmers/드림어스컴퍼니Cloud Engineer(DevOps).json is stored in S3
+[2022-10-09 02:52:03,482] {subprocess.py:89} INFO - programmers/스테이지랩스백엔드 개발자.json is stored in S3
+[2022-10-09 02:52:03,483] {subprocess.py:89} INFO - programmers/클래스유[클래스유] 백엔드 개발자.json is stored in S3
+[2022-10-09 02:52:03,485] {subprocess.py:89} INFO - programmers/지지큐컴퍼니Python Developer (파이썬 개발자).json is stored in S3
+[2022-10-09 02:52:03,487] {subprocess.py:89} INFO - programmers/미디움[전략기획본부] DevOps Engineer.json is stored in S3
+[2022-10-09 02:52:03,488] {subprocess.py:89} INFO - programmers/트릿지클라우드 보안 엔지니어 (CSE,SRE,DevOps).json is stored in S3
+[2022-10-09 02:52:03,490] {subprocess.py:89} INFO - programmers/쿤텍보안 취약점 솔루션 엔지니어.json is stored in S3
+[2022-10-09 02:52:03,491] {subprocess.py:89} INFO - programmers/쿤텍클라우드 데이터 엔지니어(Data Engineer).json is stored in S3
+[2022-10-09 02:52:03,492] {subprocess.py:89} INFO - programmers/쿤텍AI_DATA Engineer.json is stored in S3
+[2022-10-09 02:52:03,493] {subprocess.py:89} INFO - programmers/버넥트[개발센터] DevOps 엔지니어.json is stored in S3
+[2022-10-09 02:52:03,495] {subprocess.py:89} INFO - programmers/쿤텍악성코드 분석 엔지니어.json is stored in S3
+[2022-10-09 02:52:03,497] {subprocess.py:89} INFO - programmers/쎄트렉아이DevOps 개발자.json is stored in S3
+[2022-10-09 02:52:03,498] {subprocess.py:89} INFO - programmers/트릿지데브옵스 엔지니어 (DevOps Engineer).json is stored in S3
+[2022-10-09 02:52:03,499] {subprocess.py:89} INFO - programmers/히비스플랫폼 서비스 개발 팀원.json is stored in S3
+[2022-10-09 02:52:03,501] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-10-09 02:52:03,507] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/xcom.py:103 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-09 02:52:03,578] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=recruitment-airflow, task_id=KafkaToS3, execution_date=20221009T024747, start_date=20221009T025103, end_date=20221009T025203
+[2022-10-09 02:52:03,658] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-10-09 02:52:03,759] {local_task_job.py:264} INFO - 2 downstream tasks scheduled from follow-on schedule check
+[2022-10-09 02:52:03,761] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/dag.py:1069 SADeprecationWarning: Query.value() is deprecated and will be removed in a future release.  Please use Query.with_entities() in combination with Query.scalar() (deprecated since: 1.4)
+[2022-10-09 02:52:03,763] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/dag.py:1069 SADeprecationWarning: Query.values() is deprecated and will be removed in a future release.  Please use Query.with_entities() (deprecated since: 1.4)

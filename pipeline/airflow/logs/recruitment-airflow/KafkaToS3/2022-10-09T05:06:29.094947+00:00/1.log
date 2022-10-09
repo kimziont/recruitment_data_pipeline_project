@@ -1,0 +1,306 @@
+[2022-10-09 06:09:21,874] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: recruitment-airflow.KafkaToS3 manual__2022-10-09T05:06:29.094947+00:00 [queued]>
+[2022-10-09 06:09:21,907] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: recruitment-airflow.KafkaToS3 manual__2022-10-09T05:06:29.094947+00:00 [queued]>
+[2022-10-09 06:09:21,908] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-09 06:09:21,908] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2022-10-09 06:09:21,910] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-09 06:09:21,991] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): KafkaToS3> on 2022-10-09 05:06:29.094947+00:00
+[2022-10-09 06:09:21,994] {standard_task_runner.py:52} INFO - Started process 36846 to run task
+[2022-10-09 06:09:21,997] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'recruitment-airflow', 'KafkaToS3', 'manual__2022-10-09T05:06:29.094947+00:00', '--job-id', '106', '--raw', '--subdir', 'DAGS_FOLDER/recruitment_pipeline.py', '--cfg-path', '/tmp/tmpuqto2zzh', '--error-file', '/tmp/tmpit24ap0h']
+[2022-10-09 06:09:21,999] {standard_task_runner.py:77} INFO - Job 106: Subtask KafkaToS3
+[2022-10-09 06:09:22,094] {logging_mixin.py:109} INFO - Running <TaskInstance: recruitment-airflow.KafkaToS3 manual__2022-10-09T05:06:29.094947+00:00 [running]> on host pipeline
+[2022-10-09 06:09:22,151] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/xcom.py:323 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-09 06:09:22,183] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:126 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-09 06:09:22,254] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:162 SAWarning: Coercing Subquery object into a select() for use in IN(); please pass a select() construct explicitly
+[2022-10-09 06:09:22,261] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:159 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-09 06:09:22,291] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=recruitment-airflow
+AIRFLOW_CTX_TASK_ID=KafkaToS3
+AIRFLOW_CTX_EXECUTION_DATE=2022-10-09T05:06:29.094947+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-10-09T05:06:29.094947+00:00
+[2022-10-09 06:09:22,293] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-10-09 06:09:22,296] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'python /opt/pipeline/script/KafkaToS3.py']
+[2022-10-09 06:09:22,305] {subprocess.py:85} INFO - Output:
+[2022-10-09 06:10:20,224] {subprocess.py:89} INFO - 1번 째 연결 성공
+[2022-10-09 06:10:20,227] {subprocess.py:89} INFO - <class 'kafka.consumer.group.KafkaConsumer'>
+[2022-10-09 06:10:20,229] {subprocess.py:89} INFO - programmers/아이오트러스트[IoTrust] 디센트 백엔드 개발자.json is stored in S3
+[2022-10-09 06:10:20,231] {subprocess.py:89} INFO - programmers/오케스트로Back-end Engineer.json is stored in S3
+[2022-10-09 06:10:20,233] {subprocess.py:89} INFO - programmers/카카오브레인Machine Learning Engineer - Inference Engine.json is stored in S3
+[2022-10-09 06:10:20,234] {subprocess.py:89} INFO - programmers/디에스랩글로벌웹 백엔드 개발자 (Python).json is stored in S3
+[2022-10-09 06:10:20,237] {subprocess.py:89} INFO - programmers/그린랩스[신선하이개발실] 백엔드 개발 (주니어).json is stored in S3
+[2022-10-09 06:10:20,239] {subprocess.py:89} INFO - programmers/라이너스웹서비스 개발자.json is stored in S3
+[2022-10-09 06:10:20,241] {subprocess.py:89} INFO - programmers/어뮤즈랩Node.JS 개발자.json is stored in S3
+[2022-10-09 06:10:20,243] {subprocess.py:89} INFO - programmers/미리디[미리디] Jr.백엔드 개발자 - 이미지 프로세싱.json is stored in S3
+[2022-10-09 06:10:20,246] {subprocess.py:89} INFO - programmers/슈퍼진Server Developer (GAME).json is stored in S3
+[2022-10-09 06:10:20,247] {subprocess.py:89} INFO - programmers/슈퍼진Junior Sever Developer (SNS).json is stored in S3
+[2022-10-09 06:10:20,249] {subprocess.py:89} INFO - programmers/아이비베리서버_백엔드 개발.json is stored in S3
+[2022-10-09 06:10:20,250] {subprocess.py:89} INFO - programmers/플라잉캣Node.js 백엔드 개발자.json is stored in S3
+[2022-10-09 06:10:20,252] {subprocess.py:89} INFO - programmers/아이패밀리에스씨PHP_Laravel 개발자.json is stored in S3
+[2022-10-09 06:10:20,252] {subprocess.py:89} INFO - programmers/위시켓[위시켓 개발팀] 웹 개발자.json is stored in S3
+[2022-10-09 06:10:20,253] {subprocess.py:89} INFO - programmers/마드라스체크[플로우] 시스템 신규 개발.json is stored in S3
+[2022-10-09 06:10:20,255] {subprocess.py:89} INFO - programmers/위메이드블록체인 코어 및 연계 플랫폼 개발자.json is stored in S3
+[2022-10-09 06:10:20,256] {subprocess.py:89} INFO - programmers/로민[로민] AI 솔루션 운영 개발자.json is stored in S3
+[2022-10-09 06:10:20,257] {subprocess.py:89} INFO - programmers/Klinelex전기차 충전 플랫폼 개발.json is stored in S3
+[2022-10-09 06:10:20,258] {subprocess.py:89} INFO - programmers/에이스랩자율주행 시스템 개발자 - 자율주행 데브코스 수강생 전용.json is stored in S3
+[2022-10-09 06:10:20,258] {subprocess.py:89} INFO - programmers/모두싸인백엔드 엔지니어(산업기능요원 보충역, 전직).json is stored in S3
+[2022-10-09 06:10:20,259] {subprocess.py:89} INFO - programmers/모두싸인DevOps 엔지니어.json is stored in S3
+[2022-10-09 06:10:20,260] {subprocess.py:89} INFO - programmers/아우름케어매니지먼트주니어 소프트웨어 개발자 (웹개발).json is stored in S3
+[2022-10-09 06:10:20,261] {subprocess.py:89} INFO - programmers/페이타랩[패스오더] 백엔드(Spring, Python, MSA)개발자 (병역특례 산업기능요원 보충역_전직가능).json is stored in S3
+[2022-10-09 06:10:20,262] {subprocess.py:89} INFO - programmers/비바리퍼블리카(토스)[토스뱅크] Server Developer (Internal Product).json is stored in S3
+[2022-10-09 06:10:20,262] {subprocess.py:89} INFO - programmers/모젯서버 개발자(주니어)_산업기능요원 편입_전직 가능.json is stored in S3
+[2022-10-09 06:10:20,263] {subprocess.py:89} INFO - programmers/일루미나리안데브옵스 엔지니어(DevOps Engineer).json is stored in S3
+[2022-10-09 06:10:20,264] {subprocess.py:89} INFO - programmers/위메이드디파이 플랫폼 백엔드 개발자.json is stored in S3
+[2022-10-09 06:10:20,266] {subprocess.py:89} INFO - programmers/인플루엔셜[윌라] 백엔드 개발자.json is stored in S3
+[2022-10-09 06:10:20,267] {subprocess.py:89} INFO - programmers/카페24[개발팀] 이커머스 사입 및 공급 시스템 개발자.json is stored in S3
+[2022-10-09 06:10:20,268] {subprocess.py:89} INFO - programmers/레디앤스타트웹개발자(루비온레일즈).json is stored in S3
+[2022-10-09 06:10:20,269] {subprocess.py:89} INFO - programmers/엔버랩스[BackEnd] Node.js 개발자.json is stored in S3
+[2022-10-09 06:10:20,270] {subprocess.py:89} INFO - programmers/단비교육백엔드 주니어 개발자.json is stored in S3
+[2022-10-09 06:10:20,271] {subprocess.py:89} INFO - programmers/블루버드SW 웹서버개발자.json is stored in S3
+[2022-10-09 06:10:20,272] {subprocess.py:89} INFO - programmers/로그프레소데이터베이스 엔진 개발자.json is stored in S3
+[2022-10-09 06:10:20,272] {subprocess.py:89} INFO - programmers/알티베이스.NET 기반 개발  _ 네트워크 프로그램 개발  _ C_C++_Java 개발자.json is stored in S3
+[2022-10-09 06:10:20,274] {subprocess.py:89} INFO - programmers/팀프레시백엔드_풀스택 개발자.json is stored in S3
+[2022-10-09 06:10:20,275] {subprocess.py:89} INFO - programmers/콘캣AI 기반 질병예측&챗봇 서비스 개발.json is stored in S3
+[2022-10-09 06:10:20,276] {subprocess.py:89} INFO - programmers/파인랩헬스케어&핀테크 결합 APP 서비스 개발.json is stored in S3
+[2022-10-09 06:10:20,277] {subprocess.py:89} INFO - programmers/드림어스컴퍼니[오디오플랫폼 FLO] Python 기반 빅데이터 처리 개발자.json is stored in S3
+[2022-10-09 06:10:20,277] {subprocess.py:89} INFO - programmers/엑심베이Web Developer.json is stored in S3
+[2022-10-09 06:10:20,278] {subprocess.py:89} INFO - programmers/비바리퍼블리카(토스)[토스뱅크] Server Developer (Platform).json is stored in S3
+[2022-10-09 06:10:20,279] {subprocess.py:89} INFO - programmers/비바리퍼블리카(토스)[토스뱅크] Server Developer (Product).json is stored in S3
+[2022-10-09 06:10:20,280] {subprocess.py:89} INFO - programmers/쏘마Data Engineer (데이터 엔지니어).json is stored in S3
+[2022-10-09 06:10:20,281] {subprocess.py:89} INFO - programmers/쏘마Back-end Engineer (백엔드 엔지니어).json is stored in S3
+[2022-10-09 06:10:20,282] {subprocess.py:89} INFO - programmers/당근마켓서버 엔지니어 - 광고 서비스.json is stored in S3
+[2022-10-09 06:10:20,283] {subprocess.py:89} INFO - programmers/미디움[전략기획본부] 블록체인 스마트 컨트랙트 개발자.json is stored in S3
+[2022-10-09 06:10:20,284] {subprocess.py:89} INFO - programmers/비에스지파트너스JavaScript 풀스택 개발자.json is stored in S3
+[2022-10-09 06:10:20,285] {subprocess.py:89} INFO - programmers/태화이노베이션서버_백엔드, 프론트엔드, 웹 풀스택 개발자.json is stored in S3
+[2022-10-09 06:10:20,285] {subprocess.py:89} INFO - programmers/엔라이튼백엔드 엔지니어 (병역특례 전문연구요원).json is stored in S3
+[2022-10-09 06:10:20,286] {subprocess.py:89} INFO - programmers/오케스트로Open-source Engineer.json is stored in S3
+[2022-10-09 06:10:20,286] {subprocess.py:89} INFO - programmers/오케스트로Cloud Infra Engineer.json is stored in S3
+[2022-10-09 06:10:20,287] {subprocess.py:89} INFO - programmers/포자랩스AI 작곡 시스템 백엔드 개발자.json is stored in S3
+[2022-10-09 06:10:20,288] {subprocess.py:89} INFO - programmers/네오사피엔스파이썬 백엔드 개발자.json is stored in S3
+[2022-10-09 06:10:20,289] {subprocess.py:89} INFO - programmers/당근마켓서버 엔지니어 - 운영개발.json is stored in S3
+[2022-10-09 06:10:20,290] {subprocess.py:89} INFO - programmers/오케스트로Full Stack Developer (Cloud DevOps Service).json is stored in S3
+[2022-10-09 06:10:20,291] {subprocess.py:89} INFO - programmers/당근마켓서버 엔지니어 - 당근페이 플랫폼 (Java _ Kotlin).json is stored in S3
+[2022-10-09 06:10:20,291] {subprocess.py:89} INFO - programmers/당근마켓서버 엔지니어 - 당근페이 서비스 (Java _ Kotlin).json is stored in S3
+[2022-10-09 06:10:20,293] {subprocess.py:89} INFO - programmers/오케스트로Full Stack Developer (Cloud Service - MLOps).json is stored in S3
+[2022-10-09 06:10:20,294] {subprocess.py:89} INFO - programmers/오케스트로Senior Back-end Developer (Cloud Service - AIOps).json is stored in S3
+[2022-10-09 06:10:20,295] {subprocess.py:89} INFO - programmers/버킷플레이스(오늘의집)[전문연구요원] Software Engineer, Backend.json is stored in S3
+[2022-10-09 06:10:20,295] {subprocess.py:89} INFO - programmers/살린백엔드 개발자.json is stored in S3
+[2022-10-09 06:10:20,296] {subprocess.py:89} INFO - programmers/맥스트프론트엔드 개발자.json is stored in S3
+[2022-10-09 06:10:20,297] {subprocess.py:89} INFO - programmers/브릭웹 벡엔드 개발자.json is stored in S3
+[2022-10-09 06:10:20,298] {subprocess.py:89} INFO - programmers/매드업주니어 백엔드 개발자.json is stored in S3
+[2022-10-09 06:10:20,298] {subprocess.py:89} INFO - programmers/에이피알Windows 개발자.json is stored in S3
+[2022-10-09 06:10:20,299] {subprocess.py:89} INFO - programmers/알에스인터렉티브프론트엔드 개발자.json is stored in S3
+[2022-10-09 06:10:20,300] {subprocess.py:89} INFO - programmers/미디움[전략기획본부] 블록체인 코어 개발자.json is stored in S3
+[2022-10-09 06:10:20,300] {subprocess.py:89} INFO - programmers/미디움[전략기획본부] 블록체인 연동 백엔드 개발.json is stored in S3
+[2022-10-09 06:10:20,301] {subprocess.py:89} INFO - programmers/인스피언클라우드EDI 서비스 개발자.json is stored in S3
+[2022-10-09 06:10:20,302] {subprocess.py:89} INFO - programmers/iPortfolioBack-end 개발자.json is stored in S3
+[2022-10-09 06:10:20,302] {subprocess.py:89} INFO - programmers/알라딘글로벌알앤디센터웹_앱 백엔드 개발자.json is stored in S3
+[2022-10-09 06:10:20,303] {subprocess.py:89} INFO - programmers/쓰리덕스웹 개발자.json is stored in S3
+[2022-10-09 06:10:20,303] {subprocess.py:89} INFO - programmers/쿤텍데이터 개발자.json is stored in S3
+[2022-10-09 06:10:20,304] {subprocess.py:89} INFO - programmers/업스테이지Software Engineer - 검색.json is stored in S3
+[2022-10-09 06:10:20,305] {subprocess.py:89} INFO - programmers/스와치온백엔드 개발자.json is stored in S3
+[2022-10-09 06:10:20,306] {subprocess.py:89} INFO - programmers/넥슨코리아[인텔리전스랩스] 프론트서버개발팀 백엔드 개발자 (Java).json is stored in S3
+[2022-10-09 06:10:20,306] {subprocess.py:89} INFO - programmers/이스트소프트[ESTsoft] 백엔드 개발자.json is stored in S3
+[2022-10-09 06:10:20,307] {subprocess.py:89} INFO - programmers/Gauss LabsAI Engineer.json is stored in S3
+[2022-10-09 06:10:20,308] {subprocess.py:89} INFO - programmers/스냅태그백엔드(Node.js) 개발자.json is stored in S3
+[2022-10-09 06:10:20,309] {subprocess.py:89} INFO - programmers/슈퍼캣[메타버스 ZEP] 서버 프로그래머.json is stored in S3
+[2022-10-09 06:10:20,310] {subprocess.py:89} INFO - programmers/스트리미백엔드 개발자.json is stored in S3
+[2022-10-09 06:10:20,310] {subprocess.py:89} INFO - programmers/스트리미DevOps 엔지니어.json is stored in S3
+[2022-10-09 06:10:20,311] {subprocess.py:89} INFO - programmers/버넥트[개발센터] 백엔드 개발자.json is stored in S3
+[2022-10-09 06:10:20,312] {subprocess.py:89} INFO - programmers/액션파워[액션파워] 백엔드 개발자.json is stored in S3
+[2022-10-09 06:10:20,313] {subprocess.py:89} INFO - programmers/크레이브몹서버 프로그래머.json is stored in S3
+[2022-10-09 06:10:20,314] {subprocess.py:89} INFO - programmers/인포보스[인포보스]솔루션개발팀(Front-end, Back-end _ 산업기능요원, 전문연구요원 가능).json is stored in S3
+[2022-10-09 06:10:20,315] {subprocess.py:89} INFO - programmers/슈퍼캣[메타버스 ZEP] 백엔드 개발자.json is stored in S3
+[2022-10-09 06:10:20,316] {subprocess.py:89} INFO - programmers/슈퍼캣[메타버스 ZEP] 콘텐츠 서버 프로그래머.json is stored in S3
+[2022-10-09 06:10:20,317] {subprocess.py:89} INFO - programmers/에어스메디컬Backend Engineer.json is stored in S3
+[2022-10-09 06:10:20,318] {subprocess.py:89} INFO - programmers/무스마소프트웨어 개발자(Back-end_Front-end).json is stored in S3
+[2022-10-09 06:10:20,319] {subprocess.py:89} INFO - programmers/카카오브레인Backend Engineer.json is stored in S3
+[2022-10-09 06:10:20,320] {subprocess.py:89} INFO - programmers/업스테이지[전문연구요원] Software Engineer.json is stored in S3
+[2022-10-09 06:10:20,321] {subprocess.py:89} INFO - programmers/넥서스커뮤니티C# 개발자.json is stored in S3
+[2022-10-09 06:10:20,321] {subprocess.py:89} INFO - programmers/엑스이허브산업기능요원 개발자.json is stored in S3
+[2022-10-09 06:10:20,322] {subprocess.py:89} INFO - programmers/빅픽처팀웹_앱 프론트엔드 개발자.json is stored in S3
+[2022-10-09 06:10:59,129] {subprocess.py:89} INFO - programmers/아이오트러스트[IoTrust] 디센트 프론트엔드 개발자.json is stored in S3
+[2022-10-09 06:10:59,132] {subprocess.py:89} INFO - programmers/페이타랩[패스오더] Windows 개발자.json is stored in S3
+[2022-10-09 06:10:59,134] {subprocess.py:89} INFO - programmers/페이타랩[패스오더] 웹 프론트엔드 개발자.json is stored in S3
+[2022-10-09 06:10:59,135] {subprocess.py:89} INFO - programmers/크립토파라다이스Front-end Junior Developer.json is stored in S3
+[2022-10-09 06:10:59,136] {subprocess.py:89} INFO - programmers/페이타랩[패스오더] iOS 개발자.json is stored in S3
+[2022-10-09 06:10:59,137] {subprocess.py:89} INFO - programmers/멕아이씨에스프론트엔드 개발자 채용(React).json is stored in S3
+[2022-10-09 06:10:59,138] {subprocess.py:89} INFO - programmers/그린랩스[신선하이개발실] 프론트엔드 개발 (주니어).json is stored in S3
+[2022-10-09 06:10:59,138] {subprocess.py:89} INFO - programmers/에이피알[에이피알] 프론트엔드 개발자.json is stored in S3
+[2022-10-09 06:10:59,139] {subprocess.py:89} INFO - programmers/아프리카티비글로벌 서비스 Front-end 개발.json is stored in S3
+[2022-10-09 06:10:59,140] {subprocess.py:89} INFO - programmers/커넥트핏프론트엔드(Flutter) 개발자.json is stored in S3
+[2022-10-09 06:10:59,141] {subprocess.py:89} INFO - programmers/위메이드백오피스 프론트 개발자.json is stored in S3
+[2022-10-09 06:10:59,142] {subprocess.py:89} INFO - programmers/모두싸인프론트엔드 엔지니어(산업기능요원 보충역, 전직).json is stored in S3
+[2022-10-09 06:10:59,143] {subprocess.py:89} INFO - programmers/페이타랩[패스오더] Windows 개발자 (병역특례 산업기능요원 보충역_전직가능).json is stored in S3
+[2022-10-09 06:10:59,144] {subprocess.py:89} INFO - programmers/페이타랩[패스오더] iOS 개발자 (병역특례 산업기능요원 보충역_전직가능).json is stored in S3
+[2022-10-09 06:10:59,145] {subprocess.py:89} INFO - programmers/페이타랩[패스오더] 안드로이드 개발자.json is stored in S3
+[2022-10-09 06:10:59,146] {subprocess.py:89} INFO - programmers/페이타랩[패스오더] 안드로이드 개발자 (병역특례 산업기능요원 보충역_전직가능).json is stored in S3
+[2022-10-09 06:10:59,147] {subprocess.py:89} INFO - programmers/페이타랩[패스오더] 웹 프론트엔드 개발자 (병역특례 산업기능요원 보충역_전직가능).json is stored in S3
+[2022-10-09 06:10:59,147] {subprocess.py:89} INFO - programmers/위메이드디파이 플랫폼 스마트 컨트랙트 개발자.json is stored in S3
+[2022-10-09 06:10:59,148] {subprocess.py:89} INFO - programmers/의식주컴퍼니[런드리고] 웹 프론트엔드 개발자(신입 가능).json is stored in S3
+[2022-10-09 06:10:59,149] {subprocess.py:89} INFO - programmers/미디움[전략기획본부] 웹 프론트엔드 Frontend 개발자.json is stored in S3
+[2022-10-09 06:10:59,149] {subprocess.py:89} INFO - programmers/당근마켓프론트엔드 엔지니어 - 당근페이.json is stored in S3
+[2022-10-09 06:10:59,151] {subprocess.py:89} INFO - programmers/단비교육프런트엔드(ReactJS) 주니어 개발자.json is stored in S3
+[2022-10-09 06:10:59,152] {subprocess.py:89} INFO - programmers/스마트캐스트C++ 프로그래머 (QT).json is stored in S3
+[2022-10-09 06:10:59,153] {subprocess.py:89} INFO - programmers/콘캣AR APP 서비스 개발.json is stored in S3
+[2022-10-09 06:10:59,154] {subprocess.py:89} INFO - programmers/미리디[미리캔버스] 코어엔진 개발자.json is stored in S3
+[2022-10-09 06:10:59,154] {subprocess.py:89} INFO - programmers/스테이지랩스프론트엔드 개발자.json is stored in S3
+[2022-10-09 06:10:59,155] {subprocess.py:89} INFO - programmers/네오사피엔스프론트엔드 개발자 - 내부 플랫폼.json is stored in S3
+[2022-10-09 06:10:59,156] {subprocess.py:89} INFO - programmers/네오사피엔스프론트엔드 개발자.json is stored in S3
+[2022-10-09 06:10:59,156] {subprocess.py:89} INFO - programmers/오케스트로Developer, Engineer.json is stored in S3
+[2022-10-09 06:10:59,157] {subprocess.py:89} INFO - programmers/오케스트로Front-end Developer  (클라우드 관리 콘솔).json is stored in S3
+[2022-10-09 06:10:59,158] {subprocess.py:89} INFO - programmers/버킷플레이스(오늘의집)[전문연구요원] Software Engineer, Frontend.json is stored in S3
+[2022-10-09 06:10:59,159] {subprocess.py:89} INFO - programmers/클래스유[클래스유] 프론트엔드 개발자.json is stored in S3
+[2022-10-09 06:10:59,160] {subprocess.py:89} INFO - programmers/브릭웹 프론트 개발자.json is stored in S3
+[2022-10-09 06:10:59,161] {subprocess.py:89} INFO - programmers/인텔리즈DeepLearning for machine vision[제조산업을 위한 인공지능 연구 개발자].json is stored in S3
+[2022-10-09 06:10:59,161] {subprocess.py:89} INFO - programmers/식스샵[플랫폼 팀] 프론트엔드 개발자.json is stored in S3
+[2022-10-09 06:10:59,162] {subprocess.py:89} INFO - programmers/아이에이치큐'바바요(babayo)' OTT 플랫폼 프론트 개발자 (React).json is stored in S3
+[2022-10-09 06:10:59,163] {subprocess.py:89} INFO - programmers/아이에이치큐'바바요(babayo)'  OTT 플랫폼 모바일 개발자 (React-Native).json is stored in S3
+[2022-10-09 06:10:59,163] {subprocess.py:89} INFO - programmers/한국시니어연구소프론트 개발자 (Front-End Engineer).json is stored in S3
+[2022-10-09 06:10:59,164] {subprocess.py:89} INFO - programmers/알라딘글로벌알앤디센터블록체인 기반 웹서비스 프론트엔드 개발자.json is stored in S3
+[2022-10-09 06:10:59,165] {subprocess.py:89} INFO - programmers/비트바이트웹 프론트엔드 개발자.json is stored in S3
+[2022-10-09 06:10:59,166] {subprocess.py:89} INFO - programmers/파모즈서버키트 프론트엔드 서비스 개발자.json is stored in S3
+[2022-10-09 06:10:59,167] {subprocess.py:89} INFO - programmers/iPortfolioFront-end 개발자.json is stored in S3
+[2022-10-09 06:10:59,167] {subprocess.py:89} INFO - programmers/쓰리아이Frontend Developer.json is stored in S3
+[2022-10-09 06:10:59,168] {subprocess.py:89} INFO - programmers/나인하이어React 웹 프론트엔드 개발자, 부산.json is stored in S3
+[2022-10-09 06:10:59,169] {subprocess.py:89} INFO - programmers/알라딘글로벌알앤디센터웹_앱 프론트 개발자.json is stored in S3
+[2022-10-09 06:10:59,170] {subprocess.py:89} INFO - programmers/오케스트로Front-end Developer(클라우드 모니터링).json is stored in S3
+[2022-10-09 06:10:59,171] {subprocess.py:89} INFO - programmers/이우소프트Web_Cloud Front-end.json is stored in S3
+[2022-10-09 06:10:59,172] {subprocess.py:89} INFO - programmers/SKIAUnity 개발자.json is stored in S3
+[2022-10-09 06:10:59,173] {subprocess.py:89} INFO - programmers/버넥트[개발센터] 웹 개발자.json is stored in S3
+[2022-10-09 06:10:59,174] {subprocess.py:89} INFO - programmers/액션파워[액션파워] 프론트엔드 개발자.json is stored in S3
+[2022-10-09 06:10:59,176] {subprocess.py:89} INFO - programmers/에이럭스소프트웨어 개발 엔지니어 (웹).json is stored in S3
+[2022-10-09 06:10:59,178] {subprocess.py:89} INFO - programmers/AB180Junior Web SDK Engineer(주니어 웹 SDK 엔지니어)(병역특례 가능).json is stored in S3
+[2022-10-09 06:10:59,180] {subprocess.py:89} INFO - programmers/뮤즈라이브프론트엔드 엔지니어(Front Engineer _ React, Javascript).json is stored in S3
+[2022-10-09 06:10:59,181] {subprocess.py:89} INFO - programmers/휴라Frontend UI 개발자.json is stored in S3
+[2022-10-09 06:10:59,182] {subprocess.py:89} INFO - programmers/에스앤피랩Frontend Developer.json is stored in S3
+[2022-10-09 06:10:59,182] {subprocess.py:89} INFO - programmers/아이트럭프론트엔드 개발자.json is stored in S3
+[2022-10-09 06:10:59,184] {subprocess.py:89} INFO - programmers/빅인사이트FrontEnd Team 개발자.json is stored in S3
+[2022-10-09 06:10:59,184] {subprocess.py:89} INFO - programmers/세탁특공대React native Engineer(Front-end) 엔지니어.json is stored in S3
+[2022-10-09 06:10:59,185] {subprocess.py:89} INFO - programmers/아주큐엠에스웹개발.json is stored in S3
+[2022-10-09 06:10:59,187] {subprocess.py:89} INFO - programmers/라이브커넥트Flutter 앱 개발자.json is stored in S3
+[2022-10-09 06:10:59,187] {subprocess.py:89} INFO - programmers/바텍 네트웍스Front-end 개발.json is stored in S3
+[2022-10-09 06:10:59,189] {subprocess.py:89} INFO - programmers/이노솔루션LMS _ CMS 개발자.json is stored in S3
+[2022-10-09 06:10:59,190] {subprocess.py:89} INFO - programmers/오토피디아React Native 개발자.json is stored in S3
+[2022-10-09 06:10:59,191] {subprocess.py:89} INFO - programmers/오토피디아React 개발자.json is stored in S3
+[2022-10-09 06:10:59,193] {subprocess.py:89} INFO - programmers/엑셀로SW개발.json is stored in S3
+[2022-10-09 06:10:59,195] {subprocess.py:89} INFO - programmers/큐픽스Angular_TypeScript, WebGL_OpenGL, 병역특례 가능.json is stored in S3
+[2022-10-09 06:10:59,196] {subprocess.py:89} INFO - programmers/클로버추얼패션웹 그래픽스 개발자.json is stored in S3
+[2022-10-09 06:10:59,197] {subprocess.py:89} INFO - programmers/비바리퍼블리카(토스)[토스뱅크] Frontend Developer.json is stored in S3
+[2022-10-09 06:10:59,198] {subprocess.py:89} INFO - programmers/긴트[자율주행] 모바일 앱(App) 개발.json is stored in S3
+[2022-10-09 06:10:59,199] {subprocess.py:89} INFO - programmers/올거나이즈코리아[AI Startup] React Front-end Engineer.json is stored in S3
+[2022-10-09 06:10:59,200] {subprocess.py:89} INFO - programmers/포커스미디어코리아Frontend Engineer.json is stored in S3
+[2022-10-09 06:10:59,200] {subprocess.py:89} INFO - programmers/비바리퍼블리카(토스)[토스뱅크] Internal Product Developer (고객 상담 시스템).json is stored in S3
+[2022-10-09 06:10:59,201] {subprocess.py:89} INFO - programmers/트릿지주니어 프론트엔드 개발자.json is stored in S3
+[2022-10-09 06:10:59,203] {subprocess.py:89} INFO - programmers/빗썸코리아[빗썸] 블록체인 개발.json is stored in S3
+[2022-10-09 06:10:59,204] {subprocess.py:89} INFO - programmers/넥스쳐웹_플랫폼 개발자.json is stored in S3
+[2022-10-09 06:10:59,204] {subprocess.py:89} INFO - programmers/한국직무능력평가연구소웹개발자 (JAVA).json is stored in S3
+[2022-10-09 06:10:59,206] {subprocess.py:89} INFO - programmers/타르트프로덕트 엔지니어 (프론트 _ 백 _ 데이터).json is stored in S3
+[2022-10-09 06:10:59,207] {subprocess.py:89} INFO - programmers/메가존클라우드Front End Web Development Engineer.json is stored in S3
+[2022-10-09 06:10:59,208] {subprocess.py:89} INFO - programmers/엔젤스윙프론트엔드 엔지니어.json is stored in S3
+[2022-10-09 06:10:59,209] {subprocess.py:89} INFO - programmers/겟앤쇼겟앤쇼 웹 개발자.json is stored in S3
+[2022-10-09 06:10:59,210] {subprocess.py:89} INFO - programmers/릴리커버프론트엔드 개발자 모집.json is stored in S3
+[2022-10-09 06:10:59,211] {subprocess.py:89} INFO - programmers/루미르UX_UI 개발.json is stored in S3
+[2022-10-09 06:10:59,212] {subprocess.py:89} INFO - programmers/SKIAAR iOS 개발자.json is stored in S3
+[2022-10-09 06:10:59,214] {subprocess.py:89} INFO - programmers/컨워스OpenGL_GLSL 개발자.json is stored in S3
+[2022-10-09 06:10:59,215] {subprocess.py:89} INFO - programmers/컨워스3D_2D 지도 프론트엔드 개발자.json is stored in S3
+[2022-10-09 06:10:59,216] {subprocess.py:89} INFO - programmers/데이터메이커Frontend Engineer.json is stored in S3
+[2022-10-09 06:10:59,217] {subprocess.py:89} INFO - programmers/열정팩토리프론트엔드 개발자 (Flutter).json is stored in S3
+[2022-10-09 06:10:59,218] {subprocess.py:89} INFO - programmers/해긴플랫폼 개발자.json is stored in S3
+[2022-10-09 06:10:59,220] {subprocess.py:89} INFO - programmers/브리치프론트엔드&백엔드 개발자.json is stored in S3
+[2022-10-09 06:10:59,221] {subprocess.py:89} INFO - programmers/핀크웹서버개발자.json is stored in S3
+[2022-10-09 06:10:59,222] {subprocess.py:89} INFO - programmers/핀크Back-end서버개발자.json is stored in S3
+[2022-10-09 06:10:59,223] {subprocess.py:89} INFO - programmers/보이저엑스Vrew 데스크탑 앱 개발자.json is stored in S3
+[2022-10-09 06:10:59,225] {subprocess.py:89} INFO - programmers/아이엠에스모빌리티프론트 개발자 (Front Developer).json is stored in S3
+[2022-10-09 06:10:59,229] {subprocess.py:89} INFO - programmers/플랜티넷C_C++ 개발.json is stored in S3
+[2022-10-09 06:10:59,231] {subprocess.py:89} INFO - programmers/TAGbyWeb Developer(Python).json is stored in S3
+[2022-10-09 06:10:59,232] {subprocess.py:89} INFO - programmers/밀리만코리아Software Engineer (Application 개발).json is stored in S3
+[2022-10-09 06:12:01,736] {subprocess.py:89} INFO - programmers/블루펫프론트엔드 개발자.json is stored in S3
+[2022-10-09 06:12:01,738] {subprocess.py:89} INFO - programmers/구루미프론트엔드 개발자.json is stored in S3
+[2022-10-09 06:12:01,739] {subprocess.py:89} INFO - programmers/피에이치씨서버개발자.json is stored in S3
+[2022-10-09 06:12:01,741] {subprocess.py:89} INFO - programmers/한스바이오텍키오스크 웹서비스 개발.json is stored in S3
+[2022-10-09 06:12:01,744] {subprocess.py:89} INFO - programmers/한마음스마트키오스크 웹서비스 개발.json is stored in S3
+[2022-10-09 06:12:01,747] {subprocess.py:89} INFO - programmers/비바리퍼블리카(토스)[토스코어] Frontend Developer.json is stored in S3
+[2022-10-09 06:12:01,749] {subprocess.py:89} INFO - programmers/솔트룩스병특 전문연구요원 개발자.json is stored in S3
+[2022-10-09 06:12:01,751] {subprocess.py:89} INFO - programmers/Xinics프론트엔드 웹 개발자.json is stored in S3
+[2022-10-09 06:12:01,754] {subprocess.py:89} INFO - programmers/Xinics이러닝 웹 솔루션 개발자.json is stored in S3
+[2022-10-09 06:12:01,755] {subprocess.py:89} INFO - programmers/아이시큐어웹 서비스 개발자.json is stored in S3
+[2022-10-09 06:12:01,756] {subprocess.py:89} INFO - programmers/Xinics백엔드 웹 개발자.json is stored in S3
+[2022-10-09 06:12:01,759] {subprocess.py:89} INFO - programmers/리턴제로AI 연구 개발, 서비스 개발.json is stored in S3
+[2022-10-09 06:12:01,761] {subprocess.py:89} INFO - programmers/에너자이ML Engineer_Researcher.json is stored in S3
+[2022-10-09 06:12:01,763] {subprocess.py:89} INFO - programmers/클레온AI Deep Learning Engineer 딥러닝 엔지니어 (전문연구요원 가능).json is stored in S3
+[2022-10-09 06:12:01,765] {subprocess.py:89} INFO - programmers/퀀타매트릭스머신러닝 엔지니어_ 데이터사이언티스트.json is stored in S3
+[2022-10-09 06:12:01,766] {subprocess.py:89} INFO - programmers/뉴로클딥러닝 리서처.json is stored in S3
+[2022-10-09 06:12:01,770] {subprocess.py:89} INFO - programmers/리디머신러닝 엔지니어(전문연구요원 가능).json is stored in S3
+[2022-10-09 06:12:01,773] {subprocess.py:89} INFO - programmers/어뮤즈랩AI 미디어 개발자.json is stored in S3
+[2022-10-09 06:12:01,775] {subprocess.py:89} INFO - programmers/로민[로민] AI 솔루션, 자연어처리 개발자.json is stored in S3
+[2022-10-09 06:12:01,776] {subprocess.py:89} INFO - programmers/로민[로민] AI 솔루션, 컴퓨터비전 개발자.json is stored in S3
+[2022-10-09 06:12:01,777] {subprocess.py:89} INFO - programmers/에이스랩자율주행 소프트웨어 개발자 - 자율주행 데브코스 수강생 전용.json is stored in S3
+[2022-10-09 06:12:01,778] {subprocess.py:89} INFO - programmers/휴레이포지티브[휴레이] 머신러닝 개발자.json is stored in S3
+[2022-10-09 06:12:01,779] {subprocess.py:89} INFO - programmers/스페이스워크Data Scientist.json is stored in S3
+[2022-10-09 06:12:01,780] {subprocess.py:89} INFO - programmers/포스로직이미지 프로세싱 알고리즘 연구_ 최적화.json is stored in S3
+[2022-10-09 06:12:01,782] {subprocess.py:89} INFO - programmers/시터스컴퓨터 비전 개발자.json is stored in S3
+[2022-10-09 06:12:01,783] {subprocess.py:89} INFO - programmers/빅픽처팀NLP _ TTS 연구원 , 데이터 엔지니어, 데이터 사이언스.json is stored in S3
+[2022-10-09 06:12:01,784] {subprocess.py:89} INFO - programmers/핀그램소프트웨어 개발자.json is stored in S3
+[2022-10-09 06:12:01,785] {subprocess.py:89} INFO - programmers/오케스트로AI _ 클라우드 R&D 연구원 (정부과제 전담, 병역특례 가능).json is stored in S3
+[2022-10-09 06:12:01,786] {subprocess.py:89} INFO - programmers/오케스트로빅데이터 엔지니어(AIOps 팀).json is stored in S3
+[2022-10-09 06:12:01,787] {subprocess.py:89} INFO - programmers/오케스트로머신러닝(언어지능) 연구원.json is stored in S3
+[2022-10-09 06:12:01,789] {subprocess.py:89} INFO - programmers/오케스트로머신러닝(시각지능) 연구원.json is stored in S3
+[2022-10-09 06:12:01,790] {subprocess.py:89} INFO - programmers/버킷플레이스(오늘의집)[전문연구요원] Software Engineer, Machine Learning.json is stored in S3
+[2022-10-09 06:12:01,793] {subprocess.py:89} INFO - programmers/버넥트[연구센터] Computer Vision-Visual SLAM Engineer.json is stored in S3
+[2022-10-09 06:12:01,795] {subprocess.py:89} INFO - programmers/아우름플래닛AI_ML 엔지니어.json is stored in S3
+[2022-10-09 06:12:01,796] {subprocess.py:89} INFO - programmers/앤트ML_DL Researcher.json is stored in S3
+[2022-10-09 06:12:01,798] {subprocess.py:89} INFO - programmers/아이지에이웍스머신러닝 엔지니어 (디파이너리).json is stored in S3
+[2022-10-09 06:12:01,799] {subprocess.py:89} INFO - programmers/SKIAAR, Image processing 전문 연구원.json is stored in S3
+[2022-10-09 06:12:01,800] {subprocess.py:89} INFO - programmers/피에이치씨AI 연구원 (원주의료기기테크노밸리).json is stored in S3
+[2022-10-09 06:12:01,802] {subprocess.py:89} INFO - programmers/액션파워[액션파워] 인공지능_머신러닝 엔지니어.json is stored in S3
+[2022-10-09 06:12:01,802] {subprocess.py:89} INFO - programmers/인포보스[인포보스]인공지능개발팀(산업기능요원, 전문연구요원 가능).json is stored in S3
+[2022-10-09 06:12:01,804] {subprocess.py:89} INFO - programmers/AB180Data Scientist (데이터 사이언티스트)(병역특례 가능).json is stored in S3
+[2022-10-09 06:12:01,805] {subprocess.py:89} INFO - programmers/포자랩스인공지능 작곡 딥러닝 개발자 (NLP).json is stored in S3
+[2022-10-09 06:12:01,805] {subprocess.py:89} INFO - programmers/해줌[에너지 IT기업 해줌] 백엔드 개발자.json is stored in S3
+[2022-10-09 06:12:01,806] {subprocess.py:89} INFO - programmers/뷰메진컴퓨터비전 엔지니어 Junior.json is stored in S3
+[2022-10-09 06:12:01,807] {subprocess.py:89} INFO - programmers/데이터헌트머신러닝 엔지니어(NLP) _ 데이터 사이언티스트.json is stored in S3
+[2022-10-09 06:12:01,808] {subprocess.py:89} INFO - programmers/룩코AI 엔지니어.json is stored in S3
+[2022-10-09 06:12:01,811] {subprocess.py:89} INFO - programmers/아이트럭머신러닝 개발자.json is stored in S3
+[2022-10-09 06:12:01,812] {subprocess.py:89} INFO - programmers/누비랩포인트 클라우드 엔지니어.json is stored in S3
+[2022-10-09 06:12:01,813] {subprocess.py:89} INFO - programmers/리콘랩스컴퓨터비전 연구원(석박사).json is stored in S3
+[2022-10-09 06:12:01,815] {subprocess.py:89} INFO - programmers/올거나이즈코리아[AI Startup] AI Researcher _ Engineer.json is stored in S3
+[2022-10-09 06:12:01,816] {subprocess.py:89} INFO - programmers/모아이스2D Pose AI Researcher.json is stored in S3
+[2022-10-09 06:12:01,816] {subprocess.py:89} INFO - programmers/옴니어스ML Engineer - Personalized Recommendation.json is stored in S3
+[2022-10-09 06:12:01,818] {subprocess.py:89} INFO - programmers/옴니어스ML Engineer - Trend analytics.json is stored in S3
+[2022-10-09 06:12:01,820] {subprocess.py:89} INFO - programmers/옴니어스ML Engineer - Computer vision.json is stored in S3
+[2022-10-09 06:12:01,821] {subprocess.py:89} INFO - programmers/모빌린트딥러닝 알고리즘 엔지니어.json is stored in S3
+[2022-10-09 06:12:01,822] {subprocess.py:89} INFO - programmers/뉴블라머신 러닝 기반 서비스를 위한 SaaS Solution Backend 개발.json is stored in S3
+[2022-10-09 06:12:01,823] {subprocess.py:89} INFO - programmers/데이터메이커ML Engineer.json is stored in S3
+[2022-10-09 06:12:01,826] {subprocess.py:89} INFO - programmers/인플루엔셜[윌라] 데이터 엔지니어.json is stored in S3
+[2022-10-09 06:12:01,827] {subprocess.py:89} INFO - programmers/아비커스(R&D) 플랫폼 개발 MLOps.json is stored in S3
+[2022-10-09 06:12:01,828] {subprocess.py:89} INFO - programmers/씨엔알리서치AI Engineer.json is stored in S3
+[2022-10-09 06:12:01,829] {subprocess.py:89} INFO - programmers/아비커스Machine Learning Engineer.json is stored in S3
+[2022-10-09 06:12:01,830] {subprocess.py:89} INFO - programmers/아비커스Computer Vision Engineer.json is stored in S3
+[2022-10-09 06:12:01,832] {subprocess.py:89} INFO - programmers/메디픽셀[인공지능기업] 딥러닝_영상처리 연구원 모집.json is stored in S3
+[2022-10-09 06:12:01,834] {subprocess.py:89} INFO - programmers/니트로 스튜디오카트라이더 드리프트 머신러닝 개발자.json is stored in S3
+[2022-10-09 06:12:01,836] {subprocess.py:89} INFO - programmers/바텍 네트웍스클라우드기반 의료플랫폼 AI(영상_음성_텍스트 인식 등)개발자.json is stored in S3
+[2022-10-09 06:12:01,838] {subprocess.py:89} INFO - programmers/클로봇[기업부설연구소] Visual_LiDAR SLAM 개발.json is stored in S3
+[2022-10-09 06:12:01,840] {subprocess.py:89} INFO - programmers/한국클라우드공공정책사업실 R&D 개발자.json is stored in S3
+[2022-10-09 06:12:01,840] {subprocess.py:89} INFO - programmers/프로그래머스 KDT 데브코스 자율주행 1기(프로그래머스 자율주행 데브코스 수료생용 공고)자율주행 Perception Engineer.json is stored in S3
+[2022-10-09 06:12:01,841] {subprocess.py:89} INFO - programmers/업스테이지[전문연구요원] AI Research Engineer.json is stored in S3
+[2022-10-09 06:12:01,842] {subprocess.py:89} INFO - programmers/리콘랩스AI 엔지니어.json is stored in S3
+[2022-10-09 06:12:01,844] {subprocess.py:89} INFO - programmers/아이트AI PM(팀장 이상 급) 및 개발자(AI, 빅데이터 분야).json is stored in S3
+[2022-10-09 06:12:01,845] {subprocess.py:89} INFO - programmers/제네시스랩Data Scientist.json is stored in S3
+[2022-10-09 06:12:01,846] {subprocess.py:89} INFO - programmers/릴리커버백엔드 경력 개발자 모집.json is stored in S3
+[2022-10-09 06:12:01,849] {subprocess.py:89} INFO - programmers/넥스트케이딥러닝 영상분석 개발자.json is stored in S3
+[2022-10-09 06:12:01,850] {subprocess.py:89} INFO - programmers/아이엠에스모빌리티IMS.Connect 백엔드 개발자.json is stored in S3
+[2022-10-09 06:12:01,852] {subprocess.py:89} INFO - programmers/솔트룩스데이터사이언티스트(석박사).json is stored in S3
+[2022-10-09 06:12:01,854] {subprocess.py:89} INFO - programmers/이노팸Visual  Geo-localization  Researcher.json is stored in S3
+[2022-10-09 06:12:01,856] {subprocess.py:89} INFO - programmers/XinicsDevOps 엔지니어.json is stored in S3
+[2022-10-09 06:12:01,858] {subprocess.py:89} INFO - programmers/아비커스Perception Engineer.json is stored in S3
+[2022-10-09 06:12:01,859] {subprocess.py:89} INFO - programmers/스트리미데이터 엔지니어.json is stored in S3
+[2022-10-09 06:12:01,860] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-10-09 06:12:01,869] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/xcom.py:103 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-09 06:12:01,969] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=recruitment-airflow, task_id=KafkaToS3, execution_date=20221009T050629, start_date=20221009T060921, end_date=20221009T061201
+[2022-10-09 06:12:02,066] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-10-09 06:12:02,161] {local_task_job.py:264} INFO - 2 downstream tasks scheduled from follow-on schedule check
+[2022-10-09 06:12:02,164] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/dag.py:1069 SADeprecationWarning: Query.value() is deprecated and will be removed in a future release.  Please use Query.with_entities() in combination with Query.scalar() (deprecated since: 1.4)
+[2022-10-09 06:12:02,165] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/dag.py:1069 SADeprecationWarning: Query.values() is deprecated and will be removed in a future release.  Please use Query.with_entities() (deprecated since: 1.4)

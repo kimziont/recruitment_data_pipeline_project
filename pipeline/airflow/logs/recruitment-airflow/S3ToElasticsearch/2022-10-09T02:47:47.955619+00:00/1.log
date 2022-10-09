@@ -1,0 +1,63 @@
+[2022-10-09 02:52:05,610] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: recruitment-airflow.S3ToElasticsearch manual__2022-10-09T02:47:47.955619+00:00 [queued]>
+[2022-10-09 02:52:05,640] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: recruitment-airflow.S3ToElasticsearch manual__2022-10-09T02:47:47.955619+00:00 [queued]>
+[2022-10-09 02:52:05,641] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-09 02:52:05,642] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2022-10-09 02:52:05,643] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-09 02:52:05,718] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): S3ToElasticsearch> on 2022-10-09 02:47:47.955619+00:00
+[2022-10-09 02:52:05,722] {standard_task_runner.py:52} INFO - Started process 505 to run task
+[2022-10-09 02:52:05,724] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'recruitment-airflow', 'S3ToElasticsearch', 'manual__2022-10-09T02:47:47.955619+00:00', '--job-id', '96', '--raw', '--subdir', 'DAGS_FOLDER/recruitment_pipeline.py', '--cfg-path', '/tmp/tmpuxyc8zhh', '--error-file', '/tmp/tmpptc7xliq']
+[2022-10-09 02:52:05,725] {standard_task_runner.py:77} INFO - Job 96: Subtask S3ToElasticsearch
+[2022-10-09 02:52:05,814] {logging_mixin.py:109} INFO - Running <TaskInstance: recruitment-airflow.S3ToElasticsearch manual__2022-10-09T02:47:47.955619+00:00 [running]> on host pipeline
+[2022-10-09 02:52:05,870] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/xcom.py:323 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-09 02:52:05,896] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:126 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-09 02:52:05,968] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:162 SAWarning: Coercing Subquery object into a select() for use in IN(); please pass a select() construct explicitly
+[2022-10-09 02:52:05,977] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/renderedtifields.py:159 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-09 02:52:06,015] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=recruitment-airflow
+AIRFLOW_CTX_TASK_ID=S3ToElasticsearch
+AIRFLOW_CTX_EXECUTION_DATE=2022-10-09T02:47:47.955619+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-10-09T02:47:47.955619+00:00
+[2022-10-09 02:52:06,020] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-10-09 02:52:06,024] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'python /opt/pipeline/script/S3ToElasticsearch.py']
+[2022-10-09 02:52:06,038] {subprocess.py:85} INFO - Output:
+[2022-10-09 02:52:13,734] {subprocess.py:89} INFO - /opt/pipeline/script/S3ToElasticsearch.py:66: ElasticsearchWarning: Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security.
+[2022-10-09 02:52:13,735] {subprocess.py:89} INFO -   es.indices.create(index=index, **index_settings)
+[2022-10-09 02:52:13,737] {subprocess.py:89} INFO - /opt/pipeline/script/S3ToElasticsearch.py:109: ElasticsearchWarning: Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security.
+[2022-10-09 02:52:13,738] {subprocess.py:89} INFO -   es.update(index=ES_INDEX, id=doc_id, doc=dict_data, doc_as_upsert=True)
+[2022-10-09 02:52:13,739] {subprocess.py:89} INFO - programmers/드림어스컴퍼니Cloud Engineer(DevOps).json
+[2022-10-09 02:52:13,741] {subprocess.py:89} INFO - programmers/매스프레소(콴다)DBA (MySQL).json
+[2022-10-09 02:52:13,742] {subprocess.py:89} INFO - programmers/멕아이씨에스백엔드 개발자 채용(Spring boot).json
+[2022-10-09 02:52:13,743] {subprocess.py:89} INFO - programmers/미디움[전략기획본부] DevOps Engineer.json
+[2022-10-09 02:52:13,745] {subprocess.py:89} INFO - programmers/바로고Data Engineer (Data ETL Engineer).json
+[2022-10-09 02:52:13,746] {subprocess.py:89} INFO - programmers/바로고Public Cloud Engineer.json
+[2022-10-09 02:52:13,747] {subprocess.py:89} INFO - programmers/버넥트[개발센터] DevOps 엔지니어.json
+[2022-10-09 02:52:13,748] {subprocess.py:89} INFO - programmers/수호아이오Technical Writer.json
+[2022-10-09 02:52:13,749] {subprocess.py:89} INFO - programmers/스테이지랩스백엔드 개발자.json
+[2022-10-09 02:52:13,749] {subprocess.py:89} INFO - programmers/쎄트렉아이DevOps 개발자.json
+[2022-10-09 02:52:13,750] {subprocess.py:89} INFO - programmers/아이언플래그백엔드 개발자.json
+[2022-10-09 02:52:13,751] {subprocess.py:89} INFO - programmers/지지큐컴퍼니Python Developer (파이썬 개발자).json
+[2022-10-09 02:52:13,752] {subprocess.py:89} INFO - programmers/커넥트핏백엔드 개발자.json
+[2022-10-09 02:52:13,753] {subprocess.py:89} INFO - programmers/쿤텍AI_DATA Engineer.json
+[2022-10-09 02:52:13,754] {subprocess.py:89} INFO - programmers/쿤텍보안 취약점 솔루션 엔지니어.json
+[2022-10-09 02:52:13,754] {subprocess.py:89} INFO - programmers/쿤텍악성코드 분석 엔지니어.json
+[2022-10-09 02:52:13,755] {subprocess.py:89} INFO - programmers/쿤텍클라우드 데이터 엔지니어(Data Engineer).json
+[2022-10-09 02:52:13,756] {subprocess.py:89} INFO - programmers/크래프트테크놀로지스SQL Developer.json
+[2022-10-09 02:52:13,757] {subprocess.py:89} INFO - programmers/클래스유[클래스유] 백엔드 개발자.json
+[2022-10-09 02:52:13,758] {subprocess.py:89} INFO - programmers/클레온MLOps Engineer, DevOps Engineer (전문연구요원).json
+[2022-10-09 02:52:13,760] {subprocess.py:89} INFO - programmers/트릿지데브옵스 엔지니어 (DevOps Engineer).json
+[2022-10-09 02:52:13,761] {subprocess.py:89} INFO - programmers/트릿지클라우드 보안 엔지니어 (CSE,SRE,DevOps).json
+[2022-10-09 02:52:13,762] {subprocess.py:89} INFO - programmers/티맥스티베로DB Application 개발자.json
+[2022-10-09 02:52:13,762] {subprocess.py:89} INFO - programmers/티맥스티베로DB Engine 개발자.json
+[2022-10-09 02:52:13,763] {subprocess.py:89} INFO - programmers/페이타랩[패스오더] DevOps Engineer (병역특례 산업기능요원 보충역_전직가능).json
+[2022-10-09 02:52:13,764] {subprocess.py:89} INFO - programmers/히비스플랫폼 서비스 개발 팀원.json
+[2022-10-09 02:52:13,794] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-10-09 02:52:13,802] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/xcom.py:103 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2022-10-09 02:52:13,871] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=recruitment-airflow, task_id=S3ToElasticsearch, execution_date=20221009T024747, start_date=20221009T025205, end_date=20221009T025213
+[2022-10-09 02:52:13,965] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-10-09 02:52:14,001] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-10-09 02:52:14,005] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/dag.py:1069 SADeprecationWarning: Query.value() is deprecated and will be removed in a future release.  Please use Query.with_entities() in combination with Query.scalar() (deprecated since: 1.4)
+[2022-10-09 02:52:14,007] {logging_mixin.py:109} WARNING - /usr/local/lib/python3.8/site-packages/airflow/models/dag.py:1069 SADeprecationWarning: Query.values() is deprecated and will be removed in a future release.  Please use Query.with_entities() (deprecated since: 1.4)
