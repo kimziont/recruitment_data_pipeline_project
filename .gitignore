@@ -1,0 +1,10 @@
+pipeline.ini
+connectors/
+data/
+dataset/
+img/
+pipeline/airflow/logs/**
+pipeline/airflow/airflow-scheduler.*
+pipeline/airflow/airflow.*
+pipeline/airflow/airflow-webserver.*
+pipeline/airflow/airflow-webserver-monitor.pid
