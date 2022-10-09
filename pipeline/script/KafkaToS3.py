@@ -38,8 +38,9 @@ response_iterator = paginator.paginate(
 
 all_s3_objects = set()
 for page in response_iterator:
-    for content in page['Contents']:
-        all_s3_objects.add(content['Key'])
+    if 'Contents' in page:
+        for content in page['Contents']:
+            all_s3_objects.add(content['Key'])
 
 for message in consumer:
     consumer.commit()

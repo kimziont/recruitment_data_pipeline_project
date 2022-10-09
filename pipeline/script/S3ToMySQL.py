@@ -2,7 +2,16 @@ import re
 import json
 import configparser
 import boto3
-import mysql.connector
+import sys
+import subprocess
+
+try:
+    import mysql.connector
+except:
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'mysql-connector-python'])
+    import mysql.connector
+
+
 
 
 parser = configparser.ConfigParser()
