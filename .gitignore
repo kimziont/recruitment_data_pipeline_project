@@ -1,1 +1,5 @@
 pipeline.ini
+connectors/
+data/
+dataset/
+img/
