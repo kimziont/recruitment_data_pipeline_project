@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Recruitment</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'posts/css/styles.css' %}">
     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
@@ -10,7 +9,10 @@
 </head>
 <body>
     {% include './head.html' %}
-    
-    {% block content %}
-    {% endblock content %}
+    <div class="result_body" style="position:absolute; left:10%; right:10%;">
+        <h1 style="margin-top: 20px;">Recruitment</h1>
+        {% block content %}
+        {% endblock content %}
+    </div>
+
 </body>

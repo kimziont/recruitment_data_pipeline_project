@@ -2,6 +2,7 @@ import json
 import configparser
 import boto3
 from datetime import datetime
+import elasticsearch
 from elasticsearch import Elasticsearch
 
 parser = configparser.ConfigParser()
@@ -32,24 +33,24 @@ index_settings = {
     },
     'mappings': { 
         'properties': {
-            'Category': {'type': 'text'},
-            'Title': {'type': 'text'},
-            'Company': {'type': 'text'},
+            'Category': {'type': 'text', 'copy_to': 'my_all_field'},
+            'Title': {'type': 'text', 'copy_to': 'my_all_field'},
+            'Company': {'type': 'text', 'copy_to': 'my_all_field'},
             'Position': {'type': 'text'},
-            'EmploymentType': {'type': 'text'},
-            'Experiences': {'type': 'text'},
+            'EmploymentType': {'type': 'text', 'copy_to': 'my_all_field'},
+            'Experiences': {'type': 'text', 'copy_to': 'my_all_field'},
             'Salary': {'type': 'long'},
             'Stacks': {'type': 'text', 'copy_to': 'my_all_field'},
             'Period': {'type': 'text'},
             'EmployeeNumber': {'type': 'long'},
-            'WorkLocation': {'type': 'text'},
-            'PrincipalServices': {'type': 'text'},
+            'WorkLocation': {'type': 'text', 'copy_to': 'my_all_field'},
+            'PrincipalServices': {'type': 'text', 'copy_to': 'my_all_field'},
             'Description': {'type': 'text', 'copy_to': 'my_all_field'},
             'Requirements': {'type': 'text', 'copy_to': 'my_all_field'},
             'Preference': {'type': 'text', 'copy_to': 'my_all_field'},
-            'Status': {'type': 'text'},
+            'Status': {'type': 'text', 'copy_to': 'my_all_field'},
             'URL': {'type': 'text'},
-            'Source': {'type': 'text'},
+            'Source': {'type': 'text', 'copy_to': 'my_all_field'},
             'CreatedTime': {'type': 'date'},
             'LastModifiedTime': {'type': 'date'},
             'my_all_field': {'type': 'text'}
@@ -59,7 +60,18 @@ index_settings = {
 }
 
 # 인덱스 생성
-# es.indices.create(index=ES_INDEX, **index_settings)
+def es_create_index_if_not_exists(es, index, index_settings):
+    """Create the given ElasticSearch index and ignore error if it already exists"""
+    try:
+        es.indices.create(index=index, **index_settings)
+    except elasticsearch.exceptions.RequestError as ex:
+        if ex.error == 'resource_already_exists_exception':
+            pass # Index already exists. Ignore.
+        else: # Other exception - raise it
+            raise ex
+
+es_create_index_if_not_exists(es, ES_INDEX, index_settings)
+
 
 # 인덱스 삭제
 # es.indices.delete(index=ES_INDEX)
